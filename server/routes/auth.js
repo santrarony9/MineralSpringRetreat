@@ -216,6 +216,43 @@ router.get('/google/config', (req, res) => {
   });
 });
 
+// Helper: Resolve the canonical Google OAuth callback URI
+export function resolveOAuthRedirectUri(req) {
+  const host = req.get('x-forwarded-host') || req.get('host') || '';
+  const isLocal = host.includes('localhost') || host.includes('127.0.0.1');
+
+  if (isLocal) {
+    return 'http://localhost:5000/api/auth/google/callback';
+  }
+
+  // On production (Vercel / custom domains):
+  if (host) {
+    const proto = req.headers['x-forwarded-proto'] || 'https';
+    return `${proto}://${host}/api/auth/google/callback`;
+  }
+
+  return process.env.GOOGLE_CALLBACK_URL || 'https://mineral-springs-retreat.vercel.app/api/auth/google/callback';
+}
+
+// Helper: Resolve the frontend client base URL for post-login redirect
+export function resolveClientBaseUrl(req) {
+  const host = req.get('x-forwarded-host') || req.get('host') || '';
+  const isLocal = host.includes('localhost') || host.includes('127.0.0.1');
+
+  if (isLocal) {
+    if (host.includes(':5000')) {
+      return 'http://localhost:5000';
+    }
+    return process.env.CLIENT_URL || 'http://localhost:3000';
+  }
+
+  const proto = req.headers['x-forwarded-proto'] || 'https';
+  if (host) {
+    return `${proto}://${host}`;
+  }
+  return process.env.CLIENT_URL || 'https://mineral-springs-retreat.vercel.app';
+}
+
 // GET /api/auth/google/url
 router.get('/google/url', (req, res) => {
   const clientId = process.env.GOOGLE_CLIENT_ID;
@@ -228,21 +265,44 @@ router.get('/google/url', (req, res) => {
     });
   }
 
-  const redirectUri = process.env.GOOGLE_CALLBACK_URL || `${req.protocol}://${req.get('host')}/api/auth/google/callback`;
-  const state = crypto.randomBytes(16).toString('hex');
+  const redirectUri = resolveOAuthRedirectUri(req);
+  const clientOrigin = resolveClientBaseUrl(req);
+
+  // Encode state with CSRF nonce, client return origin, and redirectUri used
+  const statePayload = {
+    nonce: crypto.randomBytes(16).toString('hex'),
+    origin: clientOrigin,
+    redirectUri: redirectUri
+  };
+  const state = Buffer.from(JSON.stringify(statePayload)).toString('base64url');
+
   const scope = encodeURIComponent('openid email profile');
   const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=code&scope=${scope}&access_type=offline&prompt=select_account&state=${state}`;
 
   return res.json({
     configured: true,
     url: authUrl,
+    redirectUri,
     state
   });
 });
 
 // GET /api/auth/google/callback
 router.get('/google/callback', async (req, res) => {
-  const clientUrl = process.env.CLIENT_URL || 'http://localhost:3000';
+  let clientUrl = resolveClientBaseUrl(req);
+  let redirectUri = resolveOAuthRedirectUri(req);
+
+  // Decode state payload if present
+  if (req.query.state) {
+    try {
+      const decoded = JSON.parse(Buffer.from(req.query.state, 'base64url').toString('utf8'));
+      if (decoded.origin) clientUrl = decoded.origin;
+      if (decoded.redirectUri) redirectUri = decoded.redirectUri;
+    } catch (e) {
+      // fallback to resolved defaults
+    }
+  }
+
   const { code, error } = req.query;
 
   if (error) {
@@ -254,7 +314,6 @@ router.get('/google/callback', async (req, res) => {
   }
 
   try {
-    const redirectUri = process.env.GOOGLE_CALLBACK_URL || `${req.protocol}://${req.get('host')}/api/auth/google/callback`;
     const params = new URLSearchParams({
       code: String(code),
       client_id: process.env.GOOGLE_CLIENT_ID || '',

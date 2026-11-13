@@ -13,6 +13,7 @@ const BACKUP_DIR = path.join(DATA_DIR, 'backups');
 
 // In-memory cache for fast synchronous access
 let inMemoryDB = null;
+let lastDbMtime = 0;
 let lastCloudSyncTime = 0;
 const CLOUD_SYNC_INTERVAL_MS = 2500; // re-sync from cloud store at most once per 2.5s
 
@@ -117,8 +118,6 @@ let writeLock = false;
  * Read the entire database safely
  */
 export function readDB() {
-  if (inMemoryDB) return inMemoryDB;
-
   ensureLocalSeed();
   try {
     if (!fs.existsSync(DB_PATH)) {
@@ -129,11 +128,19 @@ export function readDB() {
       }
       return null;
     }
+
+    const stat = fs.statSync(DB_PATH);
+    if (inMemoryDB && stat.mtimeMs === lastDbMtime) {
+      return inMemoryDB;
+    }
+
     const data = fs.readFileSync(DB_PATH, 'utf-8');
     const parsed = JSON.parse(data);
     inMemoryDB = parsed;
+    lastDbMtime = stat.mtimeMs;
     return parsed;
   } catch (err) {
+    if (inMemoryDB) return inMemoryDB;
     console.error('[DB] Error reading db.json:', err);
     return null;
   }
@@ -180,6 +187,9 @@ export function writeDB(data) {
     }
 
     fs.renameSync(tempPath, DB_PATH);
+    try {
+      lastDbMtime = fs.statSync(DB_PATH).mtimeMs;
+    } catch {}
     return true;
   } catch (err) {
     console.error('[DB] Error writing db.json:', err);
