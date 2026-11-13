@@ -22,26 +22,34 @@ const ensureDistUploads = () => {
 ensureDistUploads();
 
 const saveUploadBuffer = (filename, buffer) => {
-  fs.writeFileSync(path.join(UPLOADS_DIR, filename), buffer);
-  ensureDistUploads();
-  if (fs.existsSync(DIST_UPLOADS_DIR)) {
-    try {
-      fs.writeFileSync(path.join(DIST_UPLOADS_DIR, filename), buffer);
-    } catch (e) {
-      console.warn('[MEDIA] Could not copy to dist/uploads:', e.message);
+  try {
+    fs.writeFileSync(path.join(UPLOADS_DIR, filename), buffer);
+    ensureDistUploads();
+    if (fs.existsSync(DIST_UPLOADS_DIR)) {
+      try {
+        fs.writeFileSync(path.join(DIST_UPLOADS_DIR, filename), buffer);
+      } catch (e) {
+        console.warn('[MEDIA] Could not copy to dist/uploads:', e.message);
+      }
     }
+    return true;
+  } catch (fsErr) {
+    console.warn('[MEDIA] Filesystem write skipped on serverless/read-only environment:', fsErr.message);
+    return false;
   }
 };
 
 const deleteUploadFile = (filename) => {
-  const p1 = path.join(UPLOADS_DIR, filename);
-  if (fs.existsSync(p1)) {
-    try { fs.unlinkSync(p1); } catch {}
-  }
-  const p2 = path.join(DIST_UPLOADS_DIR, filename);
-  if (fs.existsSync(p2)) {
-    try { fs.unlinkSync(p2); } catch {}
-  }
+  try {
+    const p1 = path.join(UPLOADS_DIR, filename);
+    if (fs.existsSync(p1)) {
+      try { fs.unlinkSync(p1); } catch {}
+    }
+    const p2 = path.join(DIST_UPLOADS_DIR, filename);
+    if (fs.existsSync(p2)) {
+      try { fs.unlinkSync(p2); } catch {}
+    }
+  } catch (e) {}
 };
 
 const router = express.Router();
@@ -97,13 +105,16 @@ router.post('/upload', requireAdminMiddleware, (req, res) => {
       .replace(/[^a-zA-Z0-9_-]/g, '-')
       .toLowerCase();
     const storedFilename = `${safeBase}-${Date.now()}-${Math.random().toString(36).substring(2, 6)}.${ext}`;
-    saveUploadBuffer(storedFilename, Buffer.from(matches[2], 'base64'));
-    const url = `/uploads/${storedFilename}`;
+    const savedToDisk = saveUploadBuffer(storedFilename, Buffer.from(matches[2], 'base64'));
+    
+    // In serverless / Vercel with read-only disk, retain full dataUrl for persistence
+    const url = (savedToDisk && !process.env.VERCEL) ? `/uploads/${storedFilename}` : dataUrlStr;
 
     const newMedia = {
       id: 'med-' + Date.now() + '-' + Math.random().toString(36).substring(2, 6),
       filename: storedFilename,
       url,
+      dataUrl: dataUrlStr,
       title: customTitle || safeBase.replace(/[-_]/g, ' '),
       altText: customAlt || `Mineral Springs Retreat - ${safeBase.replace(/[-_]/g, ' ')}`,
       category: cat || 'General',
