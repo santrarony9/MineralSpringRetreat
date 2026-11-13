@@ -26,3 +26,12 @@
 - Enhanced frontend components: `CozyHero.jsx`, `CozyAbout.jsx`, `CozyAboutPage.jsx`, `CozyDawaipani.jsx`, `CozyTariffDining.jsx`, `CozyExperiences.jsx`, `CozyExperiencesPage.jsx`, `CozyTravelPage.jsx`, and `CozyGalleryPage.jsx`.
 - Verified Vite production build (`npm run build`) with zero compilation errors.
 - Deployed to Vercel production at `https://mineral-springs-retreat.vercel.app`.
+
+### Phase 5: Desktop Video Asset Integration & Responsive Viewport Isolation
+- Accessed and inspected Google Drive file `11h9HSosnwzi6jaYtSld5GtFlFbWqAZbX` (`Dawaipani Reel .mp4`).
+- Identified asset as a 30.06s 1080×1920 60fps vertical reel depicting Dawaipani's mountain ridges and drifting sea of clouds.
+- Re-encoded to web-optimized 1080p MP4 with FFmpeg (H.264 High Profile, CRF 22, 30fps, silent audio stripped, `+faststart` moov header), reducing size from 98.4MB to 13.9MB (86% reduction) for instant playback.
+- Integrated video into `CozyHero.jsx` exclusively for desktop and laptop displays (viewport &ge; 1024px) with muted autoplay, loop, playsinline, and `poster` frame.
+- Guaranteed zero changes to mobile and tablet homepage displays (< 1024px), preserving the original static mountain photograph and CSS drift animation.
+- Added CMS controls to Admin Panel (`/admin`) under Homepage content management for real-time video URL configuration and removal.
+- Staged, committed, and deployed to production Vercel with verified HTTP 206/200 streaming delivery.

@@ -38,7 +38,8 @@
       "businessAccountId": "placeholder_business_account_id",
       "apiVersion": "v21.0",
       "updatedAt": "2026-11-12T14:36:34.729Z"
-    }
+    },
+    "heroVideo": "/videos/dawaipani-reel.mp4"
   },
   "tariffDetails": {
     "doubleSharing": {
@@ -565,7 +566,8 @@
             "unit": "km",
             "label": "FROM NJP & BAGDOGRA"
           }
-        ]
+        ],
+        "video": "/videos/dawaipani-reel.mp4"
       },
       "intro": {
         "eyebrow": "HIMALAYAN SERENITY MEETS RUSTIC COMFORT",
@@ -844,6 +846,13 @@
     "borderRadius": "0px"
   },
   "media": [
+    {
+      "id": "vid-dawaipani-reel",
+      "url": "/videos/dawaipani-reel.mp4",
+      "title": "Dawaipani Rolling Clouds & Valley (Desktop Hero Video)",
+      "category": "Views",
+      "type": "video"
+    },
     {
       "id": "lib-1",
       "url": "/images/mineral-springs/dawaipani-balcony-sunset-clouds.jpg",

@@ -6,10 +6,14 @@ import gsap from 'gsap';
 export default function CozyHero({ setActivePage }) {
   const { openBooking, settings, pages } = useApp();
   const heroRef = useRef(null);
+  const videoRef = useRef(null);
   const [scrollY, setScrollY] = useState(0);
+  const [videoError, setVideoError] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
   const heroData = pages?.home?.hero;
   const heroImage = heroData?.image || settings?.heroImage || '/images/mineral-springs/dawaipani-balcony-sunset-clouds.jpg';
+  const heroVideo = heroData?.video ?? settings?.heroVideo ?? '/videos/dawaipani-reel.mp4';
   const heroBadge = heroData?.badge || 'BOUTIQUE RETREAT OFFERING TIMELESS HIMALAYAN TRANQUILITY';
   const heroTitle = heroData?.title || 'A Peaceful Escape in the\nHeart of the Mountains';
   const heroStats = heroData?.stats || [
@@ -17,6 +21,25 @@ export default function CozyHero({ setActivePage }) {
     { value: '4', unit: 'Meals', label: 'DAILY INCLUDED' },
     { value: '70', unit: 'km', label: 'FROM NJP & BAGDOGRA' }
   ];
+
+  // Listen for reduced motion preference
+  useEffect(() => {
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setPrefersReducedMotion(mq.matches);
+    const handler = (e) => setPrefersReducedMotion(e.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
+
+  // Ensure autoplay on desktop when ready
+  useEffect(() => {
+    if (videoRef.current && window.innerWidth >= 1024 && !prefersReducedMotion && !videoError) {
+      const p = videoRef.current.play();
+      if (p !== undefined) {
+        p.catch(() => {});
+      }
+    }
+  }, [prefersReducedMotion, videoError, heroVideo]);
 
   useEffect(() => {
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -62,19 +85,45 @@ export default function CozyHero({ setActivePage }) {
       ref={heroRef}
       className="relative w-full h-screen min-h-[700px] max-h-[1080px] flex flex-col justify-between overflow-hidden select-none"
     >
-      {/* Background Image with Exact Cinematic Mountain Treatment & Subtle Parallax Drift */}
+      {/* Background Media with Exact Cinematic Mountain Treatment & Subtle Parallax Drift */}
       <div
         className="absolute inset-0 z-0 will-change-transform"
         style={{ transform: `translate3d(0, ${scrollY * 0.28}px, 0)` }}
       >
-        <img
-          src={heroImage}
-          alt="Mineral Springs Retreat - Mountain vistas and tea garden slopes in Dawaipani"
-          className="w-full h-full object-cover object-center scale-105 animate-hero-drift"
-        />
+        {/* Desktop / Laptop Cinematic Video Background (Viewport >= 1024px only) */}
+        {heroVideo && !videoError && !prefersReducedMotion ? (
+          <>
+            <video
+              ref={videoRef}
+              autoPlay
+              loop
+              muted
+              playsInline
+              poster={heroImage}
+              onError={() => setVideoError(true)}
+              className="hidden lg:block w-full h-full object-cover object-[center_35%]"
+              preload="auto"
+            >
+              <source src={heroVideo} type="video/mp4" />
+            </video>
+            {/* Mobile & Tablet Static Photograph (< 1024px) */}
+            <img
+              src={heroImage}
+              alt="Mineral Springs Retreat - Mountain vistas and tea garden slopes in Dawaipani"
+              className="block lg:hidden w-full h-full object-cover object-center scale-105 animate-hero-drift"
+            />
+          </>
+        ) : (
+          <img
+            src={heroImage}
+            alt="Mineral Springs Retreat - Mountain vistas and tea garden slopes in Dawaipani"
+            className="w-full h-full object-cover object-center scale-105 animate-hero-drift"
+          />
+        )}
+
         {/* Subtle Dark Vignette Matching CozyStay */}
-        <div className="absolute inset-0 bg-black/45" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/50" />
+        <div className="absolute inset-0 bg-black/45 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/50 pointer-events-none" />
       </div>
 
       {/* Generous Clearance Spacer for Fixed Header */}

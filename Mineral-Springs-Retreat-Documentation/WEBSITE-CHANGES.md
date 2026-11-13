@@ -31,13 +31,17 @@ This document tracks all changes made to the codebase, content schemas, visual c
 | 21 | `host-co-founder-portrait.jpg` | Retreat co-founder portrait (Landscape) | About Page ("Meet Your Hosts") & Gallery | `CozyAboutPage.jsx`, `db.gallery`, `db.media` |
 | 22 | `host-hospitality-portrait.jpg` | Resident hostess welcome portrait (Landscape) | Media Library & Admin Panel | `db.media`, `AdminPanel.jsx` |
 | 23 | `dawaipani-misty-valley-morning.jpg` | Early morning mist rising from valley (Landscape) | Gallery & Media Library | `CozyGalleryPage.jsx`, `db.gallery`, `db.media` |
+| 24 | `dawaipani-reel.mp4` | 30s 1080p rolling sea of clouds & valley (Portrait Reel) | Desktop Homepage Hero (&ge; 1024px) | `CozyHero.jsx`, `db.pages.home.hero.video`, `db.settings.heroVideo` |
 
 ---
 
 ## 🛠️ Component-Level Modifications
 
 ### 1. `src/components/cozystay/CozyHero.jsx`
-- Updated fallback hero background image to `dawaipani-balcony-sunset-clouds.jpg`.
+- Added desktop-only video background (`heroVideo`, defaulting to `/videos/dawaipani-reel.mp4`).
+- Implemented strict viewport isolation: `<video>` renders exclusively on screens with width &ge; 1024px (`hidden lg:block`), with `autoPlay`, `loop`, `muted`, `playsInline`, `poster={heroImage}`, and `object-[center_35%]`.
+- Kept mobile and tablet homepage completely unchanged: `<img src={heroImage} className="block lg:hidden ... scale-105 animate-hero-drift" />`.
+- Added `prefers-reduced-motion` detection and `onError` automatic fallback to preserve luxury aesthetic with zero broken video state.
 - Retained parallax scroll dynamics, dark vignette styling, and gold retreat badge.
 
 ### 2. `src/components/cozystay/CozyAbout.jsx`

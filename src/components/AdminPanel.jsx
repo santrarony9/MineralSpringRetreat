@@ -52,7 +52,8 @@ const RETREAT_LIBRARY_PHOTOS = [
   { id: 'lib-39', url: '/images/mineral-springs/host-founder-portrait.jpg', title: 'Retreat Founder - Himalayan Hospitality', category: 'Culture' },
   { id: 'lib-40', url: '/images/mineral-springs/host-co-founder-portrait.jpg', title: 'Retreat Co-Founder & Resident Hostess', category: 'Culture' },
   { id: 'lib-41', url: '/images/mineral-springs/host-hospitality-portrait.jpg', title: 'Warm Homestay Welcome Portrait', category: 'Culture' },
-  { id: 'lib-42', url: '/images/mineral-springs/dawaipani-misty-valley-morning.jpg', title: 'Misty Morning Valley Drift from Balcony', category: 'Views' }
+  { id: 'lib-42', url: '/images/mineral-springs/dawaipani-misty-valley-morning.jpg', title: 'Misty Morning Valley Drift from Balcony', category: 'Views' },
+  { id: 'lib-43', url: '/videos/dawaipani-reel.mp4', title: 'Dawaipani Rolling Clouds & Valley (Desktop Hero Video)', category: 'Views', type: 'video' }
 ];
 
 function ImageFieldWithPicker({
@@ -1855,8 +1856,8 @@ export default function AdminPanel({ isStandalone = false, onClose }) {
                       </h3>
 
                       <ImageFieldWithPicker
-                        label="Hero Background Photograph"
-                        value={pageDraft.home.hero?.image || '/images/mineral-springs/dawaipani-balcony-valley-vista.jpg'}
+                        label="Hero Background Photograph (Mobile, Tablet & Fallback)"
+                        value={pageDraft.home.hero?.image || '/images/mineral-springs/dawaipani-balcony-sunset-clouds.jpg'}
                         onChange={(url) => setPageDraft(p => ({
                           ...p,
                           home: { ...p.home, hero: { ...p.home.hero, image: url } }
@@ -1874,6 +1875,59 @@ export default function AdminPanel({ isStandalone = false, onClose }) {
                           }));
                         })}
                       />
+
+                      {/* Desktop Cinematic Video Background */}
+                      <div className="p-4 bg-[#FAF7F2] border border-[#EAE4DB] rounded-xl space-y-3">
+                        <div className="flex items-center justify-between">
+                          <label className="text-[11px] uppercase tracking-wider font-semibold text-[#555D56] flex items-center gap-2">
+                            <span>Desktop Hero Cinematic Video</span>
+                            <span className="text-[9px] bg-[#1E2C22] text-[#DFCCA8] px-2 py-0.5 rounded font-medium tracking-normal">
+                              Desktop/Laptop &ge; 1024px Only
+                            </span>
+                          </label>
+                          {pageDraft.home.hero?.video && (
+                            <button
+                              type="button"
+                              onClick={() => setPageDraft(p => ({
+                                ...p,
+                                home: { ...p.home, hero: { ...p.home.hero, video: '' } }
+                              }))}
+                              className="text-[11px] text-red-600 hover:text-red-700 underline"
+                            >
+                              Remove Video
+                            </button>
+                          )}
+                        </div>
+
+                        <div className="flex gap-2">
+                          <input
+                            type="text"
+                            value={pageDraft.home.hero?.video || ''}
+                            placeholder="/videos/dawaipani-reel.mp4"
+                            onChange={(e) => setPageDraft(p => ({
+                              ...p,
+                              home: { ...p.home, hero: { ...p.home.hero, video: e.target.value } }
+                            }))}
+                            className="flex-1 px-4 py-2.5 bg-white border border-[#D5C9B8] text-xs rounded-xl font-mono"
+                          />
+                          <button
+                            type="button"
+                            onClick={() => openMediaPicker('Select Desktop Hero Video', (url) => {
+                              setPageDraft(p => ({
+                                ...p,
+                                home: { ...p.home, hero: { ...p.home.hero, video: url } }
+                              }));
+                            })}
+                            className="px-3.5 py-2 bg-white hover:bg-[#F2ECE1] border border-[#D5C9B8] text-xs text-[#1E2C22] rounded-xl font-medium shrink-0 flex items-center gap-1.5 transition-colors"
+                          >
+                            <ImageIcon className="w-3.5 h-3.5" />
+                            <span>Pick Asset</span>
+                          </button>
+                        </div>
+                        <p className="text-[11px] text-[#7A827B] leading-relaxed">
+                          Muted looping MP4 video rendered exclusively on desktop and laptop displays (viewport &ge; 1024px). Mobile and tablet displays automatically serve the static photograph above to preserve cellular performance.
+                        </p>
+                      </div>
 
                       <div>
                         <label className="text-[11px] uppercase tracking-wider font-semibold text-[#555D56] block mb-1">

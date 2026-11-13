@@ -52,3 +52,14 @@
   - *Sortable List:* Searchable table with instant status updates.
 - **Strict Overlap Prevention:** Half-open interval checking (`[checkIn, checkOut)`) that prevents accidental double bookings while properly allowing check-in on the exact date an outgoing guest departs.
 - **Meta WhatsApp Cloud API:** Real-time host notifications on new booking inquiries, reservation confirmations, and status transitions.
+
+---
+
+## 5. Desktop Cinematic Video Background & Adaptive Delivery
+- **Original Source Inspection:** Downloaded and verified `Dawaipani Reel .mp4` (1080×1920 portrait video at 60fps) from Google Drive file ID `11h9HSosnwzi6jaYtSld5GtFlFbWqAZbX`.
+- **Web Stream Optimization:** Re-encoded using FFmpeg with H.264 High Profile, visually lossless CRF 22, 30fps cadence, stripped silent audio track, and `+faststart` moov-atom header repositioning. File size reduced from 98.4MB to 13.9MB (86% reduction) for instant playback without buffering.
+- **Adaptive Viewport Isolation:**
+  - *Laptops & Desktops (&ge; 1024px):* Full-bleed cinematic video background rendered with smooth looping, muted autoplay, responsive cropping (`object-[center_35%]`), zero video chrome, and high-definition poster frame fallback.
+  - *Mobile & Tablet Devices (&lt; 1024px):* The `<video>` element is completely omitted from rendering; the existing static mountain photograph (`heroImage`) is displayed with subtle CSS drift animation to ensure zero cellular data consumption and identical performance.
+- **Accessibility & Error Resilience:** Automatically detects `prefers-reduced-motion` and video load errors, immediately reverting to the static photograph without visual clipping or broken media states.
+- **CMS Management:** Configured in `pages.home.hero.video` and `settings.heroVideo`; editable in real-time through the Admin Panel (`/admin`) with asset picker and one-click removal controls.
