@@ -198,91 +198,91 @@ export default function CozyRooms({ setActivePage }) {
         </div>
 
         {/* Exact Horizontal Booking Bar (Signature CozyStay Feature - Refined Velvet Forest Finish) */}
-        <div className="bg-gradient-to-b from-[#1B271F] to-[#121914] text-white p-6 sm:p-8 rounded-2xl shadow-2xl border border-white/10 border-t-white/20 reveal-init reveal-delay-2">
-          <form onSubmit={handleSearchBooking} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 items-center">
+        <div className="bg-gradient-to-b from-[#1B271F] to-[#121914] text-white p-5 sm:p-7 rounded-2xl shadow-2xl border border-white/10 border-t-white/20 reveal-init reveal-delay-2">
+          <form onSubmit={handleSearchBooking} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-3.5 items-stretch">
             
             {/* Check In */}
-            <div className="border border-white/15 p-3.5 bg-black/25 backdrop-blur-sm rounded-xl hover:border-[#B89D77]/60 focus-within:border-[#B89D77] transition-all duration-300">
-              <label className="block text-[10px] font-sans uppercase tracking-[0.2em] text-[#CBB08B] mb-1 font-medium">
+            <div className="h-[62px] px-3.5 sm:px-4 py-2 bg-black/35 hover:bg-black/50 border border-white/15 hover:border-[#CBB08B]/70 focus-within:border-[#CBB08B] rounded-xl text-left transition-all duration-300 flex flex-col justify-center shadow-inner">
+              <label className="text-[10px] font-sans uppercase tracking-[0.22em] text-[#D5B990] font-semibold block leading-none mb-1.5 select-none">
                 CHECK IN
               </label>
               <div className="flex items-center space-x-2 text-xs font-sans text-white">
-                <Calendar className="w-4 h-4 text-[#B89D77] shrink-0" />
+                <Calendar className="w-3.5 h-3.5 text-[#B89D77] shrink-0" />
                 <input
                   type="date"
                   value={checkIn}
                   onChange={(e) => setCheckIn(e.target.value)}
-                  className="bg-transparent text-white text-xs w-full focus:outline-none cursor-pointer"
+                  className="bg-transparent text-white text-xs font-medium w-full focus:outline-none cursor-pointer leading-none"
                   required
                 />
               </div>
             </div>
 
             {/* Check Out */}
-            <div className="border border-white/15 p-3.5 bg-black/25 backdrop-blur-sm rounded-xl hover:border-[#B89D77]/60 focus-within:border-[#B89D77] transition-all duration-300">
-              <label className="block text-[10px] font-sans uppercase tracking-[0.2em] text-[#CBB08B] mb-1 font-medium">
+            <div className="h-[62px] px-3.5 sm:px-4 py-2 bg-black/35 hover:bg-black/50 border border-white/15 hover:border-[#CBB08B]/70 focus-within:border-[#CBB08B] rounded-xl text-left transition-all duration-300 flex flex-col justify-center shadow-inner">
+              <label className="text-[10px] font-sans uppercase tracking-[0.22em] text-[#D5B990] font-semibold block leading-none mb-1.5 select-none">
                 CHECK OUT
               </label>
               <div className="flex items-center space-x-2 text-xs font-sans text-white">
-                <Calendar className="w-4 h-4 text-[#B89D77] shrink-0" />
+                <Calendar className="w-3.5 h-3.5 text-[#B89D77] shrink-0" />
                 <input
                   type="date"
                   value={checkOut}
                   onChange={(e) => setCheckOut(e.target.value)}
-                  className="bg-transparent text-white text-xs w-full focus:outline-none cursor-pointer"
+                  className="bg-transparent text-white text-xs font-medium w-full focus:outline-none cursor-pointer leading-none"
                   required
                 />
               </div>
             </div>
 
             {/* Rooms */}
-            <div className="border border-white/15 p-3.5 bg-black/25 backdrop-blur-sm rounded-xl hover:border-[#B89D77]/60 focus-within:border-[#B89D77] transition-all duration-300">
-              <label className="block text-[10px] font-sans uppercase tracking-[0.2em] text-[#CBB08B] mb-1 font-medium">
+            <div className="h-[62px] px-3.5 sm:px-4 py-2 bg-black/35 hover:bg-black/50 border border-white/15 hover:border-[#CBB08B]/70 focus-within:border-[#CBB08B] rounded-xl text-left transition-all duration-300 flex flex-col justify-center shadow-inner">
+              <label className="text-[10px] font-sans uppercase tracking-[0.22em] text-[#D5B990] font-semibold block leading-none mb-1.5 select-none">
                 ROOMS
               </label>
               <div className="flex items-center space-x-2 text-xs font-sans text-white">
-                <Home className="w-4 h-4 text-[#B89D77] shrink-0" />
+                <Home className="w-3.5 h-3.5 text-[#B89D77] shrink-0" />
                 <select
                   value={roomsCount}
                   onChange={(e) => setRoomsCount(Number(e.target.value))}
-                  className="bg-transparent text-white text-xs w-full focus:outline-none cursor-pointer"
+                  className="bg-transparent text-white text-xs font-medium w-full focus:outline-none cursor-pointer leading-none"
                 >
-                  <option value={1} className="bg-[#111111] text-white">1 Room</option>
-                  <option value={2} className="bg-[#111111] text-white">2 Rooms</option>
-                  <option value={3} className="bg-[#111111] text-white">3 Rooms</option>
-                  <option value={4} className="bg-[#111111] text-white">Entire Homestay</option>
+                  <option value={1} className="bg-[#1B271F] text-white">1 Room</option>
+                  <option value={2} className="bg-[#1B271F] text-white">2 Rooms</option>
+                  <option value={3} className="bg-[#1B271F] text-white">3 Rooms</option>
+                  <option value={4} className="bg-[#1B271F] text-white">Entire Homestay</option>
                 </select>
               </div>
             </div>
 
             {/* Guests */}
-            <div className="border border-white/15 p-3.5 bg-black/25 backdrop-blur-sm rounded-xl hover:border-[#B89D77]/60 focus-within:border-[#B89D77] transition-all duration-300">
-              <label className="block text-[10px] font-sans uppercase tracking-[0.2em] text-[#CBB08B] mb-1 font-medium">
+            <div className="h-[62px] px-3.5 sm:px-4 py-2 bg-black/35 hover:bg-black/50 border border-white/15 hover:border-[#CBB08B]/70 focus-within:border-[#CBB08B] rounded-xl text-left transition-all duration-300 flex flex-col justify-center shadow-inner">
+              <label className="text-[10px] font-sans uppercase tracking-[0.22em] text-[#D5B990] font-semibold block leading-none mb-1.5 select-none">
                 GUESTS
               </label>
               <div className="flex items-center space-x-2 text-xs font-sans text-white">
-                <Users className="w-4 h-4 text-[#B89D77] shrink-0" />
+                <Users className="w-3.5 h-3.5 text-[#B89D77] shrink-0" />
                 <select
                   value={guestsCount}
                   onChange={(e) => setGuestsCount(Number(e.target.value))}
-                  className="bg-transparent text-white text-xs w-full focus:outline-none cursor-pointer"
+                  className="bg-transparent text-white text-xs font-medium w-full focus:outline-none cursor-pointer leading-none"
                 >
-                  <option value={1} className="bg-[#111111] text-white">1 Guest</option>
-                  <option value={2} className="bg-[#111111] text-white">2 Guests</option>
-                  <option value={3} className="bg-[#111111] text-white">3 Guests</option>
-                  <option value={4} className="bg-[#111111] text-white">4 Guests</option>
-                  <option value={6} className="bg-[#111111] text-white">6+ Guests (Group)</option>
+                  <option value={1} className="bg-[#1B271F] text-white">1 Guest</option>
+                  <option value={2} className="bg-[#1B271F] text-white">2 Guests</option>
+                  <option value={3} className="bg-[#1B271F] text-white">3 Guests</option>
+                  <option value={4} className="bg-[#1B271F] text-white">4 Guests</option>
+                  <option value={6} className="bg-[#1B271F] text-white">6+ Guests (Group)</option>
                 </select>
               </div>
             </div>
 
             {/* Check Availability Button */}
-            <div>
+            <div className="flex items-center sm:col-span-2 lg:col-span-1">
               <button
                 type="submit"
-                className="w-full cozy-btn-gold text-xs font-semibold tracking-widest py-4 rounded-xl justify-center shadow-lg hover:shadow-xl transition-all"
+                className="h-[62px] w-full px-4 rounded-xl bg-gradient-to-r from-[#CBB08B] via-[#B89D77] to-[#A6875E] hover:from-[#D6BC97] hover:via-[#C5A880] hover:to-[#B29267] text-white font-sans text-xs font-semibold tracking-[0.14em] uppercase shadow-[0_4px_16px_rgba(184,157,119,0.35)] hover:shadow-[0_8px_24px_rgba(184,157,119,0.5)] transition-all duration-300 flex items-center justify-center text-center cursor-pointer select-none active:scale-[0.99] border border-[#D4AF37]/40 leading-snug"
               >
-                Check Availability
+                <span className="whitespace-nowrap">Check Availability</span>
               </button>
             </div>
 
