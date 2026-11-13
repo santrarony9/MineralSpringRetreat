@@ -209,23 +209,22 @@ router.get('/logs', requireAdminMiddleware, (req, res) => {
 // GET /api/auth/google/config
 router.get('/google/config', (req, res) => {
   const clientId = process.env.GOOGLE_CLIENT_ID || '';
+  const isConfigured = Boolean(clientId && !clientId.includes('your-google-oauth'));
   res.json({
-    configured: Boolean(clientId && clientId !== 'your-google-oauth-client-id.apps.googleusercontent.com'),
-    clientId: clientId && clientId !== 'your-google-oauth-client-id.apps.googleusercontent.com' ? clientId : '',
-    devMode: !clientId || clientId === 'your-google-oauth-client-id.apps.googleusercontent.com'
+    configured: isConfigured,
+    clientId: isConfigured ? clientId : ''
   });
 });
 
 // GET /api/auth/google/url
 router.get('/google/url', (req, res) => {
   const clientId = process.env.GOOGLE_CLIENT_ID;
-  const configured = Boolean(clientId && clientId !== 'your-google-oauth-client-id.apps.googleusercontent.com');
+  const configured = Boolean(clientId && !clientId.includes('your-google-oauth'));
 
   if (!configured) {
-    return res.json({
+    return res.status(503).json({
       configured: false,
-      devMode: true,
-      message: 'Google Client ID not configured in .env. Dev Sign-in enabled.'
+      error: 'Google OAuth 2.0 is not configured. Please set GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET.'
     });
   }
 
@@ -354,53 +353,6 @@ router.post('/google/verify', async (req, res) => {
   } catch (err) {
     console.error('[GOOGLE_VERIFY] Verification failed:', err);
     return res.status(500).json({ error: 'Failed to verify Google token: ' + err.message });
-  }
-});
-
-// POST /api/auth/google/dev-login
-// Fast demonstration and testing endpoint for offline / development environments
-router.post('/google/dev-login', (req, res) => {
-  const { name, email, googleId, picture, phone } = req.body || {};
-  const guestEmail = (email && email.trim()) || 'sarah.jenkins@gmail.com';
-  const gId = googleId || ('google-dev-' + crypto.createHash('md5').update(guestEmail).digest('hex').substring(0, 16));
-
-  try {
-    const guest = findOrCreateGoogleUser({
-      googleId: gId,
-      email: guestEmail,
-      name: name || 'Sarah Jenkins',
-      picture: picture || 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80'
-    });
-
-    if (phone) {
-      updateGuestProfile(guest.id, { phone });
-      guest.phone = phone;
-    }
-
-    const ip = req.ip || req.connection.remoteAddress || '127.0.0.1';
-    const userAgent = req.headers['user-agent'] || 'DevBrowser';
-    const session = createSession(guest.id, ip, userAgent);
-
-    logActivity('GUEST_DEV_LOGIN', `Guest '${guest.name}' signed in via Google Dev Auth (${guest.email})`, ip, guest.email);
-
-    return res.json({
-      success: true,
-      token: session.token,
-      user: {
-        id: guest.id,
-        googleId: guest.googleId,
-        name: guest.name,
-        email: guest.email,
-        picture: guest.picture,
-        phone: guest.phone || phone || '',
-        role: guest.role,
-        createdAt: guest.createdAt,
-        lastLoginAt: guest.lastLoginAt
-      }
-    });
-  } catch (err) {
-    console.error('[DEV_LOGIN] Error:', err);
-    return res.status(500).json({ error: 'Dev login error: ' + err.message });
   }
 });
 

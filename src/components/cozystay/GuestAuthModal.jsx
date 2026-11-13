@@ -1,23 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { useApp } from '../../context/AppContext';
-import { X, ShieldCheck, Sparkles, Check, ArrowRight, UserCheck } from 'lucide-react';
+import { X, ShieldCheck, Lock } from 'lucide-react';
 
 export default function GuestAuthModal() {
   const {
     guestAuthModalOpen,
     setGuestAuthModalOpen,
-    guestDevLogin,
     guestLoading,
     settings
   } = useApp();
 
-  const [googleConfig, setGoogleConfig] = useState({ configured: false, devMode: true });
+  const [googleConfig, setGoogleConfig] = useState({ configured: false });
   const [loadingConfig, setLoadingConfig] = useState(true);
   const [error, setError] = useState('');
-  const [devName, setDevName] = useState('Sarah Jenkins');
-  const [devEmail, setDevEmail] = useState('sarah.jenkins@gmail.com');
-  const [devPhone, setDevPhone] = useState('+91 98320 54321');
-  const [showCustomDev, setShowCustomDev] = useState(false);
 
   useEffect(() => {
     if (guestAuthModalOpen) {
@@ -41,32 +36,19 @@ export default function GuestAuthModal() {
     setError('');
     try {
       const res = await fetch('/api/auth/google/url');
+      if (!res.ok) {
+        const errData = await res.json().catch(() => ({}));
+        throw new Error(errData.error || 'Google Sign-in service unavailable');
+      }
       const data = await res.json();
       if (data.configured && data.url) {
-        // Redirect to Google OAuth Consent screen
+        // Redirect directly to official Google OAuth 2.0 authentication
         window.location.href = data.url;
       } else {
-        // Dev fallback mode
-        await guestDevLogin({
-          name: devName,
-          email: devEmail,
-          phone: devPhone
-        });
+        throw new Error(data.message || 'Google authentication service is currently unavailable.');
       }
     } catch (err) {
       setError('Unable to initiate Google Sign-in: ' + err.message);
-    }
-  };
-
-  const handleQuickDevLogin = async (name, email) => {
-    setError('');
-    const res = await guestDevLogin({
-      name,
-      email,
-      phone: devPhone
-    });
-    if (!res.success) {
-      setError(res.error || 'Login failed');
     }
   };
 
@@ -76,8 +58,8 @@ export default function GuestAuthModal() {
         className="relative bg-[#FAF7F2] w-full max-w-md shadow-2xl border border-[#D5C9B8] rounded-3xl overflow-hidden my-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Header Ribbon */}
-        <div className="bg-[#17251D] px-6 py-6 text-center relative border-b border-[#B89A70]/30">
+        {/* Header Ribbon - Luxury Dark Forest Green */}
+        <div className="bg-[#17251D] px-6 py-7 text-center relative border-b border-[#B89A70]/30">
           <button
             onClick={() => setGuestAuthModalOpen(false)}
             className="absolute top-4 right-4 p-2 text-[#FAF7F2]/70 hover:text-white rounded-full transition-colors"
@@ -98,9 +80,9 @@ export default function GuestAuthModal() {
         </div>
 
         {/* Content Body */}
-        <div className="p-6 sm:p-8 space-y-5">
+        <div className="p-6 sm:p-8 space-y-6">
           {error && (
-            <div className="p-3 bg-rose-50 border border-rose-200 text-rose-800 text-xs rounded-xl font-sans">
+            <div className="p-3.5 bg-rose-50 border border-rose-200 text-rose-800 text-xs rounded-xl font-sans">
               {error}
             </div>
           )}
@@ -112,13 +94,13 @@ export default function GuestAuthModal() {
           </div>
 
           {/* Primary Action: Continue with Google Button */}
-          <div className="space-y-3 pt-2">
+          <div className="pt-2">
             <button
               onClick={handleGoogleSignIn}
-              disabled={guestLoading}
-              className="w-full flex items-center justify-center space-x-3 px-5 py-3.5 bg-white hover:bg-neutral-50 text-neutral-800 font-sans text-xs sm:text-sm font-semibold rounded-2xl border border-neutral-300 shadow-sm hover:shadow transition-all group"
+              disabled={guestLoading || loadingConfig}
+              className="w-full flex items-center justify-center space-x-3 px-5 py-4 bg-white hover:bg-neutral-50 active:scale-[0.99] text-neutral-800 font-sans text-sm font-semibold rounded-2xl border border-neutral-300 shadow-sm hover:shadow-md transition-all group cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              {/* Google Brand 'G' Icon */}
+              {/* Official Google Brand 'G' Icon */}
               <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24">
                 <path
                   fill="#4285F4"
@@ -137,95 +119,17 @@ export default function GuestAuthModal() {
                   d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"
                 />
               </svg>
-              <span>{guestLoading ? 'Connecting...' : 'Continue with Google'}</span>
+              <span>{guestLoading ? 'Connecting to Google...' : 'Continue with Google'}</span>
             </button>
           </div>
 
-          {/* Development / Demo Mode Helpers (displayed when running locally or client ID pending) */}
-          {googleConfig.devMode && (
-            <div className="pt-3 border-t border-[#D5C9B8]/60 space-y-3 font-sans">
-              <div className="flex items-center justify-between">
-                <span className="text-[10px] uppercase tracking-wider font-semibold text-[#8C7A65]">
-                  Development Demo Mode Active
-                </span>
-                <button
-                  type="button"
-                  onClick={() => setShowCustomDev(!showCustomDev)}
-                  className="text-[10px] text-[#B89A70] hover:underline"
-                >
-                  {showCustomDev ? 'Hide custom' : 'Custom account'}
-                </button>
-              </div>
-
-              {!showCustomDev ? (
-                <div className="grid grid-cols-2 gap-2 text-xs">
-                  <button
-                    type="button"
-                    onClick={() => handleQuickDevLogin('Sarah Jenkins', 'sarah.jenkins@gmail.com')}
-                    className="p-2.5 bg-white hover:bg-[#FAF7F2] border border-[#D5C9B8] rounded-xl text-left text-neutral-700 transition-colors shadow-xs"
-                  >
-                    <div className="font-semibold text-[11px] text-[#17251D]">Sarah Jenkins</div>
-                    <div className="text-[9.5px] text-neutral-500 truncate">sarah.j@gmail.com</div>
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={() => handleQuickDevLogin('Marcus Vance', 'marcus.vance@gmail.com')}
-                    className="p-2.5 bg-white hover:bg-[#FAF7F2] border border-[#D5C9B8] rounded-xl text-left text-neutral-700 transition-colors shadow-xs"
-                  >
-                    <div className="font-semibold text-[11px] text-[#17251D]">Marcus Vance</div>
-                    <div className="text-[9.5px] text-neutral-500 truncate">marcus.v@gmail.com</div>
-                  </button>
-                </div>
-              ) : (
-                <div className="p-3 bg-white border border-[#D5C9B8] rounded-2xl space-y-2 text-xs">
-                  <div>
-                    <label className="text-[10px] uppercase font-semibold text-neutral-500 block">Name</label>
-                    <input
-                      type="text"
-                      value={devName}
-                      onChange={(e) => setDevName(e.target.value)}
-                      className="w-full px-2.5 py-1.5 border border-[#D5C9B8] rounded-lg text-xs"
-                    />
-                  </div>
-                  <div>
-                    <label className="text-[10px] uppercase font-semibold text-neutral-500 block">Gmail</label>
-                    <input
-                      type="email"
-                      value={devEmail}
-                      onChange={(e) => setDevEmail(e.target.value)}
-                      className="w-full px-2.5 py-1.5 border border-[#D5C9B8] rounded-lg text-xs"
-                    />
-                  </div>
-                  <div>
-                    <label className="text-[10px] uppercase font-semibold text-neutral-500 block">Phone</label>
-                    <input
-                      type="tel"
-                      value={devPhone}
-                      onChange={(e) => setDevPhone(e.target.value)}
-                      className="w-full px-2.5 py-1.5 border border-[#D5C9B8] rounded-lg text-xs"
-                    />
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => handleQuickDevLogin(devName, devEmail)}
-                    className="w-full py-2 bg-[#17251D] text-[#FAF7F2] rounded-xl text-xs font-semibold hover:bg-black transition-colors"
-                  >
-                    Sign in with this account
-                  </button>
-                </div>
-              )}
-            </div>
-          )}
-
           {/* Privacy & Security Guarantee */}
-          <div className="pt-2 flex items-start space-x-2 text-[11px] text-[#555D56] leading-relaxed font-sans">
+          <div className="pt-3 border-t border-[#D5C9B8]/50 flex items-start space-x-2.5 text-[11px] text-[#555D56] leading-relaxed font-sans">
             <ShieldCheck className="w-4 h-4 text-[#B89A70] shrink-0 mt-0.5" />
             <span>
               Secure OAuth 2.0 authentication. We only verify your email and name. We never store or access your Google password.
             </span>
           </div>
-
         </div>
       </div>
     </div>

@@ -847,31 +847,6 @@ export function AppProvider({ children }) {
     }
   };
 
-  const guestDevLogin = async (mockData) => {
-    try {
-      setGuestLoading(true);
-      const res = await fetch('/api/auth/google/dev-login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(mockData || {})
-      });
-      const data = await res.json();
-      if (res.ok && data.success && data.token) {
-        setGuestToken(data.token);
-        setGuestUser(data.user);
-        localStorage.setItem('msr_guest_token', data.token);
-        setGuestAuthModalOpen(false);
-        loadMyBookings(data.token);
-        return { success: true, user: data.user };
-      }
-      return { success: false, error: data.error || 'Dev login failed' };
-    } catch (err) {
-      return { success: false, error: err.message };
-    } finally {
-      setGuestLoading(false);
-    }
-  };
-
   const guestLogout = async () => {
     try {
       if (guestToken) {
@@ -1327,7 +1302,6 @@ export function AppProvider({ children }) {
         createManualBooking,
         updateBooking,
         guestLoginWithGoogle,
-        guestDevLogin,
         guestLogout,
         updateGuestProfile,
         // Admin Guest Management
