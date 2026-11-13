@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: mineral-springs-retreat
+    runtime: node
+    plan: starter
+    region: singapore
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/settings
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: WHATSAPP_NOTIFICATIONS_ENABLED
+        value: "true"
+      - key: WHATSAPP_HOST_PHONE
+        value: "+919832012345"
+      - key: WHATSAPP_API_VERSION
+        value: "v21.0"
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: WHATSAPP_PHONE_NUMBER_ID
+        sync: false
+      - key: WHATSAPP_ACCESS_TOKEN
+        sync: false
+      - key: WHATSAPP_BUSINESS_ACCOUNT_ID
+        sync: false
+    disk:
+      name: msr-data
+      mountPath: /app/server/data
+      sizeGB: 1

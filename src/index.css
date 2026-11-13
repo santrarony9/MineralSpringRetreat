@@ -1,0 +1,760 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-heading: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-display: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  --font-body: "DM Sans", "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-nav: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-button: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --gold-primary: #B89D77;
+  --gold-light: #CBB08B;
+  --gold-dark: #9E825D;
+  --forest-dark: #151F18;
+  --forest-main: #1E2C22;
+  --cream-bg: #FAF7F2;
+  --ease-cozy: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 130px;
+    background-color: #FAF7F2;
+    color: #1F2220;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+
+  body {
+    background-color: #FAF7F2;
+    color: #1F2220;
+    font-family: "DM Sans", "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #B89D77;
+    color: #FFFFFF;
+  }
+
+  h1, h2, h3, h4, .font-serif, .font-heading, .font-display {
+    font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+    letter-spacing: -0.015em;
+    font-feature-settings: "kern" 1, "liga" 1, "lnum" 1, "tnum" 1;
+    font-variant-numeric: lining-nums tabular-nums;
+  }
+}
+
+/* Section scroll margins to prevent fixed header overlap across all breakpoints */
+#introduction, #stay, #experiences, #facilities, #activities, #dawaipani, #dawaipani-access, #reviews, #booking {
+  scroll-margin-top: 120px;
+}
+
+@media (max-width: 1023px) {
+  html {
+    scroll-padding-top: 68px;
+  }
+  #introduction, #stay, #experiences, #facilities, #activities, #dawaipani, #dawaipani-access, #reviews, #booking {
+    scroll-margin-top: 68px;
+  }
+}
+
+/* ========================================================================= */
+/* UNIFIED TYPOGRAPHY HIERARCHY SYSTEM                                       */
+/* ========================================================================= */
+
+/* 1. Main Hero Heading: 64–76px (Desktop), 38–44px (Mobile), Line-height: 1.05–1.15 */
+.typo-hero {
+  font-family: var(--font-heading);
+  font-size: clamp(2.375rem, 5.2vw + 1rem, 4.75rem);
+  line-height: 1.08;
+  letter-spacing: 0.035em;
+  text-wrap: balance;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+}
+
+/* 1b. Subpage Hero Title: 44–64px (Desktop), 32–40px (Mobile), Line-height: 1.08–1.15 */
+.typo-page-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.125rem, 3.8vw + 0.9rem, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+/* 2. Main Section Heading: 44–54px (Desktop), 30–36px (Mobile), Line-height: 1.15–1.25 */
+.typo-section-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3vw + 0.85rem, 3.375rem);
+  line-height: 1.16;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+/* 3. Subsection Heading: 28–34px (Desktop), 22–26px (Mobile), Line-height: 1.2–1.3 */
+.typo-subsection-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 1.6vw + 0.8rem, 2.125rem);
+  line-height: 1.24;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+/* 4. Card Heading: 22–26px (Desktop), 19–22px (Mobile), Line-height: 1.25–1.35 */
+.typo-card-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 0.8vw + 0.95rem, 1.625rem);
+  line-height: 1.26;
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
+
+/* 5. Body Text: 16–18px (Desktop), 15–16px (Mobile), Line-height: 1.7–1.9 */
+.typo-body {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 0.35vw + 0.9rem, 1.125rem);
+  line-height: 1.85;
+  font-weight: 350;
+  letter-spacing: 0.01em;
+  color: #4A524D;
+  text-wrap: pretty;
+}
+
+/* 6. Small Description: 14–15px (Desktop), 13–14px (Mobile), Line-height: 1.65–1.75 */
+.typo-small {
+  font-family: var(--font-body);
+  font-size: clamp(0.875rem, 0.2vw + 0.8rem, 0.9375rem);
+  line-height: 1.72;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-wrap: pretty;
+}
+
+/* 7. Navigation: 13–15px, DM Sans, subtle tracking */
+.typo-nav {
+  font-family: var(--font-nav);
+  font-size: clamp(0.8125rem, 0.15vw + 0.75rem, 0.9375rem);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* 8. Buttons: 13–15px, DM Sans, 600 weight, subtle tracking */
+.typo-btn {
+  font-family: var(--font-button);
+  font-size: clamp(0.8125rem, 0.15vw + 0.75rem, 0.9375rem);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Header Reserve Now Button: Refined Champagne-Gold Minimalist Luxury */
+.btn-header-reserve {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(197, 168, 128, 0.45); /* Refined champagne gold / muted beige */
+  border-radius: 2.5px; /* Softened corners (2–3px) to remove harsh boxy look */
+  background-color: rgba(184, 154, 112, 0.06); /* Blends naturally into dark forest green header */
+  color: #FAF7F2;
+  font-family: var(--font-button);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 6px 16px;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (min-width: 1280px) {
+  .btn-header-reserve {
+    font-size: 11.5px;
+    padding: 7px 18px;
+    letter-spacing: 0.15em;
+  }
+}
+
+.btn-header-reserve:hover {
+  border-color: rgba(214, 188, 151, 0.85); /* Smooth champagne border illumination */
+  background-color: rgba(184, 154, 112, 0.16); /* Subtle lighter shade on hover */
+  color: #FFFFFF;
+}
+
+.btn-header-reserve:active {
+  transform: scale(0.985);
+  background-color: rgba(184, 154, 112, 0.22);
+}
+
+/* 9. Uppercase Eyebrow / Category Tag */
+.typo-eyebrow {
+  font-family: var(--font-nav);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: #B89D77;
+}
+
+/* Card Vertical Text Alignment & Baseline Utilities */
+.card-grid-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-title-baseline {
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.28;
+}
+
+.card-desc-uniform {
+  flex: 1 1 0%;
+  line-height: 1.72;
+}
+
+/* Section Header Standardized Spacing Tokens */
+.section-header-wrap {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: clamp(3rem, 4vw, 4.5rem);
+}
+
+.section-eyebrow-gap {
+  margin-bottom: 0.75rem;
+}
+
+.section-heading-gap {
+  margin-bottom: 1rem;
+}
+
+/* ========================================================================= */
+/* UNIFIED NUMERICAL TYPOGRAPHY SYSTEM (LINING NUMERALS + TABULAR ALIGNMENT) */
+/* ========================================================================= */
+
+/* Global Lining Numbers Enforcer for Clean Baseline & Equal Cap-Height */
+.num-lining,
+.num-stat-hero,
+.num-unit-label,
+.num-card-distance,
+.num-price,
+.num-badge,
+.travel-dist-figure {
+  font-variant-numeric: lining-nums tabular-nums !important;
+  font-feature-settings: "kern" 1, "lnum" 1, "tnum" 1 !important;
+  letter-spacing: 0.01em;
+}
+
+/* Large Prominent Statistics & Hero Numbers (e.g. 6,500 ft, 70 km, 4 Meals) */
+.num-stat-hero {
+  font-family: var(--font-heading);
+  font-variant-numeric: lining-nums tabular-nums !important;
+  font-feature-settings: "kern" 1, "lnum" 1, "tnum" 1 !important;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+/* Stat Unit Label (e.g. ft, km, Meals) */
+.num-unit-label {
+  font-family: var(--font-heading);
+  font-feature-settings: "kern" 1, "lnum" 1, "tnum" 1 !important;
+  font-variant-numeric: lining-nums tabular-nums !important;
+  font-weight: 300;
+  margin-left: 0.35rem;
+  opacity: 0.9;
+  white-space: nowrap;
+}
+
+/* Card Distance Figures (e.g. 15 km, ~50 km) */
+.num-card-distance,
+.travel-dist-figure {
+  font-family: var(--font-heading);
+  font-variant-numeric: lining-nums tabular-nums !important;
+  font-feature-settings: "kern" 1, "lnum" 1, "tnum" 1 !important;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+/* Tariffs & Currency Pricing (e.g. ₹1,500, ₹1,200 – ₹1,350) */
+.num-price {
+  font-family: var(--font-heading);
+  font-variant-numeric: lining-nums tabular-nums !important;
+  font-feature-settings: "kern" 1, "lnum" 1, "tnum" 1 !important;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+/* Numerical Badges & Timers (e.g. 8:00 AM – 10:00 AM, 2.5 – 3 Hours, 4.9 Rating) */
+.num-badge {
+  font-variant-numeric: lining-nums tabular-nums !important;
+  font-feature-settings: "kern" 1, "lnum" 1, "tnum" 1 !important;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+/* CozyStay Editorial Typography Utilities */
+.font-cozy-roman {
+  font-family: "Cinzel", "Cormorant Garamond", Georgia, serif;
+}
+
+.font-cozy-serif {
+  font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+}
+
+.font-cozy-display {
+  font-family: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+}
+
+.font-cozy-sans {
+  font-family: "DM Sans", "Lato", sans-serif;
+}
+
+/* CozyStay Subtitle and Heading Styles */
+.cozy-subtitle {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-weight: 600;
+  color: #B89D77;
+}
+
+.cozy-title-large {
+  font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+/* Luxury Separator Line */
+.luxury-separator {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(184, 157, 119, 0.4) 50%, transparent 100%);
+}
+
+.luxury-card-light {
+  background-color: #FAF8F5;
+  border: 1px solid #EAE3D8;
+  box-shadow: 0 14px 34px -10px rgba(27, 36, 30, 0.06), 0 2px 6px -1px rgba(27, 36, 30, 0.03);
+  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card-light:hover {
+  border-color: rgba(184, 157, 119, 0.65);
+  box-shadow: 0 20px 40px -12px rgba(27, 36, 30, 0.1), 0 4px 10px -2px rgba(27, 36, 30, 0.04);
+}
+
+.luxury-card-dark {
+  background: radial-gradient(ellipse at top, #1F2D23 0%, #141C16 100%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 22px 48px -15px rgba(0, 0, 0, 0.45);
+  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card-dark:hover {
+  border-color: rgba(184, 157, 119, 0.45);
+  box-shadow: 0 26px 54px -15px rgba(0, 0, 0, 0.55), 0 0 20px rgba(184, 157, 119, 0.12);
+}
+
+/* ========================================================================= */
+/* COZYSTAY BOUTIQUE HOTEL ANIMATIONS & INTERACTION SYSTEM                  */
+/* ========================================================================= */
+
+/* Luxury Hotel Easing */
+:root {
+  --ease-cozy: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Scroll Reveal Base */
+.reveal-init {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-active {
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) !important;
+}
+
+/* Natural Stagger Delays */
+.reveal-delay-1 { transition-delay: 100ms; }
+.reveal-delay-2 { transition-delay: 200ms; }
+.reveal-delay-3 { transition-delay: 300ms; }
+.reveal-delay-4 { transition-delay: 400ms; }
+.reveal-delay-5 { transition-delay: 500ms; }
+
+/* Image Reveal & Scale */
+.reveal-img-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.reveal-img {
+  transform: scale(1.06);
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.reveal-active .reveal-img,
+.reveal-active.reveal-img {
+  transform: scale(1);
+}
+
+/* Hero Slow Cinematic Drift */
+@keyframes heroSlowZoom {
+  0% {
+    transform: scale(1.07) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.02) translate3d(0, 0, 0);
+  }
+}
+
+.animate-hero-drift {
+  animation: heroSlowZoom 14s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform;
+}
+
+/* Navigation Link Underline Animation */
+.nav-link-cozy {
+  position: relative;
+  white-space: nowrap;
+  display: inline-block;
+  transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link-cozy::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: #B89A70;
+  box-shadow: 0 0 6px rgba(184, 154, 112, 0.4);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link-cozy:hover::after,
+.nav-link-cozy.is-active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Inset Gold Frame for CozyStay Cards */
+.cozy-inset-frame {
+  position: absolute;
+  top: 14px;
+  bottom: 14px;
+  left: 14px;
+  right: 14px;
+  border: 1px solid rgba(197, 168, 128, 0.55);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+  z-index: 20;
+  transition: border-color 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .cozy-inset-frame {
+  border-color: rgba(245, 238, 228, 0.95);
+  box-shadow: inset 0 0 28px rgba(0, 0, 0, 0.4);
+  transform: scale(0.985);
+}
+
+/* Arrow Glide Micro-interaction */
+.arrow-glide {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .arrow-glide {
+  transform: translateX(4px);
+}
+
+/* Eyebrow tag */
+.cozy-eyebrow {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.26em;
+  font-weight: 600;
+  color: #B89D77;
+}
+
+/* CozyStay Buttons (Refined Luxury Champagne Satin Finish) */
+.cozy-btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+  gap: 8px;
+  background: linear-gradient(135deg, #CBB08B 0%, #B89D77 50%, #A6875E 100%);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  color: #FFFFFF;
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(0.8125rem, 0.15vw + 0.75rem, 0.9375rem);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 13px 30px;
+  box-shadow: 0 4px 14px -2px rgba(184, 157, 119, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cozy-btn-gold:hover {
+  background: linear-gradient(135deg, #D6BC97 0%, #C5A880 50%, #B29267 100%);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -4px rgba(184, 157, 119, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.cozy-btn-outline-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+  gap: 8px;
+  background-color: rgba(18, 22, 19, 0.35);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(184, 157, 119, 0.85);
+  color: #FFFFFF;
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(0.8125rem, 0.15vw + 0.75rem, 0.9375rem);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 10px 24px;
+  box-shadow: inset 0 0 12px rgba(184, 157, 119, 0.08);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cozy-btn-outline-box:hover {
+  background: linear-gradient(135deg, #C5A880 0%, #B89D77 100%);
+  color: #121613;
+  border-color: #D4AF37;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -3px rgba(184, 157, 119, 0.4);
+}
+
+.cozy-btn-sand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #D4BA95 0%, #C5A880 50%, #B4946A 100%);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #151F18;
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(0.8125rem, 0.15vw + 0.75rem, 0.9375rem);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 13px 28px;
+  border-radius: 9999px;
+  box-shadow: 0 6px 20px -3px rgba(197, 168, 128, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cozy-btn-sand:hover {
+  background: #FAF8F5;
+  color: #1E2C22;
+  border-color: #C5A880;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px -4px rgba(21, 31, 24, 0.18);
+}
+
+.cozy-btn-outline-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #FFFFFF;
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(0.8125rem, 0.15vw + 0.75rem, 0.9375rem);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 12px 26px;
+  border-radius: 9999px;
+  transition: all 0.35s ease;
+}
+
+.cozy-btn-outline-light:hover {
+  border-color: #C5A880;
+  color: #FAF8F5;
+  background-color: rgba(184, 157, 119, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px -3px rgba(0, 0, 0, 0.2);
+}
+
+.cozy-btn-forest {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(145deg, #243529 0%, #1A261D 100%);
+  border: 1px solid rgba(197, 168, 128, 0.35);
+  color: #FAF7F2;
+  font-family: var(--font-button);
+  font-size: clamp(0.8125rem, 0.15vw + 0.75rem, 0.9375rem);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 13px 28px;
+  border-radius: 9999px;
+  box-shadow: 0 6px 18px -3px rgba(21, 31, 24, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cozy-btn-forest:hover {
+  background: linear-gradient(135deg, #C5A880 0%, #B89D77 100%);
+  color: #121613;
+  border-color: #D4AF37;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -4px rgba(184, 157, 119, 0.4);
+}
+
+.cozy-btn-outline-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: transparent;
+  color: #1E2C22;
+  border: 1px solid rgba(184, 157, 119, 0.75);
+  font-family: var(--font-button);
+  font-size: clamp(0.8125rem, 0.15vw + 0.75rem, 0.9375rem);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 12px 26px;
+  border-radius: 9999px;
+  transition: all 0.35s ease;
+}
+
+.cozy-btn-outline-dark:hover {
+  background-color: #1E2C22;
+  color: #FAF7F2;
+  border-color: #1E2C22;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -3px rgba(30, 44, 34, 0.25);
+}
+
+/* Image Hover Zoom */
+.img-zoom-container {
+  overflow: hidden;
+}
+.img-zoom-container img {
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.img-zoom-container:hover img {
+  transform: scale(1.04);
+}
+
+/* Backward compatibility for any remaining wix-pill classes */
+.wix-pill-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 42px;
+  padding: 0 24px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+.wix-pill-button-black {
+  background-color: #1E2C22;
+  color: #FFFFFF;
+}
+.wix-pill-button-black:hover {
+  background-color: #C5A880;
+  color: #151F18;
+}
+.wix-pill-button-white {
+  background-color: #FFFFFF;
+  color: #1E2C22;
+  border: 1px solid #E6DFD5;
+}
+.wix-pill-button-white:hover {
+  background-color: #1E2C22;
+  color: #FFFFFF;
+}
+
+/* Accessible reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Backward compatibility for any remaining wix-pill classes */
+.wix-pill-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 42px;
+  padding: 0 24px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+.wix-pill-button-black {
+  background-color: #1E2C22;
+  color: #FFFFFF;
+}
+.wix-pill-button-black:hover {
+  background-color: #C5A880;
+  color: #151F18;
+}
+.wix-pill-button-white {
+  background-color: #FFFFFF;
+  color: #1E2C22;
+  border: 1px solid #E6DFD5;
+}
+.wix-pill-button-white:hover {
+  background-color: #1E2C22;
+  color: #FFFFFF;
+}
+
+/* Accessible reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

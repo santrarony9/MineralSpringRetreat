@@ -1,0 +1,1178 @@
+{
+  "settings": {
+    "homestayName": "MINERAL SPRINGS RETREAT",
+    "eyebrow": "MINERAL SPRINGS RETREAT · DAWAIPANI",
+    "heroTitle": "Where the Clouds\nRest Upon the\nMountain Mist",
+    "tagline": "Rustic Mountain Eco-Stay in Dawaipani, Darjeeling",
+    "subtagline": "Simple, clean, and comfortable accommodation nestled amidst natural mineral springs, tea garden landscapes, and views of Mount Kanchenjunga.",
+    "section1Heading": "Rustic Mountain Eco-Stay",
+    "section1Text": "Mineral Springs Retreat is a peaceful eco-stay offering an authentic mountain experience in Dawaipani. We provide simple, clean, and comfortable accommodation with attached Western-style toilets, geysers for hot water, basic essential amenities, and private balconies where you can watch the magical afternoon mist drift gently into your room.",
+    "section2Heading": "Home-Cooked Gorkha & Nepali Meals",
+    "section2Text": "Enjoy traditional, heartwarming home-style Gorkha and Nepali meals freshly prepared with locally harvested ingredients. Every reservation includes our full 4-meal plan: hearty breakfast, wholesome lunch, evening snacks & Himalayan tea, and warming dinner.",
+    "section3Heading": "Afternoon Mist & Panoramic Vistas",
+    "section3Text": "Perched on the tranquil slopes of Dawaipani, our retreat commands sweeping vistas of Mount Kanchenjunga on clear days. By evening, witness the breathtaking sparkling lights of Darjeeling town and Namchi illuminating the valley below.",
+    "perksHeading": "The Mineral Springs\nExperience",
+    "heroImage": "/images/mineral-springs/dawaipani-balcony-valley-vista.jpg",
+    "section1Image": "/images/mineral-springs/retreat-main-cottage-facade.jpg",
+    "section2Image": "/images/mineral-springs/retreat-covered-porch-lantern.jpg",
+    "section3Image": "/images/mineral-springs/retreat-hillside-eco-cottage.jpg",
+    "phone": "+91 98320 12345",
+    "email": "stay@mineralspringsretreat.com",
+    "whatsapp": "+919832012345",
+    "address": "Mineral Springs, Yankoo, Dawaipani, Lebong and Mineral Spring Tea Garden, West Bengal – 734105, India",
+    "hours": "Open 7 Days: 7am - 9pm",
+    "checkInTime": "12:00 PM",
+    "checkOutTime": "11:00 AM",
+    "googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14197.647313883734!2d88.2917!3d27.0543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e6a575a7f29c41%3A0x6b3f749553755b46!2sDawaipani%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
+    "officialName": "Mineral Springs Retreat",
+    "propertyCategory": "Homestay in Lebong and Mineral Spring Tea Garden, West Bengal",
+    "pincode": "734105",
+    "googleDirectionsUrl": "https://www.google.com/search?sa=X&q=mineral+springs+retreat+dawaipani+address&ludocid=12917762238512786598",
+    "googleReviewsUrl": "https://www.google.com/travel/search?q=mineral+springs+retreat+dawaipani",
+    "googleReviewCount": 19,
+    "googleRating": 4.9,
+    "whatsappNotificationConfig": {
+      "enabled": true,
+      "hostPhone": "+919832012345",
+      "phoneNumberId": "placeholder_phone_number_id",
+      "businessAccountId": "placeholder_business_account_id",
+      "apiVersion": "v21.0",
+      "updatedAt": "2026-11-12T14:36:34.729Z"
+    }
+  },
+  "tariffDetails": {
+    "doubleSharing": {
+      "title": "Double Sharing",
+      "rate": "Approx. ₹1,500",
+      "rateNum": 1500,
+      "unit": "per person / night",
+      "description": "Ideal for couples or two travel companions. Includes clean comfortable stay and all four meals."
+    },
+    "groupSharing": {
+      "title": "Triple / Group Sharing",
+      "rate": "Approx. ₹1,200 – ₹1,350",
+      "rateNum": 1250,
+      "unit": "per person / night",
+      "description": "Perfect for families, groups of friends, and trekking parties. Includes clean comfortable stay and all four meals."
+    },
+    "mealPlan": [
+      {
+        "meal": "Breakfast",
+        "desc": "Fresh hot breakfast with mountain tea/coffee"
+      },
+      {
+        "meal": "Lunch",
+        "desc": "Authentic Nepali/Gorkha thali with local organic vegetables, dal, and rice"
+      },
+      {
+        "meal": "Evening Snacks",
+        "desc": "Crisp local savories, pakoras, and steaming Darjeeling tea"
+      },
+      {
+        "meal": "Dinner",
+        "desc": "Comforting home-cooked dinner prepared fresh every evening"
+      }
+    ],
+    "note": "Rates are indicative and may vary depending on season, availability and group size. Please contact us to confirm the latest tariff."
+  },
+  "travelInfo": {
+    "roadConditions": {
+      "title": "Road Conditions",
+      "summary": "The final approach road to Dawaipani village is steep, narrow, and rough in places.",
+      "advice": "A suitable rugged vehicle, such as a Bolero or Sumo, is strongly recommended. Guests should coordinate with the property before travelling to confirm current road conditions and suitable transport."
+    },
+    "foodConveniences": {
+      "title": "Food & Local Conveniences",
+      "summary": "Traditional Gorkha/Nepali home-cooked meals prepared with local ingredients.",
+      "advice": "The food experience is authentic and home-style. Please note that there are no major commercial markets or luxury restaurants within easy walking distance. Guests should plan and purchase their essential personal items before reaching the property."
+    },
+    "howToReach": [
+      {
+        "from": "NJP Railway Station",
+        "distance": "Approx. 70 km",
+        "duration": "2.5 – 3 Hours",
+        "details": "Journey time depends on mountain road and weather conditions. Bolero / Sumo transfer can be coordinated."
+      },
+      {
+        "from": "Bagdogra Airport",
+        "distance": "Approx. 70 km",
+        "duration": "2.5 – 3 Hours",
+        "details": "Direct scenic mountain drive via Rohini or Pankhabari routes. Coordinate with us for trusted local transport."
+      },
+      {
+        "from": "Via Darjeeling Town",
+        "distance": "Approx. 18 km",
+        "duration": "45 – 60 Minutes",
+        "details": "Guests can first reach Darjeeling town and then hire a local 4WD / rugged vehicle for the journey to the retreat."
+      }
+    ]
+  },
+  "perks": [
+    {
+      "id": "medicinal-springs",
+      "title": "Medicinal Water Springs",
+      "description": "The name Dawaipani translates to 'medicated water' in local heritage. The village is associated with local streams and natural mineral water springs that have historically been believed by local communities to have rejuvenating properties.",
+      "image": "/images/mineral-springs/retreat-wooden-balcony-guitar.jpg",
+      "color": "#F2DC8D"
+    },
+    {
+      "id": "waterfalls-trekking",
+      "title": "Trekking & Hidden Waterfalls",
+      "description": "Explore winding village trails, discover pristine natural waterfalls, and trek along nearby riverbanks such as the Rung Dung River. Walks and treks should be undertaken with local guidance where necessary.",
+      "image": "/images/mineral-springs/retreat-cottages-mountain-slope.jpg",
+      "color": "#F55956"
+    },
+    {
+      "id": "kanchenjunga-views",
+      "title": "Panoramic Kanchenjunga",
+      "description": "On clear days, visitors can enjoy spectacular panoramic views of Mount Kanchenjunga. At night, marvel at the glittering lights of Darjeeling town and Namchi across the valley.",
+      "image": "/images/mineral-springs/dawaipani-balcony-valley-vista.jpg",
+      "color": "#8A7636"
+    },
+    {
+      "id": "tea-garden-walks",
+      "title": "Tea Garden & Village Walks",
+      "description": "The retreat is surrounded by the broader Lebong and Mineral Spring Tea Garden landscape. Enjoy morning walks through tea gardens, bird-watching, and peaceful village paths.",
+      "image": "/images/mineral-springs/retreat-covered-porch-lantern.jpg",
+      "color": "#8DC3DF"
+    },
+    {
+      "id": "bonfire-gatherings",
+      "title": "Bonfire & Mountain Barbecue",
+      "description": "Gather beneath the crisp mountain night sky. Bonfire and barbecue arrangements are available on request, subject to weather conditions and availability.",
+      "image": "/images/mineral-springs/retreat-patio-deck-lounge.jpg",
+      "color": "#EC6A9B"
+    }
+  ],
+  "rooms": [
+    {
+      "id": "double-sharing",
+      "name": "Double Sharing Eco Room",
+      "tagline": "Simple, clean & comfortable rustic mountain room with private balcony",
+      "description": "An intimate, peaceful eco-room offering a genuine mountain retreat. Includes clean comfortable double bedding, attached Western-style toilet with hot water geyser, essential amenities, and a private balcony where magical afternoon mist drifts into the room.",
+      "pricePerNight": 3000,
+      "pricePerPerson": 1500,
+      "sharingType": "Double Sharing (~₹1,500/person)",
+      "capacity": 2,
+      "maxGuests": 2,
+      "bed": "1 Double Bed",
+      "size": "280 sq. ft.",
+      "mealsIncluded": "All 4 Meals (Breakfast, Lunch, Evening Snacks & Tea, Dinner)",
+      "images": [
+        "/images/mineral-springs/room-double-sharing-balcony.jpg",
+        "/images/mineral-springs/room-reading-nook-corner.jpg",
+        "/images/mineral-springs/room-misty-balcony-morning.jpg"
+      ],
+      "facilities": [
+        "Clean and comfortable room",
+        "Attached Western-style toilet",
+        "Geyser for 24/7 hot water",
+        "Private balcony with mountain views",
+        "Afternoon mist flowing through balcony",
+        "All 4 home-cooked meals included",
+        "Basic essential amenities"
+      ],
+      "policies": [
+        "Approx. ₹1,500 per person per night (Double Sharing)",
+        "Includes 4 meals: Breakfast, Lunch, Evening Snacks, Dinner",
+        "Rates are indicative and may vary depending on season, availability and group size"
+      ],
+      "totalUnits": 2
+    },
+    {
+      "id": "group-sharing",
+      "name": "Triple / Group Sharing Room",
+      "tagline": "Spacious mountain accommodation for families, friends and trekking groups",
+      "description": "A spacious rustic eco-room designed for families and travel groups. Features multiple comfortable beds, attached Western-style toilet with geyser, basic essential amenities, and balcony views over the rolling green ridges.",
+      "pricePerNight": 3750,
+      "pricePerPerson": 1250,
+      "sharingType": "Triple / Group Sharing (~₹1,200 – ₹1,350/person)",
+      "capacity": 3,
+      "maxGuests": 5,
+      "bed": "1 Double Bed + 2 Single Beds",
+      "size": "380 sq. ft.",
+      "mealsIncluded": "All 4 Meals (Breakfast, Lunch, Evening Snacks & Tea, Dinner)",
+      "images": [
+        "/images/mineral-springs/room-group-family-suite.jpg",
+        "/images/mineral-springs/room-twin-balcony-view.jpg",
+        "/images/mineral-springs/room-green-feature-wall.jpg"
+      ],
+      "facilities": [
+        "Clean and comfortable group layout",
+        "Attached Western-style toilet",
+        "Geyser for 24/7 hot water",
+        "Spacious balcony with valley panorama",
+        "Magical mountain mist experience",
+        "All 4 home-cooked meals included",
+        "Basic essential amenities"
+      ],
+      "policies": [
+        "Approx. ₹1,200 – ₹1,350 per person per night (Group Sharing)",
+        "Includes 4 meals: Breakfast, Lunch, Evening Snacks, Dinner",
+        "Rates are indicative and may vary depending on season, availability and group size"
+      ],
+      "totalUnits": 2
+    }
+  ],
+  "inquiries": [],
+  "gallery": [
+    {
+      "id": "gal-1",
+      "title": "Double Sharing Bedroom with Balcony Doors",
+      "category": "Rooms",
+      "image": "/images/mineral-springs/room-double-sharing-balcony.jpg",
+      "aspect": "wide"
+    },
+    {
+      "id": "gal-2",
+      "title": "Retreat Main Cottage & Forest Canopy",
+      "category": "Property",
+      "image": "/images/mineral-springs/retreat-main-cottage-facade.jpg",
+      "aspect": "tall"
+    },
+    {
+      "id": "gal-3",
+      "title": "Verandah with Acoustic Guitar & Valley View",
+      "category": "Property",
+      "image": "/images/mineral-springs/retreat-wooden-balcony-guitar.jpg",
+      "aspect": "wide"
+    },
+    {
+      "id": "gal-4",
+      "title": "Balcony View of Layered Himalayan Ridges",
+      "category": "Surroundings",
+      "image": "/images/mineral-springs/dawaipani-balcony-valley-vista.jpg",
+      "aspect": "square"
+    },
+    {
+      "id": "gal-5",
+      "title": "Covered Porch with Vintage Lantern",
+      "category": "Property",
+      "image": "/images/mineral-springs/retreat-covered-porch-lantern.jpg",
+      "aspect": "square"
+    },
+    {
+      "id": "gal-6",
+      "title": "Outdoor Patio Deck & Mountain Lounge",
+      "category": "Property",
+      "image": "/images/mineral-springs/retreat-patio-deck-lounge.jpg",
+      "aspect": "tall"
+    },
+    {
+      "id": "gal-7",
+      "title": "Family Suite with Balcony Doors",
+      "category": "Rooms",
+      "image": "/images/mineral-springs/room-group-family-suite.jpg",
+      "aspect": "wide"
+    },
+    {
+      "id": "gal-8",
+      "title": "Cottages Along the Garden Slope",
+      "category": "Property",
+      "image": "/images/mineral-springs/retreat-cottages-mountain-slope.jpg",
+      "aspect": "square"
+    }
+  ],
+  "experiences": [
+    {
+      "id": "exp-1",
+      "title": "Balcony Valley Vistas & Morning Clouds",
+      "category": "Views",
+      "description": "Watch silken clouds flow right across your private balcony as the early sun illuminates the rolling mountain ridges.",
+      "image": "/images/mineral-springs/dawaipani-balcony-valley-vista.jpg",
+      "timing": "Morning & Evening",
+      "highlight": "Panoramic Mountain Ridges"
+    },
+    {
+      "id": "exp-2",
+      "title": "Verandah Corridor & Peaceful Living",
+      "category": "Lifestyle",
+      "description": "Unwind on wide wooden verandahs with acoustic guitar, handcrafted rugs, and endless views of forest greenery.",
+      "image": "/images/mineral-springs/retreat-wooden-balcony-guitar.jpg",
+      "timing": "Afternoons",
+      "highlight": "Serene Mountain Verandahs"
+    },
+    {
+      "id": "exp-3",
+      "title": "Hillside Eco Cottages in Pine Forest",
+      "category": "Architecture",
+      "description": "Authentic wooden stilt cottages nestled directly against pine forest slopes in harmony with Himalayan nature.",
+      "image": "/images/mineral-springs/retreat-hillside-eco-cottage.jpg",
+      "timing": "All Day",
+      "highlight": "Eco Stilt Architecture"
+    },
+    {
+      "id": "exp-4",
+      "title": "Terraced Cottages & Garden Walks",
+      "category": "Nature",
+      "description": "Walk among red-roofed cottages connected by rustic stone steps, native blooms, and organic mountain flora.",
+      "image": "/images/mineral-springs/retreat-cottages-mountain-slope.jpg",
+      "timing": "Morning Walks",
+      "highlight": "Mountain Garden Paths"
+    },
+    {
+      "id": "exp-5",
+      "title": "Deck Bonfire & Mountain Barbecue",
+      "category": "Evening",
+      "description": "Gather around crackling timber embers on our open wooden patio deck under starlit Himalayan night skies.",
+      "image": "/images/mineral-springs/retreat-patio-deck-lounge.jpg",
+      "timing": "Evenings on Request",
+      "highlight": "Open Timber Deck Lounge"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "rev-google-1",
+      "name": "Joyeeta Guha",
+      "comment": "The food was so good, home like.",
+      "rating": 5,
+      "source": "Google Review",
+      "verified": true,
+      "stayType": "Verified Google Guest",
+      "date": "Google Review"
+    },
+    {
+      "id": "rev-google-2",
+      "name": "Milton Music",
+      "comment": "Highly recommended for anyone looking for a relaxing and enjoyable getaway!",
+      "rating": 5,
+      "source": "Google Review",
+      "verified": true,
+      "stayType": "Verified Google Guest",
+      "date": "Google Review"
+    },
+    {
+      "id": "rev-google-3",
+      "name": "Sanju Sur",
+      "comment": "If u want to spend some time with urself amidst nature, its the place.",
+      "rating": 5,
+      "source": "Google Review",
+      "verified": true,
+      "stayType": "Verified Google Guest",
+      "date": "Google Review"
+    }
+  ],
+  "users": [
+    {
+      "id": "usr-admin-1",
+      "username": "admin",
+      "email": "stay@mineralspringsretreat.com",
+      "passwordHash": "dffa2f2badf5d6f93c3f16a58b523d52:7bcc904da6db992b72d758276d799492c0dc1cae602ae8a5a8047e0a96181a4b20851c3cced35d0891bd8492d8b4041644e8be0dfad22e5ae3a513dc47fb9fac",
+      "role": "superadmin",
+      "createdAt": "2026-11-12T10:55:06.672Z",
+      "updatedAt": "2026-11-12T10:55:26.204Z",
+      "lastLoginAt": "2026-11-13T08:16:19.836Z",
+      "name": "Website Owner",
+      "status": "active",
+      "phone": "+91 98320 12345"
+    }
+  ],
+  "sessions": [],
+  "auditLogs": [],
+  "passwordResets": [],
+  "pages": {
+    "home": {
+      "hero": {
+        "badge": "BOUTIQUE RETREAT OFFERING TIMELESS HIMALAYAN TRANQUILITY",
+        "title": "A Peaceful Escape in the\nHeart of the Mountains",
+        "subtitle": "",
+        "image": "/images/mineral-springs/dawaipani-balcony-valley-vista.jpg",
+        "stats": [
+          {
+            "id": "stat-1",
+            "value": "6,500",
+            "unit": "ft",
+            "label": "RETREAT ALTITUDE"
+          },
+          {
+            "id": "stat-2",
+            "value": "4",
+            "unit": "Meals",
+            "label": "DAILY INCLUDED"
+          },
+          {
+            "id": "stat-3",
+            "value": "70",
+            "unit": "km",
+            "label": "FROM NJP & BAGDOGRA"
+          }
+        ]
+      },
+      "intro": {
+        "eyebrow": "HIMALAYAN SERENITY MEETS RUSTIC COMFORT",
+        "heading": "Mineral Springs Retreat in the heart of the mountains is an authentic sanctuary offering simple, clean accommodations with unrivaled tea garden walks and valley peace.",
+        "paragraph": "Perched at 6,500 feet in the serene village of Dawaipani, overlooking Mount Kanchenjunga and the expansive Lebong tea gardens. Unwind in quiet rustic rooms, savor traditional home-cooked meals, and experience the spellbinding afternoon clouds drifting through your private balcony.",
+        "images": [
+          {
+            "src": "/images/mineral-springs/retreat-main-cottage-facade.jpg",
+            "alt": "Mineral Springs Retreat wooden cottage with lace trim nestled in pine hills",
+            "caption": "Main Mountain Cottage Facade"
+          },
+          {
+            "src": "/images/mineral-springs/retreat-wooden-balcony-guitar.jpg",
+            "alt": "Peaceful wooden verandah with acoustic guitar and mountain valley views",
+            "caption": "Verandah Overlooking the Valley"
+          },
+          {
+            "src": "/images/mineral-springs/retreat-cottages-mountain-slope.jpg",
+            "alt": "Red-roofed retreat cottages terraced on mountain garden slope",
+            "caption": "Cottages Along the Garden Slope"
+          },
+          {
+            "src": "/images/mineral-springs/retreat-patio-deck-lounge.jpg",
+            "alt": "Outdoor timber patio deck with cushioned lounge seating",
+            "caption": "Patio Deck & Fireside Lounge"
+          },
+          {
+            "src": "/images/mineral-springs/retreat-hillside-eco-cottage.jpg",
+            "alt": "Traditional wooden hillside cottage on stilts nested in pine forest",
+            "caption": "Hillside Stilt Eco-Cottage"
+          }
+        ]
+      },
+      "facilities": {
+        "eyebrow": "COMFORTS & ESSENTIALS",
+        "heading": "Thoughtful Himalayan Hospitality",
+        "subtitle": "Everything you need for an authentic, comfortable and restorative stay in the quiet hills of Dawaipani.",
+        "items": [
+          {
+            "title": "Attached Western Toilets",
+            "desc": "Clean, sanitized ensuite Western toilets in all rooms with geysers for 24/7 hot water."
+          },
+          {
+            "title": "Panoramic Private Balconies",
+            "desc": "Sit back and watch afternoon mist and clouds roll right past your bedroom window."
+          },
+          {
+            "title": "All 4 Daily Meals Included",
+            "desc": "Freshly cooked local Gorkha and Nepali cuisine prepared from village-harvested organic ingredients."
+          },
+          {
+            "title": "Tea Garden & Pine Forest Trails",
+            "desc": "Direct access to Lebong tea estate walking paths and fragrant pine forest walking tracks."
+          }
+        ]
+      },
+      "activities": {
+        "eyebrow": "LOCAL LIVING & DISCOVERY",
+        "heading": "Immerse in Mountain Life",
+        "subtitle": "Experience the authentic rhythms of Himalayan village life in Dawaipani.",
+        "items": [
+          {
+            "title": "Kanchenjunga Sunrise Walks",
+            "desc": "Wake up to breathtaking golden sunrises over the Kanchenjunga mountain range."
+          },
+          {
+            "title": "Lebong Tea Garden Treks",
+            "desc": "Gentle hillside walks through historic tea garden slopes with local village guides."
+          },
+          {
+            "title": "Evening Deck Bonfires",
+            "desc": "Cozy fireside gatherings under starlit Himalayan skies with hot tea and snacks."
+          }
+        ]
+      },
+      "bookingCTA": {
+        "eyebrow": "BEGIN YOUR HIMALAYAN JOURNEY",
+        "heading": "Ready to Experience Dawaipani?",
+        "subtitle": "Book your stay at Mineral Springs Retreat today. Simple rustic rooms, delicious home-cooked meals, and breathtaking mountain vistas await.",
+        "buttonText": "CHECK AVAILABILITY & RESERVE"
+      }
+    },
+    "about": {
+      "heroTitle": "Our Himalayan Sanctuary",
+      "heroSubtitle": "A peaceful retreat born from mountain heritage and natural mineral springs.",
+      "storyHeading": "Living in Harmony with Nature",
+      "storyParagraph1": "Mineral Springs Retreat was established as an authentic sanctuary in the tranquil hamlet of Dawaipani, approximately 15 km from Darjeeling town. Surrounded by dense pine forests and the emerald slopes of the Lebong tea gardens, our retreat offers travelers a peaceful refuge from urban haste.",
+      "storyParagraph2": "Our architecture honors traditional Himalayan timber craftsmanship, with rustic wooden verandas, locally sourced pine finishes, and private balconies that frame uninterrupted vistas of Mount Kanchenjunga. Here, the afternoons bring gentle clouds flowing through your room, and evenings bring glowing village lights and starlit skies.",
+      "values": [
+        {
+          "title": "Authentic Hospitality",
+          "desc": "Warm family hosting rooted in traditional Gorkha warmth and personalized care."
+        },
+        {
+          "title": "Organic Mountain Dining",
+          "desc": "Wholesome 4-meal daily dining prepared with organic farm ingredients."
+        },
+        {
+          "title": "Ecological Respect",
+          "desc": "Sustainable mountain living preserving the natural mineral springs."
+        }
+      ]
+    },
+    "dawaipani": {
+      "badge": "THE HIMALAYAN VILLAGE",
+      "title": "Discover Dawaipani",
+      "subtitle": "A secluded hill village perched at 6,500 ft, renowned for panoramic Kanchenjunga views, pure mountain air, and tranquil tea estates.",
+      "elevation": "6,500 ft",
+      "distanceFromDarjeeling": "15 km",
+      "weatherHighlights": "Cool summers (15°C – 22°C), crisp misty monsoons, and clear cold winters (2°C – 12°C) with spectacular snow-capped views.",
+      "sections": [
+        {
+          "heading": "The Name & History",
+          "text": "Dawaipani translates literally to 'Medicinal Water' in Nepali, named after the natural therapeutic mineral springs that flow through the surrounding forests. Travelers historically came to these hills seeking the rejuvenating qualities of its pure spring waters and undisturbed pine canopy."
+        },
+        {
+          "heading": "Kanchenjunga Panoramic Vista",
+          "text": "Unlike crowded hill stations, Dawaipani offers an unobstructed, 180-degree panorama of Mount Kanchenjunga and its sibling peaks. On crisp mornings, witness the world's third highest peak turn from deep violet to glistening Himalayan gold."
+        },
+        {
+          "heading": "Lebong Mineral Spring Tea Estate",
+          "text": "The retreat borders the historic Lebong and Mineral Spring Tea Gardens. Guests can take guided nature walks through terraced organic tea slopes, observe artisan leaf plucking, and breathe in the distinctive floral fragrance of Darjeeling tea in flush."
+        }
+      ]
+    },
+    "stay": {
+      "title": "Rooms & Accommodations",
+      "subtitle": "Simple, clean, and comfortable rustic rooms with private balconies and inclusive 4-meal plans.",
+      "mealPlanNotice": "Every reservation includes all 4 daily home-cooked meals: Morning Breakfast, Wholesome Lunch, Evening Tea & Snacks, and Warming Dinner.",
+      "policiesHeading": "Accommodation Inclusions & Policies",
+      "checkInTime": "12:00 PM",
+      "checkOutTime": "11:00 AM",
+      "rules": [
+        "Check-in at 12:00 PM; Check-out at 11:00 AM.",
+        "Rates are per person per night and include all 4 daily meals.",
+        "Attached Western toilets with 24/7 hot geyser water in all rooms.",
+        "Advance booking is recommended during peak Kanchenjunga viewing seasons."
+      ]
+    },
+    "experiences": {
+      "title": "Curated Mountain Experiences",
+      "subtitle": "From mist-bathed morning balconies to starlit deck bonfires and tea garden walks.",
+      "introText": "Every moment at Mineral Springs Retreat is crafted around the quiet wonder of the Himalayas. Immerse yourself in authentic village walks, music on the timber verandah, and heartfelt conversations with your local hosts."
+    },
+    "gallery": {
+      "title": "Retreat & Landscape Gallery",
+      "subtitle": "Visual glimpses of our wooden cottages, mountain balconies, misty sunrises, and serene surroundings.",
+      "categories": [
+        "All",
+        "Architecture",
+        "Rooms",
+        "Nature",
+        "Lifestyle"
+      ]
+    },
+    "travel": {
+      "title": "Travel & Route Guide",
+      "subtitle": "How to reach Mineral Springs Retreat in Dawaipani from major transit hubs.",
+      "altitudeWarning": "Dawaipani is located at 6,500 ft elevation. The final 3 km approach follows a scenic mountain road. 4WD / high-clearance vehicles are recommended during monsoon months.",
+      "distances": [
+        {
+          "destination": "New Jalpaiguri (NJP) Railway Station",
+          "distance": "70 km",
+          "time": "Approx. 3.5 – 4 hours drive",
+          "route": "Via Siliguri – Kurseong – Jorebungalow – Dawaipani"
+        },
+        {
+          "destination": "Bagdogra International Airport (IXB)",
+          "distance": "75 km",
+          "time": "Approx. 4 hours drive",
+          "route": "Via Siliguri – Rohini / Mirik or Kurseong"
+        },
+        {
+          "destination": "Darjeeling Town (Mall / Chowrasta)",
+          "distance": "15 km",
+          "time": "Approx. 45 – 55 minutes drive",
+          "route": "Via Lebong Cart Road"
+        },
+        {
+          "destination": "Kalimpong Hill Station",
+          "distance": "50 km",
+          "time": "Approx. 2.5 hours drive",
+          "route": "Via Teesta Bazaar and Peshok Road"
+        },
+        {
+          "destination": "Gangtok, Sikkim",
+          "distance": "78 km",
+          "time": "Approx. 3.5 – 4 hours drive",
+          "route": "Via Rangpo and Teesta"
+        }
+      ],
+      "taxiAssistanceText": "We can arrange reliable local pick-up and drop-off taxis from NJP Railway Station, Siliguri, and Bagdogra Airport upon request."
+    },
+    "reservation": {
+      "title": "Reserve Your Stay",
+      "subtitle": "Experience rustic tranquility with all 4 home-cooked meals included.",
+      "inquiryInstructions": "Submit your preferred dates and room choice below. Our reservations desk will confirm availability and send you booking confirmation directly via WhatsApp or Email.",
+      "cancellationPolicy": "Full refund for cancellations made 7 or more days prior to check-in. 50% refund for cancellations within 3-6 days. No refund for cancellations within 48 hours."
+    },
+    "header": {
+      "brandTitle": "MINERAL SPRINGS",
+      "brandSubtitle": "RETREAT",
+      "starsCount": 5,
+      "navItems": [
+        {
+          "id": "home",
+          "label": "HOME",
+          "visible": true
+        },
+        {
+          "id": "about",
+          "label": "ABOUT",
+          "visible": true
+        },
+        {
+          "id": "dawaipani",
+          "label": "DAWAIPANI",
+          "visible": true
+        },
+        {
+          "id": "stay",
+          "label": "STAY",
+          "visible": true
+        },
+        {
+          "id": "experiences",
+          "label": "EXPERIENCES",
+          "visible": true
+        },
+        {
+          "id": "gallery",
+          "label": "GALLERY",
+          "visible": true
+        },
+        {
+          "id": "travel",
+          "label": "TRAVEL GUIDE",
+          "visible": true
+        }
+      ],
+      "ctaText": "RESERVE NOW"
+    },
+    "footer": {
+      "brandTitle": "MINERAL SPRINGS",
+      "brandSubtitle": "RETREAT · DAWAIPANI",
+      "bio": "Mineral Springs Retreat is a rustic boutique eco-stay in Dawaipani village, overlooking Mount Kanchenjunga and the expansive Lebong tea gardens. Offering simple clean accommodation, home-cooked Gorkha meals, and unbroken mountain peace.",
+      "phone": "+91 98320 12345",
+      "email": "stay@mineralspringsretreat.com",
+      "address": "Mineral Springs, Yankoo, Dawaipani, Lebong and Mineral Spring Tea Garden, West Bengal – 734105, India.",
+      "googleReviewCount": 19,
+      "googleRating": 4.9,
+      "directionsUrl": "https://www.google.com/search?sa=X&q=mineral+springs+retreat+dawaipani+address&ludocid=12917762238512786598",
+      "googleReviewsUrl": "https://www.google.com/travel/search?q=mineral+springs+retreat+dawaipani",
+      "copyrightText": "© 2026 Mineral Springs Retreat, Dawaipani. All rights reserved."
+    }
+  },
+  "designTokens": {
+    "headingFont": "'Cormorant Garamond', Georgia, serif",
+    "bodyFont": "'DM Sans', sans-serif",
+    "h1SizeDesktop": "64px",
+    "h1SizeMobile": "38px",
+    "h2SizeDesktop": "44px",
+    "h2SizeMobile": "28px",
+    "h3SizeDesktop": "26px",
+    "h3SizeMobile": "20px",
+    "bodySize": "15px",
+    "colorHeaderBg": "#17251D",
+    "colorFooterBg": "#111613",
+    "colorAccentGold": "#B89A70",
+    "colorGoldLight": "#CBB08B",
+    "colorBodyDark": "#1A1A1A",
+    "colorPageBg": "#FAF7F2",
+    "colorSectionLight": "#F3EFEA",
+    "sectionPaddingDesktop": "96px",
+    "sectionPaddingMobile": "64px",
+    "borderRadius": "0px"
+  },
+  "media": [
+    {
+      "id": "med-1",
+      "filename": "dawaipani-balcony-valley-vista.jpg",
+      "url": "/images/mineral-springs/dawaipani-balcony-valley-vista.jpg",
+      "title": "Dawaipani balcony valley vista",
+      "altText": "Mineral Springs Retreat - dawaipani balcony valley vista",
+      "category": "Vistas",
+      "uploadedAt": "2026-11-12T10:55:06.685Z"
+    },
+    {
+      "id": "med-2",
+      "filename": "dawaipani-clouds-balcony.jpg",
+      "url": "/images/mineral-springs/dawaipani-clouds-balcony.jpg",
+      "title": "Dawaipani clouds balcony",
+      "altText": "Mineral Springs Retreat - dawaipani clouds balcony",
+      "category": "Vistas",
+      "uploadedAt": "2026-11-12T10:55:06.685Z"
+    },
+    {
+      "id": "med-3",
+      "filename": "dawaipani-ridge-panoramic.jpg",
+      "url": "/images/mineral-springs/dawaipani-ridge-panoramic.jpg",
+      "title": "Dawaipani ridge panoramic",
+      "altText": "Mineral Springs Retreat - dawaipani ridge panoramic",
+      "category": "Vistas",
+      "uploadedAt": "2026-11-12T10:55:06.685Z"
+    },
+    {
+      "id": "med-4",
+      "filename": "hero-mountain-ridge.jpg",
+      "url": "/images/mineral-springs/hero-mountain-ridge.jpg",
+      "title": "Hero mountain ridge",
+      "altText": "Mineral Springs Retreat - hero mountain ridge",
+      "category": "General",
+      "uploadedAt": "2026-11-12T10:55:06.685Z"
+    },
+    {
+      "id": "med-5",
+      "filename": "kanchenjunga-valley-vista.jpg",
+      "url": "/images/mineral-springs/kanchenjunga-valley-vista.jpg",
+      "title": "Kanchenjunga valley vista",
+      "altText": "Mineral Springs Retreat - kanchenjunga valley vista",
+      "category": "General",
+      "uploadedAt": "2026-11-12T10:55:06.685Z"
+    },
+    {
+      "id": "med-6",
+      "filename": "mist-mountain-valley.jpg",
+      "url": "/images/mineral-springs/mist-mountain-valley.jpg",
+      "title": "Mist mountain valley",
+      "altText": "Mineral Springs Retreat - mist mountain valley",
+      "category": "General",
+      "uploadedAt": "2026-11-12T10:55:06.685Z"
+    },
+    {
+      "id": "med-7",
+      "filename": "nature-mountain-sanctuary.jpg",
+      "url": "/images/mineral-springs/nature-mountain-sanctuary.jpg",
+      "title": "Nature mountain sanctuary",
+      "altText": "Mineral Springs Retreat - nature mountain sanctuary",
+      "category": "General",
+      "uploadedAt": "2026-11-12T10:55:06.685Z"
+    },
+    {
+      "id": "med-8",
+      "filename": "retreat-balcony-cushion-corner.jpg",
+      "url": "/images/mineral-springs/retreat-balcony-cushion-corner.jpg",
+      "title": "Retreat balcony cushion corner",
+      "altText": "Mineral Springs Retreat - retreat balcony cushion corner",
+      "category": "Retreat",
+      "uploadedAt": "2026-11-12T10:55:06.685Z"
+    },
+    {
+      "id": "med-9",
+      "filename": "retreat-cottages-mountain-slope.jpg",
+      "url": "/images/mineral-springs/retreat-cottages-mountain-slope.jpg",
+      "title": "Retreat cottages mountain slope",
+      "altText": "Mineral Springs Retreat - retreat cottages mountain slope",
+      "category": "Retreat",
+      "uploadedAt": "2026-11-12T10:55:06.685Z"
+    },
+    {
+      "id": "med-10",
+      "filename": "retreat-covered-porch-lantern.jpg",
+      "url": "/images/mineral-springs/retreat-covered-porch-lantern.jpg",
+      "title": "Retreat covered porch lantern",
+      "altText": "Mineral Springs Retreat - retreat covered porch lantern",
+      "category": "Retreat",
+      "uploadedAt": "2026-11-12T10:55:06.685Z"
+    },
+    {
+      "id": "med-11",
+      "filename": "retreat-hillside-eco-cottage.jpg",
+      "url": "/images/mineral-springs/retreat-hillside-eco-cottage.jpg",
+      "title": "Retreat hillside eco cottage",
+      "altText": "Mineral Springs Retreat - retreat hillside eco cottage",
+      "category": "Retreat",
+      "uploadedAt": "2026-11-12T10:55:06.685Z"
+    },
+    {
+      "id": "med-12",
+      "filename": "retreat-main-cottage-facade.jpg",
+      "url": "/images/mineral-springs/retreat-main-cottage-facade.jpg",
+      "title": "Retreat main cottage facade",
+      "altText": "Mineral Springs Retreat - retreat main cottage facade",
+      "category": "Retreat",
+      "uploadedAt": "2026-11-12T10:55:06.685Z"
+    },
+    {
+      "id": "med-13",
+      "filename": "retreat-patio-deck-lounge.jpg",
+      "url": "/images/mineral-springs/retreat-patio-deck-lounge.jpg",
+      "title": "Retreat patio deck lounge",
+      "altText": "Mineral Springs Retreat - retreat patio deck lounge",
+      "category": "Retreat",
+      "uploadedAt": "2026-11-12T10:55:06.685Z"
+    },
+    {
+      "id": "med-14",
+      "filename": "retreat-verandah-corridor-view.jpg",
+      "url": "/images/mineral-springs/retreat-verandah-corridor-view.jpg",
+      "title": "Retreat verandah corridor view",
+      "altText": "Mineral Springs Retreat - retreat verandah corridor view",
+      "category": "Retreat",
+      "uploadedAt": "2026-11-12T10:55:06.685Z"
+    },
+    {
+      "id": "med-15",
+      "filename": "retreat-wooden-balcony-guitar.jpg",
+      "url": "/images/mineral-springs/retreat-wooden-balcony-guitar.jpg",
+      "title": "Retreat wooden balcony guitar",
+      "altText": "Mineral Springs Retreat - retreat wooden balcony guitar",
+      "category": "Retreat",
+      "uploadedAt": "2026-11-12T10:55:06.685Z"
+    },
+    {
+      "id": "med-16",
+      "filename": "room-cozy-pine-bedroom.jpg",
+      "url": "/images/mineral-springs/room-cozy-pine-bedroom.jpg",
+      "title": "Room cozy pine bedroom",
+      "altText": "Mineral Springs Retreat - room cozy pine bedroom",
+      "category": "Rooms",
+      "uploadedAt": "2026-11-12T10:55:06.685Z"
+    },
+    {
+      "id": "med-17",
+      "filename": "room-double-sharing-balcony.jpg",
+      "url": "/images/mineral-springs/room-double-sharing-balcony.jpg",
+      "title": "Room double sharing balcony",
+      "altText": "Mineral Springs Retreat - room double sharing balcony",
+      "category": "Rooms",
+      "uploadedAt": "2026-11-12T10:55:06.685Z"
+    },
+    {
+      "id": "med-18",
+      "filename": "room-green-feature-wall.jpg",
+      "url": "/images/mineral-springs/room-green-feature-wall.jpg",
+      "title": "Room green feature wall",
+      "altText": "Mineral Springs Retreat - room green feature wall",
+      "category": "Rooms",
+      "uploadedAt": "2026-11-12T10:55:06.685Z"
+    },
+    {
+      "id": "med-19",
+      "filename": "room-group-family-suite.jpg",
+      "url": "/images/mineral-springs/room-group-family-suite.jpg",
+      "title": "Room group family suite",
+      "altText": "Mineral Springs Retreat - room group family suite",
+      "category": "Rooms",
+      "uploadedAt": "2026-11-12T10:55:06.686Z"
+    },
+    {
+      "id": "med-20",
+      "filename": "room-misty-balcony-morning.jpg",
+      "url": "/images/mineral-springs/room-misty-balcony-morning.jpg",
+      "title": "Room misty balcony morning",
+      "altText": "Mineral Springs Retreat - room misty balcony morning",
+      "category": "Rooms",
+      "uploadedAt": "2026-11-12T10:55:06.686Z"
+    },
+    {
+      "id": "med-21",
+      "filename": "room-reading-nook-corner.jpg",
+      "url": "/images/mineral-springs/room-reading-nook-corner.jpg",
+      "title": "Room reading nook corner",
+      "altText": "Mineral Springs Retreat - room reading nook corner",
+      "category": "Rooms",
+      "uploadedAt": "2026-11-12T10:55:06.686Z"
+    },
+    {
+      "id": "med-22",
+      "filename": "room-twin-balcony-view.jpg",
+      "url": "/images/mineral-springs/room-twin-balcony-view.jpg",
+      "title": "Room twin balcony view",
+      "altText": "Mineral Springs Retreat - room twin balcony view",
+      "category": "Rooms",
+      "uploadedAt": "2026-11-12T10:55:06.686Z"
+    },
+    {
+      "id": "med-23",
+      "filename": "tea-garden-landscape.jpg",
+      "url": "/images/mineral-springs/tea-garden-landscape.jpg",
+      "title": "Tea garden landscape",
+      "altText": "Mineral Springs Retreat - tea garden landscape",
+      "category": "General",
+      "uploadedAt": "2026-11-12T10:55:06.686Z"
+    },
+    {
+      "id": "med-24",
+      "filename": "village-trail-vista.jpg",
+      "url": "/images/mineral-springs/village-trail-vista.jpg",
+      "title": "Village trail vista",
+      "altText": "Mineral Springs Retreat - village trail vista",
+      "category": "General",
+      "uploadedAt": "2026-11-12T10:55:06.686Z"
+    }
+  ],
+  "draftPages": {
+    "home": {
+      "hero": {
+        "badge": "BOUTIQUE RETREAT OFFERING TIMELESS HIMALAYAN TRANQUILITY",
+        "title": "A Peaceful Escape in the\nHeart of the Mountains",
+        "subtitle": "",
+        "image": "/images/mineral-springs/dawaipani-balcony-valley-vista.jpg",
+        "stats": [
+          {
+            "id": "stat-1",
+            "value": "6,500",
+            "unit": "ft",
+            "label": "RETREAT ALTITUDE"
+          },
+          {
+            "id": "stat-2",
+            "value": "4",
+            "unit": "Meals",
+            "label": "DAILY INCLUDED"
+          },
+          {
+            "id": "stat-3",
+            "value": "70",
+            "unit": "km",
+            "label": "FROM NJP & BAGDOGRA"
+          }
+        ]
+      },
+      "intro": {
+        "eyebrow": "HIMALAYAN SERENITY MEETS RUSTIC COMFORT",
+        "heading": "Mineral Springs Retreat in the heart of the mountains is an authentic sanctuary offering simple, clean accommodations with unrivaled tea garden walks and valley peace.",
+        "paragraph": "Perched at 6,500 feet in the serene village of Dawaipani, overlooking Mount Kanchenjunga and the expansive Lebong tea gardens. Unwind in quiet rustic rooms, savor traditional home-cooked meals, and experience the spellbinding afternoon clouds drifting through your private balcony.",
+        "images": [
+          {
+            "src": "/images/mineral-springs/retreat-main-cottage-facade.jpg",
+            "alt": "Mineral Springs Retreat wooden cottage with lace trim nestled in pine hills",
+            "caption": "Main Mountain Cottage Facade"
+          },
+          {
+            "src": "/images/mineral-springs/retreat-wooden-balcony-guitar.jpg",
+            "alt": "Peaceful wooden verandah with acoustic guitar and mountain valley views",
+            "caption": "Verandah Overlooking the Valley"
+          },
+          {
+            "src": "/images/mineral-springs/retreat-cottages-mountain-slope.jpg",
+            "alt": "Red-roofed retreat cottages terraced on mountain garden slope",
+            "caption": "Cottages Along the Garden Slope"
+          },
+          {
+            "src": "/images/mineral-springs/retreat-patio-deck-lounge.jpg",
+            "alt": "Outdoor timber patio deck with cushioned lounge seating",
+            "caption": "Patio Deck & Fireside Lounge"
+          },
+          {
+            "src": "/images/mineral-springs/retreat-hillside-eco-cottage.jpg",
+            "alt": "Traditional wooden hillside cottage on stilts nested in pine forest",
+            "caption": "Hillside Stilt Eco-Cottage"
+          }
+        ]
+      },
+      "facilities": {
+        "eyebrow": "COMFORTS & ESSENTIALS",
+        "heading": "Thoughtful Himalayan Hospitality",
+        "subtitle": "Everything you need for an authentic, comfortable and restorative stay in the quiet hills of Dawaipani.",
+        "items": [
+          {
+            "title": "Attached Western Toilets",
+            "desc": "Clean, sanitized ensuite Western toilets in all rooms with geysers for 24/7 hot water."
+          },
+          {
+            "title": "Panoramic Private Balconies",
+            "desc": "Sit back and watch afternoon mist and clouds roll right past your bedroom window."
+          },
+          {
+            "title": "All 4 Daily Meals Included",
+            "desc": "Freshly cooked local Gorkha and Nepali cuisine prepared from village-harvested organic ingredients."
+          },
+          {
+            "title": "Tea Garden & Pine Forest Trails",
+            "desc": "Direct access to Lebong tea estate walking paths and fragrant pine forest walking tracks."
+          }
+        ]
+      },
+      "activities": {
+        "eyebrow": "LOCAL LIVING & DISCOVERY",
+        "heading": "Immerse in Mountain Life",
+        "subtitle": "Experience the authentic rhythms of Himalayan village life in Dawaipani.",
+        "items": [
+          {
+            "title": "Kanchenjunga Sunrise Walks",
+            "desc": "Wake up to breathtaking golden sunrises over the Kanchenjunga mountain range."
+          },
+          {
+            "title": "Lebong Tea Garden Treks",
+            "desc": "Gentle hillside walks through historic tea garden slopes with local village guides."
+          },
+          {
+            "title": "Evening Deck Bonfires",
+            "desc": "Cozy fireside gatherings under starlit Himalayan skies with hot tea and snacks."
+          }
+        ]
+      },
+      "bookingCTA": {
+        "eyebrow": "BEGIN YOUR HIMALAYAN JOURNEY",
+        "heading": "Ready to Experience Dawaipani?",
+        "subtitle": "Book your stay at Mineral Springs Retreat today. Simple rustic rooms, delicious home-cooked meals, and breathtaking mountain vistas await.",
+        "buttonText": "CHECK AVAILABILITY & RESERVE"
+      }
+    },
+    "about": {
+      "heroTitle": "Our Himalayan Sanctuary",
+      "heroSubtitle": "A peaceful retreat born from mountain heritage and natural mineral springs.",
+      "storyHeading": "Living in Harmony with Nature",
+      "storyParagraph1": "Mineral Springs Retreat was established as an authentic sanctuary in the tranquil hamlet of Dawaipani, approximately 15 km from Darjeeling town. Surrounded by dense pine forests and the emerald slopes of the Lebong tea gardens, our retreat offers travelers a peaceful refuge from urban haste.",
+      "storyParagraph2": "Our architecture honors traditional Himalayan timber craftsmanship, with rustic wooden verandas, locally sourced pine finishes, and private balconies that frame uninterrupted vistas of Mount Kanchenjunga. Here, the afternoons bring gentle clouds flowing through your room, and evenings bring glowing village lights and starlit skies.",
+      "values": [
+        {
+          "title": "Authentic Hospitality",
+          "desc": "Warm family hosting rooted in traditional Gorkha warmth and personalized care."
+        },
+        {
+          "title": "Organic Mountain Dining",
+          "desc": "Wholesome 4-meal daily dining prepared with organic farm ingredients."
+        },
+        {
+          "title": "Ecological Respect",
+          "desc": "Sustainable mountain living preserving the natural mineral springs."
+        }
+      ]
+    },
+    "dawaipani": {
+      "badge": "THE HIMALAYAN VILLAGE",
+      "title": "Discover Dawaipani",
+      "subtitle": "A secluded hill village perched at 6,500 ft, renowned for panoramic Kanchenjunga views, pure mountain air, and tranquil tea estates.",
+      "elevation": "6,500 ft",
+      "distanceFromDarjeeling": "15 km",
+      "weatherHighlights": "Cool summers (15°C – 22°C), crisp misty monsoons, and clear cold winters (2°C – 12°C) with spectacular snow-capped views.",
+      "sections": [
+        {
+          "heading": "The Name & History",
+          "text": "Dawaipani translates literally to 'Medicinal Water' in Nepali, named after the natural therapeutic mineral springs that flow through the surrounding forests. Travelers historically came to these hills seeking the rejuvenating qualities of its pure spring waters and undisturbed pine canopy."
+        },
+        {
+          "heading": "Kanchenjunga Panoramic Vista",
+          "text": "Unlike crowded hill stations, Dawaipani offers an unobstructed, 180-degree panorama of Mount Kanchenjunga and its sibling peaks. On crisp mornings, witness the world's third highest peak turn from deep violet to glistening Himalayan gold."
+        },
+        {
+          "heading": "Lebong Mineral Spring Tea Estate",
+          "text": "The retreat borders the historic Lebong and Mineral Spring Tea Gardens. Guests can take guided nature walks through terraced organic tea slopes, observe artisan leaf plucking, and breathe in the distinctive floral fragrance of Darjeeling tea in flush."
+        }
+      ]
+    },
+    "stay": {
+      "title": "Rooms & Accommodations",
+      "subtitle": "Simple, clean, and comfortable rustic rooms with private balconies and inclusive 4-meal plans.",
+      "mealPlanNotice": "Every reservation includes all 4 daily home-cooked meals: Morning Breakfast, Wholesome Lunch, Evening Tea & Snacks, and Warming Dinner.",
+      "policiesHeading": "Accommodation Inclusions & Policies",
+      "checkInTime": "12:00 PM",
+      "checkOutTime": "11:00 AM",
+      "rules": [
+        "Check-in at 12:00 PM; Check-out at 11:00 AM.",
+        "Rates are per person per night and include all 4 daily meals.",
+        "Attached Western toilets with 24/7 hot geyser water in all rooms.",
+        "Advance booking is recommended during peak Kanchenjunga viewing seasons."
+      ]
+    },
+    "experiences": {
+      "title": "Curated Mountain Experiences",
+      "subtitle": "From mist-bathed morning balconies to starlit deck bonfires and tea garden walks.",
+      "introText": "Every moment at Mineral Springs Retreat is crafted around the quiet wonder of the Himalayas. Immerse yourself in authentic village walks, music on the timber verandah, and heartfelt conversations with your local hosts."
+    },
+    "gallery": {
+      "title": "Retreat & Landscape Gallery",
+      "subtitle": "Visual glimpses of our wooden cottages, mountain balconies, misty sunrises, and serene surroundings.",
+      "categories": [
+        "All",
+        "Architecture",
+        "Rooms",
+        "Nature",
+        "Lifestyle"
+      ]
+    },
+    "travel": {
+      "title": "Travel & Route Guide",
+      "subtitle": "How to reach Mineral Springs Retreat in Dawaipani from major transit hubs.",
+      "altitudeWarning": "Dawaipani is located at 6,500 ft elevation. The final 3 km approach follows a scenic mountain road. 4WD / high-clearance vehicles are recommended during monsoon months.",
+      "distances": [
+        {
+          "destination": "New Jalpaiguri (NJP) Railway Station",
+          "distance": "70 km",
+          "time": "Approx. 3.5 – 4 hours drive",
+          "route": "Via Siliguri – Kurseong – Jorebungalow – Dawaipani"
+        },
+        {
+          "destination": "Bagdogra International Airport (IXB)",
+          "distance": "75 km",
+          "time": "Approx. 4 hours drive",
+          "route": "Via Siliguri – Rohini / Mirik or Kurseong"
+        },
+        {
+          "destination": "Darjeeling Town (Mall / Chowrasta)",
+          "distance": "15 km",
+          "time": "Approx. 45 – 55 minutes drive",
+          "route": "Via Lebong Cart Road"
+        },
+        {
+          "destination": "Kalimpong Hill Station",
+          "distance": "50 km",
+          "time": "Approx. 2.5 hours drive",
+          "route": "Via Teesta Bazaar and Peshok Road"
+        },
+        {
+          "destination": "Gangtok, Sikkim",
+          "distance": "78 km",
+          "time": "Approx. 3.5 – 4 hours drive",
+          "route": "Via Rangpo and Teesta"
+        }
+      ],
+      "taxiAssistanceText": "We can arrange reliable local pick-up and drop-off taxis from NJP Railway Station, Siliguri, and Bagdogra Airport upon request."
+    },
+    "reservation": {
+      "title": "Reserve Your Stay",
+      "subtitle": "Experience rustic tranquility with all 4 home-cooked meals included.",
+      "inquiryInstructions": "Submit your preferred dates and room choice below. Our reservations desk will confirm availability and send you booking confirmation directly via WhatsApp or Email.",
+      "cancellationPolicy": "Full refund for cancellations made 7 or more days prior to check-in. 50% refund for cancellations within 3-6 days. No refund for cancellations within 48 hours."
+    },
+    "header": {
+      "brandTitle": "MINERAL SPRINGS",
+      "brandSubtitle": "RETREAT",
+      "starsCount": 5,
+      "navItems": [
+        {
+          "id": "home",
+          "label": "HOME",
+          "visible": true
+        },
+        {
+          "id": "about",
+          "label": "ABOUT",
+          "visible": true
+        },
+        {
+          "id": "dawaipani",
+          "label": "DAWAIPANI",
+          "visible": true
+        },
+        {
+          "id": "stay",
+          "label": "STAY",
+          "visible": true
+        },
+        {
+          "id": "experiences",
+          "label": "EXPERIENCES",
+          "visible": true
+        },
+        {
+          "id": "gallery",
+          "label": "GALLERY",
+          "visible": true
+        },
+        {
+          "id": "travel",
+          "label": "TRAVEL GUIDE",
+          "visible": true
+        }
+      ],
+      "ctaText": "RESERVE NOW"
+    },
+    "footer": {
+      "brandTitle": "MINERAL SPRINGS",
+      "brandSubtitle": "RETREAT · DAWAIPANI",
+      "bio": "Mineral Springs Retreat is a rustic boutique eco-stay in Dawaipani village, overlooking Mount Kanchenjunga and the expansive Lebong tea gardens. Offering simple clean accommodation, home-cooked Gorkha meals, and unbroken mountain peace.",
+      "phone": "+91 98320 12345",
+      "email": "stay@mineralspringsretreat.com",
+      "address": "Mineral Springs, Yankoo, Dawaipani, Lebong and Mineral Spring Tea Garden, West Bengal – 734105, India.",
+      "googleReviewCount": 19,
+      "googleRating": 4.9,
+      "directionsUrl": "https://www.google.com/search?sa=X&q=mineral+springs+retreat+dawaipani+address&ludocid=12917762238512786598",
+      "googleReviewsUrl": "https://www.google.com/travel/search?q=mineral+springs+retreat+dawaipani",
+      "copyrightText": "© 2026 Mineral Springs Retreat, Dawaipani. All rights reserved."
+    }
+  }
+}
