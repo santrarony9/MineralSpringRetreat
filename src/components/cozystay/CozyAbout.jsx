@@ -4,29 +4,29 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const defaultImages = [
   {
+    src: '/images/mineral-springs/mineral-springs-retreat-complex-facade.jpg',
+    alt: 'Mineral Springs Retreat complex facade overlooking lush valley and misty hills',
+    caption: 'Retreat Complex & Mountain View'
+  },
+  {
+    src: '/images/mineral-springs/retreat-wooden-verandah-balcony.jpg',
+    alt: 'Peaceful timber verandah and covered balcony overlooking misty valley',
+    caption: 'Verandah Overlooking the Valley'
+  },
+  {
+    src: '/images/mineral-springs/retreat-cottage-hillside-canopy.jpg',
+    alt: 'Retreat cottage terrace perched high on hillside surrounded by pine canopy',
+    caption: 'Cottages Along the Pine Canopy'
+  },
+  {
     src: '/images/mineral-springs/retreat-main-cottage-facade.jpg',
     alt: 'Mineral Springs Retreat wooden cottage with lace trim nestled in pine hills',
     caption: 'Main Mountain Cottage Facade'
   },
   {
-    src: '/images/mineral-springs/retreat-wooden-balcony-guitar.jpg',
-    alt: 'Peaceful wooden verandah with acoustic guitar and mountain valley views',
-    caption: 'Verandah Overlooking the Valley'
-  },
-  {
-    src: '/images/mineral-springs/retreat-cottages-mountain-slope.jpg',
-    alt: 'Red-roofed retreat cottages terraced on mountain garden slope',
-    caption: 'Cottages Along the Garden Slope'
-  },
-  {
     src: '/images/mineral-springs/retreat-patio-deck-lounge.jpg',
     alt: 'Outdoor timber patio deck with cushioned lounge seating',
     caption: 'Patio Deck & Fireside Lounge'
-  },
-  {
-    src: '/images/mineral-springs/retreat-hillside-eco-cottage.jpg',
-    alt: 'Traditional wooden hillside cottage on stilts nested in pine forest',
-    caption: 'Hillside Stilt Eco-Cottage'
   }
 ];
 

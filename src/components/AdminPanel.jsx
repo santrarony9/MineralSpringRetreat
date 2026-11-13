@@ -29,7 +29,30 @@ const RETREAT_LIBRARY_PHOTOS = [
   { id: 'lib-16', url: '/images/mineral-springs/dawaipani-clouds-balcony.jpg', title: 'Clouds Rolling by Balcony', category: 'Views' },
   { id: 'lib-17', url: '/images/mineral-springs/kanchenjunga-valley-vista.jpg', title: 'Kanchenjunga Vista', category: 'Views' },
   { id: 'lib-18', url: '/images/mineral-springs/tea-garden-landscape.jpg', title: 'Tea Garden Slopes', category: 'Nature' },
-  { id: 'lib-19', url: '/images/mineral-springs/village-trail-vista.jpg', title: 'Village Trail', category: 'Nature' }
+  { id: 'lib-19', url: '/images/mineral-springs/village-trail-vista.jpg', title: 'Village Trail', category: 'Nature' },
+  { id: 'lib-20', url: '/images/mineral-springs/dawaipani-balcony-sunset-clouds.jpg', title: 'Golden Sunset Clouds from Balcony', category: 'Views' },
+  { id: 'lib-21', url: '/images/mineral-springs/mineral-springs-retreat-complex-facade.jpg', title: 'Main Eco-Retreat Complex Facade', category: 'Property' },
+  { id: 'lib-22', url: '/images/mineral-springs/dawaipani-kanchenjunga-snow-peaks.jpg', title: 'Mt. Kanchenjunga Snow Peaks Panorama', category: 'Views' },
+  { id: 'lib-23', url: '/images/mineral-springs/dawaipani-darjeeling-night-lights.jpg', title: 'Darjeeling Town Night Lights Over Cloud Sea', category: 'Views' },
+  { id: 'lib-24', url: '/images/mineral-springs/mineral-springs-waterfall-stream.jpg', title: 'Mineral Springs Waterfall & River Rocks', category: 'Nature' },
+  { id: 'lib-25', url: '/images/mineral-springs/guest-mindfulness-mountain-river.jpg', title: 'Guest Relaxation on Riverbed Boulders', category: 'Experiences' },
+  { id: 'lib-26', url: '/images/mineral-springs/dawaipani-drone-canopy-aerial.jpg', title: '90° Top-Down Drone Canopy Aerial', category: 'Views' },
+  { id: 'lib-27', url: '/images/mineral-springs/dawaipani-golden-tea-slopes-sunrise.jpg', title: 'Golden Sunrise Over Terraced Tea Slopes', category: 'Nature' },
+  { id: 'lib-28', url: '/images/mineral-springs/darjeeling-unesco-steam-locomotive.jpg', title: 'UNESCO Heritage DHR Steam Toy Train', category: 'Culture' },
+  { id: 'lib-29', url: '/images/mineral-springs/darjeeling-toy-train-tracks.jpg', title: 'Narrow-Gauge Mountain Rail Trail', category: 'Experiences' },
+  { id: 'lib-30', url: '/images/mineral-springs/dawaipani-tibetan-prayer-flags.jpg', title: 'Tibetan Prayer Flags & Hillside Grounds', category: 'Culture' },
+  { id: 'lib-31', url: '/images/mineral-springs/darjeeling-tea-macro-dewdrops.jpg', title: 'Macro Dewdrop Organic Tea Leaves', category: 'Nature' },
+  { id: 'lib-32', url: '/images/mineral-springs/darjeeling-tea-gardens-panoramic.jpg', title: 'Panoramic Rolling Tea Terraces', category: 'Nature' },
+  { id: 'lib-33', url: '/images/mineral-springs/darjeeling-tea-leaves-fresh-tip.jpg', title: 'Two Leaves and a Bud Green Tea Shoot', category: 'Nature' },
+  { id: 'lib-34', url: '/images/mineral-springs/dawaipani-forest-trail-walk.jpg', title: 'Cardamom Forest Trail to Cottages', category: 'Property' },
+  { id: 'lib-35', url: '/images/mineral-springs/retreat-wooden-verandah-balcony.jpg', title: 'Pine Timber Verandah & Blue Guitar', category: 'Property' },
+  { id: 'lib-36', url: '/images/mineral-springs/retreat-cottage-hillside-canopy.jpg', title: 'Hillside Cottage in Pine Canopy', category: 'Property' },
+  { id: 'lib-37', url: '/images/mineral-springs/mineral-springs-crystal-stream.jpg', title: 'Crystal Mountain Stream Water', category: 'Nature' },
+  { id: 'lib-38', url: '/images/mineral-springs/mineral-springs-boulder-riverbed.jpg', title: 'Boulder Riverbed at Mineral Springs', category: 'Nature' },
+  { id: 'lib-39', url: '/images/mineral-springs/host-founder-portrait.jpg', title: 'Retreat Founder - Himalayan Hospitality', category: 'Culture' },
+  { id: 'lib-40', url: '/images/mineral-springs/host-co-founder-portrait.jpg', title: 'Retreat Co-Founder & Resident Hostess', category: 'Culture' },
+  { id: 'lib-41', url: '/images/mineral-springs/host-hospitality-portrait.jpg', title: 'Warm Homestay Welcome Portrait', category: 'Culture' },
+  { id: 'lib-42', url: '/images/mineral-springs/dawaipani-misty-valley-morning.jpg', title: 'Misty Morning Valley Drift from Balcony', category: 'Views' }
 ];
 
 function ImageFieldWithPicker({

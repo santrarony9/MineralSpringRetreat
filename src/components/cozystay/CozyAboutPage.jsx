@@ -139,6 +139,67 @@ export default function CozyAboutPage({ setActivePage }) {
           </div>
         </div>
 
+        {/* Meet Your Homestay Hosts */}
+        <div className="mb-20 sm:mb-28">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="typo-eyebrow text-[#B89D77] block mb-2 font-medium">GENUINE HOSPITALITY</span>
+            <h2 className="typo-section-heading text-cozy-forest font-normal">
+              Meet Your Homestay Hosts
+            </h2>
+            <p className="typo-body text-cozy-muted font-light mt-3">
+              Mineral Springs Retreat is guided by authentic family warmth. From home-cooked Gorkha meals to forest trail coordination, our hosts welcome you into the peaceful rhythm of mountain life.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+            {/* Host Card 1: Founder */}
+            <div className="bg-white rounded-3xl overflow-hidden border border-[#EAE3D8] shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="aspect-[16/11] overflow-hidden bg-neutral-900">
+                <img
+                  src="/images/mineral-springs/host-founder-portrait.jpg"
+                  alt="Mineral Springs Retreat Founder and Homestay Host"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6 sm:p-8 space-y-2">
+                <span className="text-[10px] uppercase font-sans tracking-[0.2em] text-[#B89D77] font-semibold block">
+                  HOMESTAY FOUNDER & HOST
+                </span>
+                <h3 className="typo-card-heading text-cozy-forest text-xl font-normal">
+                  Warm Himalayan Welcome
+                </h3>
+                <p className="typo-small text-cozy-muted font-light leading-relaxed">
+                  Dedicated to preserving Dawaipani's pristine natural ecology and sharing the timeless serenity of the Mineral Springs ridge with mindful travelers.
+                </p>
+              </div>
+            </div>
+
+            {/* Host Card 2: Co-Founder & Resident Hostess */}
+            <div className="bg-white rounded-3xl overflow-hidden border border-[#EAE3D8] shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div className="aspect-[16/11] overflow-hidden bg-neutral-900">
+                <img
+                  src="/images/mineral-springs/host-co-founder-portrait.jpg"
+                  alt="Mineral Springs Retreat Co-Founder and Resident Hostess"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6 sm:p-8 space-y-2">
+                <span className="text-[10px] uppercase font-sans tracking-[0.2em] text-[#B89D77] font-semibold block">
+                  RESIDENT HOSTESS & HOSPITALITY
+                </span>
+                <h3 className="typo-card-heading text-cozy-forest text-xl font-normal">
+                  Authentic Mountain Living
+                </h3>
+                <p className="typo-small text-cozy-muted font-light leading-relaxed">
+                  Overseeing farm-to-table cuisine, warm guest comforts, and ensuring every visitor experiences genuine mountain care throughout their stay.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom CTA Banner */}
         <div className="bg-[#1E2C22] text-white rounded-3xl p-8 sm:p-14 text-center border border-[#2D3B31] shadow-2xl relative overflow-hidden">
           <div className="relative z-10 max-w-2xl mx-auto space-y-4">

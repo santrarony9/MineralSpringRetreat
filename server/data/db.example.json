@@ -12,10 +12,10 @@
     "section3Heading": "Afternoon Mist & Panoramic Vistas",
     "section3Text": "Perched on the tranquil slopes of Dawaipani, our retreat commands sweeping vistas of Mount Kanchenjunga on clear days. By evening, witness the breathtaking sparkling lights of Darjeeling town and Namchi illuminating the valley below.",
     "perksHeading": "The Mineral Springs\nExperience",
-    "heroImage": "/images/mineral-springs/dawaipani-balcony-valley-vista.jpg",
-    "section1Image": "/images/mineral-springs/retreat-main-cottage-facade.jpg",
-    "section2Image": "/images/mineral-springs/retreat-covered-porch-lantern.jpg",
-    "section3Image": "/images/mineral-springs/retreat-hillside-eco-cottage.jpg",
+    "heroImage": "/images/mineral-springs/dawaipani-balcony-sunset-clouds.jpg",
+    "section1Image": "/images/mineral-springs/mineral-springs-retreat-complex-facade.jpg",
+    "section2Image": "/images/mineral-springs/dawaipani-drone-canopy-aerial.jpg",
+    "section3Image": "/images/mineral-springs/dawaipani-darjeeling-night-lights.jpg",
     "phone": "+91 98320 12345",
     "email": "stay@mineralspringsretreat.com",
     "whatsapp": "+919832012345",
@@ -159,9 +159,11 @@
       "size": "280 sq. ft.",
       "mealsIncluded": "All 4 Meals (Breakfast, Lunch, Evening Snacks & Tea, Dinner)",
       "images": [
+        "/images/mineral-springs/mineral-springs-retreat-complex-facade.jpg",
         "/images/mineral-springs/room-double-sharing-balcony.jpg",
         "/images/mineral-springs/room-reading-nook-corner.jpg",
-        "/images/mineral-springs/room-misty-balcony-morning.jpg"
+        "/images/mineral-springs/room-misty-balcony-morning.jpg",
+        "/images/mineral-springs/retreat-wooden-verandah-balcony.jpg"
       ],
       "facilities": [
         "Clean and comfortable room",
@@ -193,9 +195,11 @@
       "size": "380 sq. ft.",
       "mealsIncluded": "All 4 Meals (Breakfast, Lunch, Evening Snacks & Tea, Dinner)",
       "images": [
+        "/images/mineral-springs/retreat-cottage-hillside-canopy.jpg",
         "/images/mineral-springs/room-group-family-suite.jpg",
         "/images/mineral-springs/room-twin-balcony-view.jpg",
-        "/images/mineral-springs/room-green-feature-wall.jpg"
+        "/images/mineral-springs/room-green-feature-wall.jpg",
+        "/images/mineral-springs/mineral-springs-retreat-complex-facade.jpg"
       ],
       "facilities": [
         "Clean and comfortable group layout",
@@ -271,53 +275,218 @@
       "category": "Property",
       "image": "/images/mineral-springs/retreat-cottages-mountain-slope.jpg",
       "aspect": "square"
+    },
+    {
+      "id": "gal-9",
+      "title": "Golden Sunset & Sea of Clouds from Balcony",
+      "category": "Scenery",
+      "image": "/images/mineral-springs/dawaipani-balcony-sunset-clouds.jpg",
+      "aspect": "square"
+    },
+    {
+      "id": "gal-10",
+      "title": "Mineral Springs Retreat Complex & Hillside Slopes",
+      "category": "Stay",
+      "image": "/images/mineral-springs/mineral-springs-retreat-complex-facade.jpg",
+      "aspect": "square"
+    },
+    {
+      "id": "gal-11",
+      "title": "Mt. Kanchenjunga Sleeping Buddha over Dawaipani Ridges",
+      "category": "Scenery",
+      "image": "/images/mineral-springs/dawaipani-kanchenjunga-snow-peaks.jpg",
+      "aspect": "square"
+    },
+    {
+      "id": "gal-12",
+      "title": "Darjeeling Town Night Lights over Floating Cloud Sea",
+      "category": "Scenery",
+      "image": "/images/mineral-springs/dawaipani-darjeeling-night-lights.jpg",
+      "aspect": "square"
+    },
+    {
+      "id": "gal-13",
+      "title": "Natural Mineral Springs Mountain Waterfall",
+      "category": "Experiences",
+      "image": "/images/mineral-springs/mineral-springs-waterfall-stream.jpg",
+      "aspect": "tall"
+    },
+    {
+      "id": "gal-14",
+      "title": "Mindful Meditation on Mountain River Rocks",
+      "category": "Experiences",
+      "image": "/images/mineral-springs/guest-mindfulness-mountain-river.jpg",
+      "aspect": "tall"
+    },
+    {
+      "id": "gal-15",
+      "title": "90° Drone Canopy Aerial of Retreat Cottages",
+      "category": "Scenery",
+      "image": "/images/mineral-springs/dawaipani-drone-canopy-aerial.jpg",
+      "aspect": "square"
+    },
+    {
+      "id": "gal-16",
+      "title": "Golden Sunrise over Terraced Tea Garden Slopes",
+      "category": "Scenery",
+      "image": "/images/mineral-springs/dawaipani-golden-tea-slopes-sunrise.jpg",
+      "aspect": "square"
+    },
+    {
+      "id": "gal-17",
+      "title": "UNESCO World Heritage DHR Steam Toy Train with Floral Garlands",
+      "category": "Culture",
+      "image": "/images/mineral-springs/darjeeling-unesco-steam-locomotive.jpg",
+      "aspect": "tall"
+    },
+    {
+      "id": "gal-18",
+      "title": "Narrow-Gauge Heritage Mountain Railway Trail",
+      "category": "Experiences",
+      "image": "/images/mineral-springs/darjeeling-toy-train-tracks.jpg",
+      "aspect": "square"
+    },
+    {
+      "id": "gal-19",
+      "title": "Tibetan Prayer Flags Fluttering over Hillside Grounds",
+      "category": "Culture",
+      "image": "/images/mineral-springs/dawaipani-tibetan-prayer-flags.jpg",
+      "aspect": "square"
+    },
+    {
+      "id": "gal-20",
+      "title": "Morning Dewdrops on Organic Darjeeling Tea Leaves",
+      "category": "Nature",
+      "image": "/images/mineral-springs/darjeeling-tea-macro-dewdrops.jpg",
+      "aspect": "square"
+    },
+    {
+      "id": "gal-21",
+      "title": "Rolling Green Contour Slopes of Darjeeling Tea Terraces",
+      "category": "Scenery",
+      "image": "/images/mineral-springs/darjeeling-tea-gardens-panoramic.jpg",
+      "aspect": "square"
+    },
+    {
+      "id": "gal-22",
+      "title": "Cardamom Forest Trail Leading to Hillside Cottages",
+      "category": "Experiences",
+      "image": "/images/mineral-springs/dawaipani-forest-trail-walk.jpg",
+      "aspect": "square"
+    },
+    {
+      "id": "gal-23",
+      "title": "Pine Timber Verandah & Mountain Valley Breeze",
+      "category": "Stay",
+      "image": "/images/mineral-springs/retreat-wooden-verandah-balcony.jpg",
+      "aspect": "square"
+    },
+    {
+      "id": "gal-24",
+      "title": "Red-Roofed Eco-Cottage Surrounded by Canopy Foliage",
+      "category": "Stay",
+      "image": "/images/mineral-springs/retreat-cottage-hillside-canopy.jpg",
+      "aspect": "square"
+    },
+    {
+      "id": "gal-25",
+      "title": "Transparent Crystal Mountain Stream & Riverbed Moss",
+      "category": "Nature",
+      "image": "/images/mineral-springs/mineral-springs-crystal-stream.jpg",
+      "aspect": "tall"
+    },
+    {
+      "id": "gal-26",
+      "title": "Retreat Founder & Host in Homestay Studio",
+      "category": "Culture",
+      "image": "/images/mineral-springs/host-founder-portrait.jpg",
+      "aspect": "wide"
+    },
+    {
+      "id": "gal-27",
+      "title": "Warm Himalayan Hospitality - Resident Hostess",
+      "category": "Culture",
+      "image": "/images/mineral-springs/host-co-founder-portrait.jpg",
+      "aspect": "wide"
+    },
+    {
+      "id": "gal-28",
+      "title": "Misty Morning Valley Drift from Room Balcony",
+      "category": "Scenery",
+      "image": "/images/mineral-springs/dawaipani-misty-valley-morning.jpg",
+      "aspect": "square"
     }
   ],
   "experiences": [
     {
       "id": "exp-1",
-      "title": "Balcony Valley Vistas & Morning Clouds",
-      "category": "Views",
-      "description": "Watch silken clouds flow right across your private balcony as the early sun illuminates the rolling mountain ridges.",
-      "image": "/images/mineral-springs/dawaipani-balcony-valley-vista.jpg",
-      "timing": "Morning & Evening",
-      "highlight": "Panoramic Mountain Ridges"
+      "title": "Mineral Springs Waterfall & River Trek",
+      "duration": "Half Day (3–4 Hours)",
+      "difficulty": "Moderate",
+      "tagline": "Cascading natural waters, riverbed boulders & untouched wilderness",
+      "description": "Hike through cardamom groves and virgin subtropical forests down to the authentic Mineral Springs mountain waterfalls. Wade in crystal pools, sit on moss-covered boulders, and immerse in pristine Himalayan sounds.",
+      "image": "/images/mineral-springs/mineral-springs-waterfall-stream.jpg",
+      "highlights": [
+        "Natural freshwater waterfall cascades",
+        "River boulder meditation",
+        "Dense subtropical canopy birdwatching"
+      ]
     },
     {
       "id": "exp-2",
-      "title": "Verandah Corridor & Peaceful Living",
-      "category": "Lifestyle",
-      "description": "Unwind on wide wooden verandahs with acoustic guitar, handcrafted rugs, and endless views of forest greenery.",
-      "image": "/images/mineral-springs/retreat-wooden-balcony-guitar.jpg",
-      "timing": "Afternoons",
-      "highlight": "Serene Mountain Verandahs"
+      "title": "Organic Tea Garden Walk & First Flush Tasting",
+      "duration": "2–3 Hours",
+      "difficulty": "Easy",
+      "tagline": "Hand-plucked tender leaves, dewdrop mornings & estate heritage",
+      "description": "Stroll through the manicured contour slopes of nearby organic Darjeeling tea gardens. Witness traditional two-leaves-and-a-bud plucking and savor fresh-brewed aromatic Darjeeling tea back at the retreat.",
+      "image": "/images/mineral-springs/darjeeling-tea-gardens-panoramic.jpg",
+      "highlights": [
+        "Terraced tea slope panoramas",
+        "Macro leaf plucking insights",
+        "Curated artisanal tea tasting session"
+      ]
     },
     {
       "id": "exp-3",
-      "title": "Hillside Eco Cottages in Pine Forest",
-      "category": "Architecture",
-      "description": "Authentic wooden stilt cottages nestled directly against pine forest slopes in harmony with Himalayan nature.",
-      "image": "/images/mineral-springs/retreat-hillside-eco-cottage.jpg",
-      "timing": "All Day",
-      "highlight": "Eco Stilt Architecture"
+      "title": "Kanchenjunga Sunrise & Cloud Inversion Watch",
+      "duration": "Early Morning (5:30 AM)",
+      "difficulty": "Easy (From Verandah)",
+      "tagline": "180-degree Sleeping Buddha panorama above a silent sea of clouds",
+      "description": "Awaken with fresh mountain ginger tea on your private wooden verandah. Watch the first golden rays illuminate the snow peaks of Mt. Kanchenjunga while white cloud inversions flood the valley below.",
+      "image": "/images/mineral-springs/dawaipani-balcony-sunset-clouds.jpg",
+      "highlights": [
+        "Golden hour Kanchenjunga illumination",
+        "Sea-of-clouds inversion phenomenon",
+        "Warm morning brew on wooden balcony"
+      ]
     },
     {
       "id": "exp-4",
-      "title": "Terraced Cottages & Garden Walks",
-      "category": "Nature",
-      "description": "Walk among red-roofed cottages connected by rustic stone steps, native blooms, and organic mountain flora.",
-      "image": "/images/mineral-springs/retreat-cottages-mountain-slope.jpg",
-      "timing": "Morning Walks",
-      "highlight": "Mountain Garden Paths"
+      "title": "Cardamom Forest & Village Ridge Trails",
+      "duration": "1.5–2 Hours",
+      "difficulty": "Gentle",
+      "tagline": "Stone trails, fluttering prayer flags & peaceful hamlet life",
+      "description": "Follow scenic stone pathways winding past hillside cottages, fluttering Buddhist prayer flags, and terraced organic farms. Breathe in pure mountain air and experience genuine Gorkha mountain culture.",
+      "image": "/images/mineral-springs/dawaipani-forest-trail-walk.jpg",
+      "highlights": [
+        "Stone mountain pathway strolls",
+        "Traditional prayer flags & shrines",
+        "Village cultural exchange"
+      ]
     },
     {
       "id": "exp-5",
-      "title": "Deck Bonfire & Mountain Barbecue",
-      "category": "Evening",
-      "description": "Gather around crackling timber embers on our open wooden patio deck under starlit Himalayan night skies.",
-      "image": "/images/mineral-springs/retreat-patio-deck-lounge.jpg",
-      "timing": "Evenings on Request",
-      "highlight": "Open Timber Deck Lounge"
+      "title": "UNESCO Darjeeling Toy Train Heritage Excursion",
+      "duration": "Half Day Trip",
+      "difficulty": "Easy / Sightseeing",
+      "tagline": "Historic steam locomotive winding through misty pine forests",
+      "description": "Take a scenic excursion to the Darjeeling Himalayan Railway (DHR). Watch authentic blue steam engines puff smoke along narrow-gauge tracks carved into steep mountain slopes—a UNESCO World Heritage landmark.",
+      "image": "/images/mineral-springs/darjeeling-unesco-steam-locomotive.jpg",
+      "highlights": [
+        "140-year-old steam engine heritage",
+        "Narrow-gauge trackside photography",
+        "Batasia Loop & Ghoom station views"
+      ]
     }
   ],
   "testimonials": [
@@ -376,7 +545,7 @@
         "badge": "BOUTIQUE RETREAT OFFERING TIMELESS HIMALAYAN TRANQUILITY",
         "title": "A Peaceful Escape in the\nHeart of the Mountains",
         "subtitle": "",
-        "image": "/images/mineral-springs/dawaipani-balcony-valley-vista.jpg",
+        "image": "/images/mineral-springs/dawaipani-balcony-sunset-clouds.jpg",
         "stats": [
           {
             "id": "stat-1",
@@ -676,220 +845,178 @@
   },
   "media": [
     {
-      "id": "med-1",
-      "filename": "dawaipani-balcony-valley-vista.jpg",
-      "url": "/images/mineral-springs/dawaipani-balcony-valley-vista.jpg",
-      "title": "Dawaipani balcony valley vista",
-      "altText": "Mineral Springs Retreat - dawaipani balcony valley vista",
-      "category": "Vistas",
-      "uploadedAt": "2026-11-12T10:55:06.685Z"
+      "id": "lib-1",
+      "url": "/images/mineral-springs/dawaipani-balcony-sunset-clouds.jpg",
+      "title": "Golden Sunset Clouds from Balcony",
+      "category": "Views"
     },
     {
-      "id": "med-2",
-      "filename": "dawaipani-clouds-balcony.jpg",
-      "url": "/images/mineral-springs/dawaipani-clouds-balcony.jpg",
-      "title": "Dawaipani clouds balcony",
-      "altText": "Mineral Springs Retreat - dawaipani clouds balcony",
-      "category": "Vistas",
-      "uploadedAt": "2026-11-12T10:55:06.685Z"
+      "id": "lib-2",
+      "url": "/images/mineral-springs/mineral-springs-retreat-complex-facade.jpg",
+      "title": "Main Eco-Retreat Complex Facade",
+      "category": "Property"
     },
     {
-      "id": "med-3",
-      "filename": "dawaipani-ridge-panoramic.jpg",
-      "url": "/images/mineral-springs/dawaipani-ridge-panoramic.jpg",
-      "title": "Dawaipani ridge panoramic",
-      "altText": "Mineral Springs Retreat - dawaipani ridge panoramic",
-      "category": "Vistas",
-      "uploadedAt": "2026-11-12T10:55:06.685Z"
+      "id": "lib-3",
+      "url": "/images/mineral-springs/dawaipani-kanchenjunga-snow-peaks.jpg",
+      "title": "Mt. Kanchenjunga Snow Peaks Panorama",
+      "category": "Views"
     },
     {
-      "id": "med-4",
-      "filename": "hero-mountain-ridge.jpg",
-      "url": "/images/mineral-springs/hero-mountain-ridge.jpg",
-      "title": "Hero mountain ridge",
-      "altText": "Mineral Springs Retreat - hero mountain ridge",
-      "category": "General",
-      "uploadedAt": "2026-11-12T10:55:06.685Z"
+      "id": "lib-4",
+      "url": "/images/mineral-springs/dawaipani-darjeeling-night-lights.jpg",
+      "title": "Darjeeling Town Night Lights Over Cloud Sea",
+      "category": "Views"
     },
     {
-      "id": "med-5",
-      "filename": "kanchenjunga-valley-vista.jpg",
-      "url": "/images/mineral-springs/kanchenjunga-valley-vista.jpg",
-      "title": "Kanchenjunga valley vista",
-      "altText": "Mineral Springs Retreat - kanchenjunga valley vista",
-      "category": "General",
-      "uploadedAt": "2026-11-12T10:55:06.685Z"
+      "id": "lib-5",
+      "url": "/images/mineral-springs/mineral-springs-waterfall-stream.jpg",
+      "title": "Mineral Springs Waterfall & River Rocks",
+      "category": "Nature"
     },
     {
-      "id": "med-6",
-      "filename": "mist-mountain-valley.jpg",
-      "url": "/images/mineral-springs/mist-mountain-valley.jpg",
-      "title": "Mist mountain valley",
-      "altText": "Mineral Springs Retreat - mist mountain valley",
-      "category": "General",
-      "uploadedAt": "2026-11-12T10:55:06.685Z"
+      "id": "lib-6",
+      "url": "/images/mineral-springs/guest-mindfulness-mountain-river.jpg",
+      "title": "Guest Relaxation on Riverbed Boulders",
+      "category": "Experiences"
     },
     {
-      "id": "med-7",
-      "filename": "nature-mountain-sanctuary.jpg",
-      "url": "/images/mineral-springs/nature-mountain-sanctuary.jpg",
-      "title": "Nature mountain sanctuary",
-      "altText": "Mineral Springs Retreat - nature mountain sanctuary",
-      "category": "General",
-      "uploadedAt": "2026-11-12T10:55:06.685Z"
+      "id": "lib-7",
+      "url": "/images/mineral-springs/dawaipani-drone-canopy-aerial.jpg",
+      "title": "90° Top-Down Drone Canopy Aerial",
+      "category": "Views"
     },
     {
-      "id": "med-8",
-      "filename": "retreat-balcony-cushion-corner.jpg",
-      "url": "/images/mineral-springs/retreat-balcony-cushion-corner.jpg",
-      "title": "Retreat balcony cushion corner",
-      "altText": "Mineral Springs Retreat - retreat balcony cushion corner",
-      "category": "Retreat",
-      "uploadedAt": "2026-11-12T10:55:06.685Z"
+      "id": "lib-8",
+      "url": "/images/mineral-springs/dawaipani-golden-tea-slopes-sunrise.jpg",
+      "title": "Golden Sunrise Over Terraced Tea Slopes",
+      "category": "Nature"
     },
     {
-      "id": "med-9",
-      "filename": "retreat-cottages-mountain-slope.jpg",
-      "url": "/images/mineral-springs/retreat-cottages-mountain-slope.jpg",
-      "title": "Retreat cottages mountain slope",
-      "altText": "Mineral Springs Retreat - retreat cottages mountain slope",
-      "category": "Retreat",
-      "uploadedAt": "2026-11-12T10:55:06.685Z"
+      "id": "lib-9",
+      "url": "/images/mineral-springs/darjeeling-unesco-steam-locomotive.jpg",
+      "title": "UNESCO Heritage DHR Steam Toy Train",
+      "category": "Culture"
     },
     {
-      "id": "med-10",
-      "filename": "retreat-covered-porch-lantern.jpg",
-      "url": "/images/mineral-springs/retreat-covered-porch-lantern.jpg",
-      "title": "Retreat covered porch lantern",
-      "altText": "Mineral Springs Retreat - retreat covered porch lantern",
-      "category": "Retreat",
-      "uploadedAt": "2026-11-12T10:55:06.685Z"
+      "id": "lib-10",
+      "url": "/images/mineral-springs/darjeeling-toy-train-tracks.jpg",
+      "title": "Narrow-Gauge Mountain Rail Trail",
+      "category": "Experiences"
     },
     {
-      "id": "med-11",
-      "filename": "retreat-hillside-eco-cottage.jpg",
-      "url": "/images/mineral-springs/retreat-hillside-eco-cottage.jpg",
-      "title": "Retreat hillside eco cottage",
-      "altText": "Mineral Springs Retreat - retreat hillside eco cottage",
-      "category": "Retreat",
-      "uploadedAt": "2026-11-12T10:55:06.685Z"
+      "id": "lib-11",
+      "url": "/images/mineral-springs/dawaipani-tibetan-prayer-flags.jpg",
+      "title": "Tibetan Prayer Flags & Hillside Grounds",
+      "category": "Culture"
     },
     {
-      "id": "med-12",
-      "filename": "retreat-main-cottage-facade.jpg",
-      "url": "/images/mineral-springs/retreat-main-cottage-facade.jpg",
-      "title": "Retreat main cottage facade",
-      "altText": "Mineral Springs Retreat - retreat main cottage facade",
-      "category": "Retreat",
-      "uploadedAt": "2026-11-12T10:55:06.685Z"
+      "id": "lib-12",
+      "url": "/images/mineral-springs/darjeeling-tea-macro-dewdrops.jpg",
+      "title": "Macro Dewdrop Organic Tea Leaves",
+      "category": "Nature"
     },
     {
-      "id": "med-13",
-      "filename": "retreat-patio-deck-lounge.jpg",
-      "url": "/images/mineral-springs/retreat-patio-deck-lounge.jpg",
-      "title": "Retreat patio deck lounge",
-      "altText": "Mineral Springs Retreat - retreat patio deck lounge",
-      "category": "Retreat",
-      "uploadedAt": "2026-11-12T10:55:06.685Z"
+      "id": "lib-13",
+      "url": "/images/mineral-springs/darjeeling-tea-gardens-panoramic.jpg",
+      "title": "Panoramic Rolling Tea Terraces",
+      "category": "Nature"
     },
     {
-      "id": "med-14",
-      "filename": "retreat-verandah-corridor-view.jpg",
-      "url": "/images/mineral-springs/retreat-verandah-corridor-view.jpg",
-      "title": "Retreat verandah corridor view",
-      "altText": "Mineral Springs Retreat - retreat verandah corridor view",
-      "category": "Retreat",
-      "uploadedAt": "2026-11-12T10:55:06.685Z"
+      "id": "lib-14",
+      "url": "/images/mineral-springs/darjeeling-tea-leaves-fresh-tip.jpg",
+      "title": "Two Leaves and a Bud Green Tea Shoot",
+      "category": "Nature"
     },
     {
-      "id": "med-15",
-      "filename": "retreat-wooden-balcony-guitar.jpg",
-      "url": "/images/mineral-springs/retreat-wooden-balcony-guitar.jpg",
-      "title": "Retreat wooden balcony guitar",
-      "altText": "Mineral Springs Retreat - retreat wooden balcony guitar",
-      "category": "Retreat",
-      "uploadedAt": "2026-11-12T10:55:06.685Z"
+      "id": "lib-15",
+      "url": "/images/mineral-springs/dawaipani-forest-trail-walk.jpg",
+      "title": "Cardamom Forest Trail to Cottages",
+      "category": "Property"
     },
     {
-      "id": "med-16",
-      "filename": "room-cozy-pine-bedroom.jpg",
-      "url": "/images/mineral-springs/room-cozy-pine-bedroom.jpg",
-      "title": "Room cozy pine bedroom",
-      "altText": "Mineral Springs Retreat - room cozy pine bedroom",
-      "category": "Rooms",
-      "uploadedAt": "2026-11-12T10:55:06.685Z"
+      "id": "lib-16",
+      "url": "/images/mineral-springs/retreat-wooden-verandah-balcony.jpg",
+      "title": "Pine Timber Verandah & Blue Guitar",
+      "category": "Property"
     },
     {
-      "id": "med-17",
-      "filename": "room-double-sharing-balcony.jpg",
+      "id": "lib-17",
+      "url": "/images/mineral-springs/retreat-cottage-hillside-canopy.jpg",
+      "title": "Hillside Cottage in Pine Canopy",
+      "category": "Property"
+    },
+    {
+      "id": "lib-18",
+      "url": "/images/mineral-springs/mineral-springs-crystal-stream.jpg",
+      "title": "Crystal Mountain Stream Water",
+      "category": "Nature"
+    },
+    {
+      "id": "lib-19",
+      "url": "/images/mineral-springs/mineral-springs-boulder-riverbed.jpg",
+      "title": "Boulder Riverbed at Mineral Springs",
+      "category": "Nature"
+    },
+    {
+      "id": "lib-20",
+      "url": "/images/mineral-springs/host-founder-portrait.jpg",
+      "title": "Retreat Founder - Himalayan Hospitality",
+      "category": "Culture"
+    },
+    {
+      "id": "lib-21",
+      "url": "/images/mineral-springs/host-co-founder-portrait.jpg",
+      "title": "Retreat Co-Founder & Resident Hostess",
+      "category": "Culture"
+    },
+    {
+      "id": "lib-22",
+      "url": "/images/mineral-springs/host-hospitality-portrait.jpg",
+      "title": "Warm Homestay Welcome Portrait",
+      "category": "Culture"
+    },
+    {
+      "id": "lib-23",
+      "url": "/images/mineral-springs/dawaipani-misty-valley-morning.jpg",
+      "title": "Misty Morning Valley Drift from Balcony",
+      "category": "Views"
+    },
+    {
+      "id": "lib-24",
       "url": "/images/mineral-springs/room-double-sharing-balcony.jpg",
-      "title": "Room double sharing balcony",
-      "altText": "Mineral Springs Retreat - room double sharing balcony",
-      "category": "Rooms",
-      "uploadedAt": "2026-11-12T10:55:06.685Z"
+      "title": "Double Sharing Bedroom with Balcony",
+      "category": "Rooms"
     },
     {
-      "id": "med-18",
-      "filename": "room-green-feature-wall.jpg",
-      "url": "/images/mineral-springs/room-green-feature-wall.jpg",
-      "title": "Room green feature wall",
-      "altText": "Mineral Springs Retreat - room green feature wall",
-      "category": "Rooms",
-      "uploadedAt": "2026-11-12T10:55:06.685Z"
-    },
-    {
-      "id": "med-19",
-      "filename": "room-group-family-suite.jpg",
+      "id": "lib-25",
       "url": "/images/mineral-springs/room-group-family-suite.jpg",
-      "title": "Room group family suite",
-      "altText": "Mineral Springs Retreat - room group family suite",
-      "category": "Rooms",
-      "uploadedAt": "2026-11-12T10:55:06.686Z"
+      "title": "Group Family Suite Interior",
+      "category": "Rooms"
     },
     {
-      "id": "med-20",
-      "filename": "room-misty-balcony-morning.jpg",
-      "url": "/images/mineral-springs/room-misty-balcony-morning.jpg",
-      "title": "Room misty balcony morning",
-      "altText": "Mineral Springs Retreat - room misty balcony morning",
-      "category": "Rooms",
-      "uploadedAt": "2026-11-12T10:55:06.686Z"
-    },
-    {
-      "id": "med-21",
-      "filename": "room-reading-nook-corner.jpg",
-      "url": "/images/mineral-springs/room-reading-nook-corner.jpg",
-      "title": "Room reading nook corner",
-      "altText": "Mineral Springs Retreat - room reading nook corner",
-      "category": "Rooms",
-      "uploadedAt": "2026-11-12T10:55:06.686Z"
-    },
-    {
-      "id": "med-22",
-      "filename": "room-twin-balcony-view.jpg",
+      "id": "lib-26",
       "url": "/images/mineral-springs/room-twin-balcony-view.jpg",
-      "title": "Room twin balcony view",
-      "altText": "Mineral Springs Retreat - room twin balcony view",
-      "category": "Rooms",
-      "uploadedAt": "2026-11-12T10:55:06.686Z"
+      "title": "Twin Balcony Room with Mountain View",
+      "category": "Rooms"
     },
     {
-      "id": "med-23",
-      "filename": "tea-garden-landscape.jpg",
-      "url": "/images/mineral-springs/tea-garden-landscape.jpg",
-      "title": "Tea garden landscape",
-      "altText": "Mineral Springs Retreat - tea garden landscape",
-      "category": "General",
-      "uploadedAt": "2026-11-12T10:55:06.686Z"
+      "id": "lib-27",
+      "url": "/images/mineral-springs/room-cozy-pine-bedroom.jpg",
+      "title": "Pine Wood Master Bedroom",
+      "category": "Rooms"
     },
     {
-      "id": "med-24",
-      "filename": "village-trail-vista.jpg",
-      "url": "/images/mineral-springs/village-trail-vista.jpg",
-      "title": "Village trail vista",
-      "altText": "Mineral Springs Retreat - village trail vista",
-      "category": "General",
-      "uploadedAt": "2026-11-12T10:55:06.686Z"
+      "id": "lib-28",
+      "url": "/images/mineral-springs/retreat-wooden-balcony-guitar.jpg",
+      "title": "Balcony Corridor with Acoustic Guitar",
+      "category": "Property"
+    },
+    {
+      "id": "lib-29",
+      "url": "/images/mineral-springs/retreat-covered-porch-lantern.jpg",
+      "title": "Covered Porch with Warm Lantern",
+      "category": "Property"
     }
   ],
   "draftPages": {

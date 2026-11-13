@@ -5,87 +5,81 @@ import { Mountain, Waves, Compass, Footprints, Sparkles, Flame, Check, ArrowRigh
 
 const defaultExperiences = [
   {
-    id: 'kanchenjunga',
-    title: 'Panoramic Himalayan Vistas from Balcony',
-    subtitle: 'Sunrise Majesty & Layered Blue Ridges',
-    icon: Mountain,
-    image: '/images/mineral-springs/dawaipani-balcony-valley-vista.jpg',
-    description: 'Step onto the wooden homestay balcony and gaze across endless mist-shrouded mountain ridges stretching toward Darjeeling. On clear mornings, amber dawn illuminates the distant peaks, while twilight turns the valley into a sparkling constellation of village and city lights.',
-    points: [
-      'Sweeping layered mountain ridge visibility directly from property balconies',
-      'Spectacular twinkling valley lights of Darjeeling & Namchi at night',
-      'Direct mountain views from private room balconies',
-      'Tranquil sunrise contemplation spots with fresh morning air'
-    ]
-  },
-  {
-    id: 'medicinal-springs',
-    title: 'Verandah Corridors & Peaceful Alpine Living',
-    subtitle: 'Handcrafted Heritage & Open Mountain Air',
+    id: 'exp-1',
+    title: 'Mineral Springs Waterfall & River Trek',
+    subtitle: 'Cascading natural waters, riverbed boulders & untouched wilderness',
     icon: Waves,
-    image: '/images/mineral-springs/retreat-verandah-corridor-view.jpg',
-    description: 'The retreat features long, open-air wooden verandah walkways bordered by potted palms, heritage woven rugs, and pine railings. It is the perfect place to sit with a cup of hot Darjeeling tea, read, or listen to the mountain breeze whispering through the pines.',
+    image: '/images/mineral-springs/mineral-springs-waterfall-stream.jpg',
+    description: 'Hike through cardamom groves and virgin subtropical forests down to the authentic Mineral Springs mountain waterfalls. Wade in crystal pools, sit on moss-covered boulders, and immerse in pristine Himalayan sounds.',
     points: [
-      'Open-air wooden verandah corridors connecting the suites',
-      'Authentic mountain architecture with heritage textiles',
-      'Sheltered spots to enjoy mountain rain and drifting mist',
-      'Peaceful environment for relaxation and creative contemplation'
+      'Natural freshwater waterfall cascades and crystal mountain pools',
+      'Peaceful river boulder meditation and pure running water sounds',
+      'Dense subtropical pine canopy and Himalayan birdwatching'
     ]
   },
   {
-    id: 'tea-gardens',
-    title: 'Hillside Eco-Cottages in Pine Canopy',
-    subtitle: 'Traditional Timber & Stilt Architecture',
+    id: 'exp-2',
+    title: 'Organic Tea Garden Walk & First Flush Tasting',
+    subtitle: 'Hand-plucked tender leaves, dewdrop mornings & estate heritage',
     icon: Compass,
-    image: '/images/mineral-springs/retreat-hillside-eco-cottage.jpg',
-    description: 'Nestled directly against the steep mountain slope, our eco-cottages on stilts are built in harmony with nature. Shaded by towering Himalayan pines and lush ferns, each cottage offers total privacy and immersion in the mountain forest environment.',
+    image: '/images/mineral-springs/darjeeling-tea-gardens-panoramic.jpg',
+    description: 'Stroll through the manicured contour slopes of nearby organic Darjeeling tea gardens. Witness traditional two-leaves-and-a-bud plucking and savor fresh-brewed aromatic Darjeeling tea back at the retreat.',
     points: [
-      'Traditional wooden stilt cottage architecture on the hillside',
-      'Surrounded by evergreen pine forest and mountain vegetation',
-      'Rich Himalayan bird-watching right from your cottage windows',
-      'A truly peaceful escape far away from tourist congestion'
+      'Sweeping panoramas of terraced green tea slopes',
+      'Insight into traditional organic harvesting & hand plucking',
+      'Curated artisanal Darjeeling tea tasting session at the homestay'
     ]
   },
   {
-    id: 'trekking-waterfalls',
-    title: 'Morning Mist Drifting Through Balcony',
-    subtitle: 'The Signature Dawaipani Weather Phenomenon',
+    id: 'exp-3',
+    title: 'Kanchenjunga Sunrise & Cloud Inversion Watch',
+    subtitle: '180-degree Sleeping Buddha panorama above a silent sea of clouds',
+    icon: Mountain,
+    image: '/images/mineral-springs/dawaipani-balcony-sunset-clouds.jpg',
+    description: 'Awaken with fresh mountain ginger tea on your private wooden verandah. Watch the first golden rays illuminate the snow peaks of Mt. Kanchenjunga while white cloud inversions flood the valley below.',
+    points: [
+      'Golden hour illumination of the Sleeping Buddha snow peaks',
+      'Sea-of-clouds inversion phenomenon right from your balcony',
+      'Fresh hot morning brew amidst total mountain tranquility'
+    ]
+  },
+  {
+    id: 'exp-4',
+    title: 'Cardamom Forest & Village Ridge Trails',
+    subtitle: 'Stone trails, fluttering prayer flags & peaceful hamlet life',
     icon: Footprints,
-    image: '/images/mineral-springs/room-misty-balcony-morning.jpg',
-    description: 'Experience the magical sensation of cool, silken mountain mist rolling right past your bedroom door. In the quiet morning hours, watch clouds flow like rivers across the valley canopy, filling the air with the scent of pine and wet earth.',
+    image: '/images/mineral-springs/dawaipani-forest-trail-walk.jpg',
+    description: 'Follow scenic stone pathways winding past hillside cottages, fluttering Buddhist prayer flags, and terraced organic farms. Breathe in pure mountain air and experience genuine Gorkha mountain culture.',
     points: [
-      'Silken mountain mist drifting right past your bedroom doors',
-      'Cool, refreshing Himalayan air every morning and afternoon',
-      'Dramatic shifts in weather and cloud formations throughout the day',
-      'Unmatched photography opportunities of changing mountain light'
+      'Gentle stone trails passing terraced hill gardens and pine woods',
+      'Traditional colorful prayer flags and village shrines',
+      'Authentic cultural exchange with friendly local hosts'
     ]
   },
   {
-    id: 'village-life',
-    title: 'Dawaipani Village Walks & Bird-Watching',
-    subtitle: 'Rural Warmth & Avian Sanctuary',
+    id: 'exp-5',
+    title: 'UNESCO Darjeeling Toy Train Heritage Excursion',
+    subtitle: 'Historic steam locomotive winding through misty pine forests',
     icon: Sparkles,
-    image: '/images/mineral-springs/retreat-cottages-mountain-slope.jpg',
-    description: 'Dawaipani is a peaceful settlement characterized by warm Gorkha hospitality and serene mountain rhythms. Take quiet walks past traditional wooden cottages, vibrant flower gardens, and listen to melodious songs of laughingthrushes, sunbirds, and Himalayan barbets.',
+    image: '/images/mineral-springs/darjeeling-unesco-steam-locomotive.jpg',
+    description: 'Take a scenic excursion to the Darjeeling Himalayan Railway (DHR). Watch authentic blue steam engines puff smoke along narrow-gauge tracks carved into steep mountain slopes—a UNESCO World Heritage landmark.',
     points: [
-      'Immersive village strolls through authentic Gorkha communities',
-      'Exceptional bird-watching in pine and rhododendron woods',
-      'Slow down to the gentle pace of authentic Himalayan life',
-      'Pure silence away from urban stress and commercial noise'
+      'Historic 140-year-old steam locomotive heritage experience',
+      'Iconic narrow-gauge railway photo opportunities',
+      'Scenic journeys through Batasia Loop and misty mountain stations'
     ]
   },
   {
-    id: 'bonfire-bbq',
-    title: 'Evening Bonfire & Mountain Barbecue',
+    id: 'exp-6',
+    title: 'Evening Bonfire & Fireside Mountain Lounge',
     subtitle: 'Starlight Gatherings on Request',
     icon: Flame,
     image: '/images/mineral-springs/retreat-patio-deck-lounge.jpg',
     description: 'As twilight falls and the mountain air turns pleasantly crisp, gather around crackling embers under a brilliant Himalayan night sky. Bonfire and barbecue sessions can be arranged on request, subject to weather conditions and local host availability.',
     points: [
-      'Cozy wood fire in the outdoor open courtyard',
+      'Cozy wood fire in the outdoor open timber courtyard',
       'Delicious local barbecue treats prepared on request',
-      'Unobstructed mountain stargazing free of light pollution',
-      'Subject to clear weather and prior host coordination'
+      'Unobstructed mountain stargazing free of light pollution'
     ]
   }
 ];
@@ -110,7 +104,7 @@ export default function CozyExperiencesPage({ setActivePage }) {
           icon: def.icon || icons[idx % icons.length],
           image: exp.image || def.image || '/images/mineral-springs/dawaipani-balcony-valley-vista.jpg',
           description: exp.description || def.description || '',
-          points: def.points || [
+          points: exp.highlights || def.points || [
             'Direct mountain vistas and peaceful forest surroundings',
             'Authentic homestay hospitality and local host guidance',
             'Fresh Himalayan mountain air and quiet contemplation spots'

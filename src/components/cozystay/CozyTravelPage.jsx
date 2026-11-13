@@ -232,6 +232,71 @@ export default function CozyTravelPage({ setActivePage }) {
           </div>
         </div>
 
+        {/* 4. UNESCO World Heritage Excursion: Darjeeling Toy Train */}
+        <div className="bg-[#FAF8F5] rounded-3xl p-8 sm:p-12 border border-[#EAE3D8] shadow-xl mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <span className="typo-eyebrow text-[#B89D77] block mb-2 font-medium">HERITAGE EXCURSION</span>
+            <h3 className="typo-section-heading text-cozy-forest font-normal">
+              Darjeeling Himalayan Railway (Toy Train)
+            </h3>
+            <p className="typo-small text-cozy-muted font-light mt-2">
+              Located just a short scenic drive from Dawaipani, the UNESCO World Heritage mountain railway offers an unforgettable journey through misty pine ridges.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+            {/* Steam Train Card */}
+            <div className="rounded-3xl overflow-hidden border border-[#EAE3D8] bg-white shadow-md group flex flex-col">
+              <div className="aspect-[4/3] overflow-hidden bg-neutral-900">
+                <img
+                  src="/images/mineral-springs/darjeeling-unesco-steam-locomotive.jpg"
+                  alt="UNESCO World Heritage Darjeeling Himalayan Railway steam locomotive"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6 sm:p-7 space-y-2 flex-1 flex flex-col justify-between">
+                <div>
+                  <span className="text-[10px] font-sans uppercase tracking-[0.2em] text-[#B89D77] font-semibold block mb-1">
+                    HISTORIC STEAM LOCOMOTIVE
+                  </span>
+                  <h4 className="typo-card-heading text-xl text-cozy-forest font-normal">
+                    Living Himalayan Heritage
+                  </h4>
+                  <p className="typo-small text-cozy-muted font-light mt-2 leading-relaxed">
+                    Operating continuously since 1881, the iconic blue B-Class steam engine climbs through the clouds, whistling past terraced villages and tea slopes.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Trackside Trail Card */}
+            <div className="rounded-3xl overflow-hidden border border-[#EAE3D8] bg-white shadow-md group flex flex-col">
+              <div className="aspect-[4/3] overflow-hidden bg-neutral-900">
+                <img
+                  src="/images/mineral-springs/darjeeling-toy-train-tracks.jpg"
+                  alt="Historic narrow-gauge mountain railway tracks near Darjeeling"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6 sm:p-7 space-y-2 flex-1 flex flex-col justify-between">
+                <div>
+                  <span className="text-[10px] font-sans uppercase tracking-[0.2em] text-[#B89D77] font-semibold block mb-1">
+                    NARROW-GAUGE TRACKSIDE TRAIL
+                  </span>
+                  <h4 className="typo-card-heading text-xl text-cozy-forest font-normal">
+                    Hill Cart Road Excursion
+                  </h4>
+                  <p className="typo-small text-cozy-muted font-light mt-2 leading-relaxed">
+                    Guests can coordinate half-day trips through our host to visit nearby Batasia Loop and Ghoom station, taking leisurely walks along the misty narrow-gauge tracks.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Host Callout */}
         <div className="bg-[#151F18] text-white rounded-3xl p-8 sm:p-12 text-center border border-[#2D3B31]">
           <h3 className="typo-subsection-heading text-white font-normal mb-2">

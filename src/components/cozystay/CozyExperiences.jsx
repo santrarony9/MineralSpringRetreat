@@ -4,39 +4,39 @@ import { ArrowRight } from 'lucide-react';
 
 const defaultExperiences = [
   {
-    id: 'kanchenjunga',
-    tag: 'PANORAMIC VISTAS',
-    category: 'OUTDOORS',
-    title: 'Panoramic Mountain Vistas',
-    desc: 'Gaze across layered blue Himalayan ridges from private balconies, with rolling clouds and distant Darjeeling lights.',
-    image: '/images/mineral-springs/dawaipani-balcony-valley-vista.jpg',
+    id: 'waterfall-trek',
+    tag: 'NATURAL WONDER',
+    category: 'TREKKING',
+    title: 'Mineral Springs Waterfall Trek',
+    desc: 'Hike through cardamom forests down to natural cascades and crystal stream pools deep in the Himalayan valley.',
+    image: '/images/mineral-springs/mineral-springs-waterfall-stream.jpg',
     isStaggered: false
   },
   {
-    id: 'verandah-living',
-    tag: 'HOMESTAY LIFE',
-    category: 'RELAXATION',
-    title: 'Mountain Verandah Walk',
-    desc: 'Stroll along wooden verandahs framed by potted palms, heritage rugs, and crisp alpine air overlooking the forest.',
-    image: '/images/mineral-springs/retreat-verandah-corridor-view.jpg',
+    id: 'tea-gardens',
+    tag: 'ESTATE HERITAGE',
+    category: 'ORGANIC TASTING',
+    title: 'Tea Garden Walk & Tasting',
+    desc: 'Stroll through terraced mountain tea slopes, discover two-leaves-and-a-bud plucking, and sample fresh brews.',
+    image: '/images/mineral-springs/darjeeling-tea-gardens-panoramic.jpg',
     isStaggered: true
   },
   {
-    id: 'hillside-cottages',
-    tag: 'ECO ARCHITECTURE',
-    category: 'RETREAT GROUNDS',
-    title: 'Pine Hillside Cottages',
-    desc: 'Experience rustic timber living nestled directly on the mountain slope surrounded by towering Himalayan pines.',
-    image: '/images/mineral-springs/retreat-hillside-eco-cottage.jpg',
+    id: 'kanchenjunga',
+    tag: 'PANORAMIC VISTAS',
+    category: 'OUTDOORS',
+    title: 'Kanchenjunga Sunrise & Clouds',
+    desc: 'Witness golden hour dawn over the Sleeping Buddha snow peaks with floating sea-of-clouds right from your verandah.',
+    image: '/images/mineral-springs/dawaipani-balcony-sunset-clouds.jpg',
     isStaggered: false
   },
   {
-    id: 'garden-cottages',
-    tag: 'TERRACED GARDENS',
-    category: 'FLORA & TRAILS',
-    title: 'Terraced Garden Lodges',
-    desc: 'Wander among red-roofed cottages connected by rustic stone steps, blooming hydrangeas, and organic mountain greenery.',
-    image: '/images/mineral-springs/retreat-cottages-mountain-slope.jpg',
+    id: 'forest-trails',
+    tag: 'GENTLE TRAILS',
+    category: 'HAMLET WALKS',
+    title: 'Cardamom Forest & Ridge Trails',
+    desc: 'Follow quiet stone pathways past fluttering prayer flags, traditional stilt cottages, and lush mountain slopes.',
+    image: '/images/mineral-springs/dawaipani-forest-trail-walk.jpg',
     isStaggered: true
   }
 ];

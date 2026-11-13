@@ -166,8 +166,8 @@ export default function CozyDawaipani({ setActivePage, standalone = false }) {
               <div className="lg:col-span-6 order-1 lg:order-2">
                 <div className="aspect-[4/3] overflow-hidden bg-neutral-900 group">
                   <img
-                    src="/images/mineral-springs/retreat-wooden-balcony-guitar.jpg"
-                    alt="Panoramic Mount Kanchenjunga vista from retreat verandah"
+                    src="/images/mineral-springs/dawaipani-kanchenjunga-snow-peaks.jpg"
+                    alt="The Sleeping Buddha Mount Kanchenjunga vista from Dawaipani"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                   />
@@ -180,8 +180,8 @@ export default function CozyDawaipani({ setActivePage, standalone = false }) {
               <div className="lg:col-span-6 order-1">
                 <div className="aspect-[4/3] overflow-hidden bg-neutral-900 group">
                   <img
-                    src="/images/mineral-springs/retreat-balcony-cushion-corner.jpg"
-                    alt="Valley mist and mountain slopes from intimate balcony corner"
+                    src="/images/mineral-springs/dawaipani-drone-canopy-aerial.jpg"
+                    alt="Canopy and valley mist across Dawaipani mountain slopes"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                   />
@@ -224,8 +224,8 @@ export default function CozyDawaipani({ setActivePage, standalone = false }) {
               <div className="lg:col-span-6 order-1 lg:order-2">
                 <div className="aspect-[4/3] overflow-hidden bg-neutral-900 group">
                   <img
-                    src="/images/mineral-springs/retreat-patio-deck-lounge.jpg"
-                    alt="Evening mountain patio deck looking across to Darjeeling lights"
+                    src="/images/mineral-springs/dawaipani-darjeeling-night-lights.jpg"
+                    alt="Evening mountain vista looking across to shimmering Darjeeling lights over cloud sea"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                   />
@@ -238,8 +238,8 @@ export default function CozyDawaipani({ setActivePage, standalone = false }) {
               <div className="lg:col-span-6 order-1">
                 <div className="aspect-[4/3] overflow-hidden bg-neutral-900 group">
                   <img
-                    src="/images/mineral-springs/retreat-cottages-mountain-slope.jpg"
-                    alt="Retreat cottages nestled in green mountain gardens surrounding Dawaipani"
+                    src="/images/mineral-springs/darjeeling-tea-gardens-panoramic.jpg"
+                    alt="Retreat cottages and manicured emerald tea garden slopes surrounding Dawaipani"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                   />

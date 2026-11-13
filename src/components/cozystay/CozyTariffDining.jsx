@@ -171,6 +171,49 @@ export default function CozyTariffDining({ setActivePage }) {
           </p>
         </div>
 
+        {/* Organic Tea & Mountain Farm Gastronomy Highlight */}
+        <div className="mt-14 sm:mt-18 bg-[#151F18] border border-[#2D3B31] rounded-2xl p-6 sm:p-10 shadow-2xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div>
+              <span className="text-[11px] font-sans uppercase tracking-[0.24em] text-cozy-sand font-semibold block mb-3">
+                ESTATE HARVEST & TEA HERITAGE
+              </span>
+              <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-white font-normal leading-snug mb-4">
+                Organic Darjeeling Tea & Mountain-Grown Dining
+              </h3>
+              <p className="font-sans text-xs sm:text-sm text-white/80 leading-relaxed font-light mb-4">
+                Every warm cup at the retreat is brewed with tender organic Darjeeling tea leaves hand-harvested from nearby mountain slopes. Our home kitchen pairs these fragrant brews with wholesome Gorkha meals made from freshly gathered village vegetables, pure mountain spring water, and traditional wood-fire recipes.
+              </p>
+              <div className="flex flex-wrap items-center gap-4 text-xs text-cozy-sand font-medium">
+                <span className="inline-flex items-center gap-1.5 bg-[#1E2C22] px-3 py-1.5 rounded-full border border-[#2D3B31]">
+                  <CozySparkle className="w-3.5 h-3.5 text-cozy-sand" /> 100% Organic First Flush Brews
+                </span>
+                <span className="inline-flex items-center gap-1.5 bg-[#1E2C22] px-3 py-1.5 rounded-full border border-[#2D3B31]">
+                  <CozySparkle className="w-3.5 h-3.5 text-cozy-sand" /> Pure Spring Water Kitchen
+                </span>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
+              <div className="overflow-hidden rounded-xl border border-white/10 group aspect-[4/3] bg-black/20">
+                <img
+                  src="/images/mineral-springs/darjeeling-tea-macro-dewdrops.jpg"
+                  alt="Morning dewdrops on organic Darjeeling tea leaves at Mineral Springs Retreat"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                />
+              </div>
+              <div className="overflow-hidden rounded-xl border border-white/10 group aspect-[4/3] bg-black/20">
+                <img
+                  src="/images/mineral-springs/darjeeling-tea-gardens-panoramic.jpg"
+                  alt="Panoramic contour slopes of Darjeeling tea garden terraces"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );

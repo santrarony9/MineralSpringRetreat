@@ -14,151 +14,269 @@ export default function CozyGalleryPage({ setActivePage }) {
   const pageSubtitle = galleryData?.subtitle || 'Visual glimpses of our wooden cottages, mountain balconies, misty sunrises, and peaceful Himalayan settings in Dawaipani.';
 
   const defaultPhotos = [
-    {
-      id: 1,
-      title: 'Double Sharing Bedroom with Balcony Doors',
-      category: 'rooms',
-      categoryLabel: 'Rooms & Suites',
-      image: '/images/mineral-springs/room-double-sharing-balcony.jpg',
-      aspect: 'aspect-[4/3]',
-      caption: 'Warm wooden bedroom with floral bedding and double glass doors opening directly onto the mist and mountain canopy.'
-    },
-    {
-      id: 2,
-      title: 'Twin Sharing Room with Scenic Balcony Access',
-      category: 'rooms',
-      categoryLabel: 'Rooms & Suites',
-      image: '/images/mineral-springs/room-twin-balcony-view.jpg',
-      aspect: 'aspect-[4/3]',
-      caption: 'Comfortable twin-bed accommodation featuring polished wood flooring, cozy fleece quilts, and walkout balcony.'
-    },
-    {
-      id: 3,
-      title: 'Spacious Family & Group Sharing Suite',
-      category: 'rooms',
-      categoryLabel: 'Rooms & Suites',
-      image: '/images/mineral-springs/room-group-family-suite.jpg',
-      aspect: 'aspect-[4/3]',
-      caption: 'Large family suite with carpeted wooden floors, multiple comfortable beds, reading lamps, and scenic private balcony.'
-    },
-    {
-      id: 4,
-      title: 'Open Verandah with Acoustic Guitar & Valley View',
-      category: 'property',
-      categoryLabel: 'Property & Verandahs',
-      image: '/images/mineral-springs/retreat-wooden-balcony-guitar.jpg',
-      aspect: 'aspect-[4/3]',
-      caption: 'Long wooden balcony with warm red woven runner rug, acoustic guitar, and panoramic vistas overlooking the valley below.'
-    },
-    {
-      id: 5,
-      title: 'Bedside Reading Nook with Warm Lamp',
-      category: 'rooms',
-      categoryLabel: 'Rooms & Suites',
-      image: '/images/mineral-springs/room-reading-nook-corner.jpg',
-      aspect: 'aspect-[4/3]',
-      caption: 'Peaceful corner bedroom with handcrafted side table, brass reading lamp, curated books, and soft natural light.'
-    },
-    {
-      id: 6,
-      title: 'Balcony View of Layered Blue Himalayan Ridges',
-      category: 'mountains',
-      categoryLabel: 'Himalayan Vistas',
-      image: '/images/mineral-springs/dawaipani-balcony-valley-vista.jpg',
-      aspect: 'aspect-[4/3]',
-      caption: 'Looking out from the homestay balcony across endless mist-shrouded mountain ridges stretching toward Darjeeling.'
-    },
-    {
-      id: 7,
-      title: 'Misty Balcony Morning from Bedroom',
-      category: 'rooms',
-      categoryLabel: 'Rooms & Suites',
-      image: '/images/mineral-springs/room-misty-balcony-morning.jpg',
-      aspect: 'aspect-[4/3]',
-      caption: 'Stepping out from your bed into the cool, silent morning air as gentle clouds flow right across the wooden railing.'
-    },
-    {
-      id: 8,
-      title: 'Verandah Corridor with Potted Palm & Runner',
-      category: 'property',
-      categoryLabel: 'Property & Verandahs',
-      image: '/images/mineral-springs/retreat-verandah-corridor-view.jpg',
-      aspect: 'aspect-[4/3]',
-      caption: 'Long wooden verandah walkway framed by potted greens, heritage red rug, and open mountain vistas.'
-    },
-    {
-      id: 9,
-      title: 'Cottages Along the Stone Garden Slope',
-      category: 'property',
-      categoryLabel: 'Property & Verandahs',
-      image: '/images/mineral-springs/retreat-cottages-mountain-slope.jpg',
-      aspect: 'aspect-[4/3]',
-      caption: 'Red-roofed cottages connected by rustic stone steps and native blooming flowers along the terraced hillside.'
-    },
-    {
-      id: 10,
-      title: 'Open Wooden Patio Deck & Mountain Lounge',
-      category: 'property',
-      categoryLabel: 'Property & Verandahs',
-      image: '/images/mineral-springs/retreat-patio-deck-lounge.jpg',
-      aspect: 'aspect-[4/3]',
-      caption: 'Spacious outdoor timber deck with maroon-cushioned benches and coffee table — ideal for bonfire gatherings and stargazing.'
-    },
-    {
-      id: 11,
-      title: 'Forest Green Feature Wall Bedroom',
-      category: 'rooms',
-      categoryLabel: 'Rooms & Suites',
-      image: '/images/mineral-springs/room-green-feature-wall.jpg',
-      aspect: 'aspect-[4/3]',
-      caption: 'Elegant bedroom accent wall in deep forest green, complemented by bamboo sconce lighting, maple curtains, and mountain views.'
-    },
-    {
-      id: 12,
-      title: 'Retreat Main Cottage & Forest Canopy',
-      category: 'property',
-      categoryLabel: 'Property & Verandahs',
-      image: '/images/mineral-springs/retreat-main-cottage-facade.jpg',
-      aspect: 'aspect-[4/3]',
-      caption: 'Two-storey wooden lodge with traditional white lace eaves, mountain stonework, and towering pine forest backdrop.'
-    },
-    {
-      id: 13,
-      title: 'Hillside Eco-Cottage Tucked in Pine Forest',
-      category: 'property',
-      categoryLabel: 'Property & Verandahs',
-      image: '/images/mineral-springs/retreat-hillside-eco-cottage.jpg',
-      aspect: 'aspect-[4/3]',
-      caption: 'Traditional wooden cottage on stilts surrounded by towering pines and lush Himalayan vegetation on the quiet mountain slope.'
-    },
-    {
-      id: 14,
-      title: 'Covered Porch with Lantern & Garden Seating',
-      category: 'property',
-      categoryLabel: 'Property & Verandahs',
-      image: '/images/mineral-springs/retreat-covered-porch-lantern.jpg',
-      aspect: 'aspect-[4/3]',
-      caption: 'Charming sheltered entry porch with vintage hanging lantern, deep red benches, and potted plants for evening tea.'
-    },
-    {
-      id: 15,
-      title: 'Cozy Pine Wood Panelled Bedroom',
-      category: 'rooms',
-      categoryLabel: 'Rooms & Suites',
-      image: '/images/mineral-springs/room-cozy-pine-bedroom.jpg',
-      aspect: 'aspect-[4/3]',
-      caption: 'Natural pine wood plank walls and cozy mountain bedding with private walkout balcony overlooking the pines.'
-    },
-    {
-      id: 16,
-      title: 'Balcony Sitting Corner with Valley Canopy',
-      category: 'property',
-      categoryLabel: 'Property & Verandahs',
-      image: '/images/mineral-springs/retreat-balcony-cushion-corner.jpg',
-      aspect: 'aspect-[4/3]',
-      caption: 'Intimate balcony sitting corner with ethnic patterned cushions, bamboo accents, and sweeping views of the valley.'
-    }
-  ];
+  {
+    "id": "gal-1",
+    "title": "Double Sharing Bedroom with Balcony Doors",
+    "category": "rooms",
+    "categoryLabel": "Rooms",
+    "image": "/images/mineral-springs/room-double-sharing-balcony.jpg",
+    "aspect": "aspect-[16/9]",
+    "caption": "Double Sharing Bedroom with Balcony Doors"
+  },
+  {
+    "id": "gal-2",
+    "title": "Retreat Main Cottage & Forest Canopy",
+    "category": "property",
+    "categoryLabel": "Property",
+    "image": "/images/mineral-springs/retreat-main-cottage-facade.jpg",
+    "aspect": "aspect-[3/4]",
+    "caption": "Retreat Main Cottage & Forest Canopy"
+  },
+  {
+    "id": "gal-3",
+    "title": "Verandah with Acoustic Guitar & Valley View",
+    "category": "property",
+    "categoryLabel": "Property",
+    "image": "/images/mineral-springs/retreat-wooden-balcony-guitar.jpg",
+    "aspect": "aspect-[16/9]",
+    "caption": "Verandah with Acoustic Guitar & Valley View"
+  },
+  {
+    "id": "gal-4",
+    "title": "Balcony View of Layered Himalayan Ridges",
+    "category": "surroundings",
+    "categoryLabel": "Surroundings",
+    "image": "/images/mineral-springs/dawaipani-balcony-valley-vista.jpg",
+    "aspect": "aspect-[4/3]",
+    "caption": "Balcony View of Layered Himalayan Ridges"
+  },
+  {
+    "id": "gal-5",
+    "title": "Covered Porch with Vintage Lantern",
+    "category": "property",
+    "categoryLabel": "Property",
+    "image": "/images/mineral-springs/retreat-covered-porch-lantern.jpg",
+    "aspect": "aspect-[4/3]",
+    "caption": "Covered Porch with Vintage Lantern"
+  },
+  {
+    "id": "gal-6",
+    "title": "Outdoor Patio Deck & Mountain Lounge",
+    "category": "property",
+    "categoryLabel": "Property",
+    "image": "/images/mineral-springs/retreat-patio-deck-lounge.jpg",
+    "aspect": "aspect-[3/4]",
+    "caption": "Outdoor Patio Deck & Mountain Lounge"
+  },
+  {
+    "id": "gal-7",
+    "title": "Family Suite with Balcony Doors",
+    "category": "rooms",
+    "categoryLabel": "Rooms",
+    "image": "/images/mineral-springs/room-group-family-suite.jpg",
+    "aspect": "aspect-[16/9]",
+    "caption": "Family Suite with Balcony Doors"
+  },
+  {
+    "id": "gal-8",
+    "title": "Cottages Along the Garden Slope",
+    "category": "property",
+    "categoryLabel": "Property",
+    "image": "/images/mineral-springs/retreat-cottages-mountain-slope.jpg",
+    "aspect": "aspect-[4/3]",
+    "caption": "Cottages Along the Garden Slope"
+  },
+  {
+    "id": "gal-9",
+    "title": "Golden Sunset & Sea of Clouds from Balcony",
+    "category": "scenery",
+    "categoryLabel": "Scenery",
+    "image": "/images/mineral-springs/dawaipani-balcony-sunset-clouds.jpg",
+    "aspect": "aspect-[4/3]",
+    "caption": "Golden Sunset & Sea of Clouds from Balcony"
+  },
+  {
+    "id": "gal-10",
+    "title": "Mineral Springs Retreat Complex & Hillside Slopes",
+    "category": "stay",
+    "categoryLabel": "Stay",
+    "image": "/images/mineral-springs/mineral-springs-retreat-complex-facade.jpg",
+    "aspect": "aspect-[4/3]",
+    "caption": "Mineral Springs Retreat Complex & Hillside Slopes"
+  },
+  {
+    "id": "gal-11",
+    "title": "Mt. Kanchenjunga Sleeping Buddha over Dawaipani Ridges",
+    "category": "scenery",
+    "categoryLabel": "Scenery",
+    "image": "/images/mineral-springs/dawaipani-kanchenjunga-snow-peaks.jpg",
+    "aspect": "aspect-[4/3]",
+    "caption": "Mt. Kanchenjunga Sleeping Buddha over Dawaipani Ridges"
+  },
+  {
+    "id": "gal-12",
+    "title": "Darjeeling Town Night Lights over Floating Cloud Sea",
+    "category": "scenery",
+    "categoryLabel": "Scenery",
+    "image": "/images/mineral-springs/dawaipani-darjeeling-night-lights.jpg",
+    "aspect": "aspect-[4/3]",
+    "caption": "Darjeeling Town Night Lights over Floating Cloud Sea"
+  },
+  {
+    "id": "gal-13",
+    "title": "Natural Mineral Springs Mountain Waterfall",
+    "category": "experiences",
+    "categoryLabel": "Experiences",
+    "image": "/images/mineral-springs/mineral-springs-waterfall-stream.jpg",
+    "aspect": "aspect-[3/4]",
+    "caption": "Natural Mineral Springs Mountain Waterfall"
+  },
+  {
+    "id": "gal-14",
+    "title": "Mindful Meditation on Mountain River Rocks",
+    "category": "experiences",
+    "categoryLabel": "Experiences",
+    "image": "/images/mineral-springs/guest-mindfulness-mountain-river.jpg",
+    "aspect": "aspect-[3/4]",
+    "caption": "Mindful Meditation on Mountain River Rocks"
+  },
+  {
+    "id": "gal-15",
+    "title": "90° Drone Canopy Aerial of Retreat Cottages",
+    "category": "scenery",
+    "categoryLabel": "Scenery",
+    "image": "/images/mineral-springs/dawaipani-drone-canopy-aerial.jpg",
+    "aspect": "aspect-[4/3]",
+    "caption": "90° Drone Canopy Aerial of Retreat Cottages"
+  },
+  {
+    "id": "gal-16",
+    "title": "Golden Sunrise over Terraced Tea Garden Slopes",
+    "category": "scenery",
+    "categoryLabel": "Scenery",
+    "image": "/images/mineral-springs/dawaipani-golden-tea-slopes-sunrise.jpg",
+    "aspect": "aspect-[4/3]",
+    "caption": "Golden Sunrise over Terraced Tea Garden Slopes"
+  },
+  {
+    "id": "gal-17",
+    "title": "UNESCO World Heritage DHR Steam Toy Train with Floral Garlands",
+    "category": "culture",
+    "categoryLabel": "Culture",
+    "image": "/images/mineral-springs/darjeeling-unesco-steam-locomotive.jpg",
+    "aspect": "aspect-[3/4]",
+    "caption": "UNESCO World Heritage DHR Steam Toy Train with Floral Garlands"
+  },
+  {
+    "id": "gal-18",
+    "title": "Narrow-Gauge Heritage Mountain Railway Trail",
+    "category": "experiences",
+    "categoryLabel": "Experiences",
+    "image": "/images/mineral-springs/darjeeling-toy-train-tracks.jpg",
+    "aspect": "aspect-[4/3]",
+    "caption": "Narrow-Gauge Heritage Mountain Railway Trail"
+  },
+  {
+    "id": "gal-19",
+    "title": "Tibetan Prayer Flags Fluttering over Hillside Grounds",
+    "category": "culture",
+    "categoryLabel": "Culture",
+    "image": "/images/mineral-springs/dawaipani-tibetan-prayer-flags.jpg",
+    "aspect": "aspect-[4/3]",
+    "caption": "Tibetan Prayer Flags Fluttering over Hillside Grounds"
+  },
+  {
+    "id": "gal-20",
+    "title": "Morning Dewdrops on Organic Darjeeling Tea Leaves",
+    "category": "nature",
+    "categoryLabel": "Nature",
+    "image": "/images/mineral-springs/darjeeling-tea-macro-dewdrops.jpg",
+    "aspect": "aspect-[4/3]",
+    "caption": "Morning Dewdrops on Organic Darjeeling Tea Leaves"
+  },
+  {
+    "id": "gal-21",
+    "title": "Rolling Green Contour Slopes of Darjeeling Tea Terraces",
+    "category": "scenery",
+    "categoryLabel": "Scenery",
+    "image": "/images/mineral-springs/darjeeling-tea-gardens-panoramic.jpg",
+    "aspect": "aspect-[4/3]",
+    "caption": "Rolling Green Contour Slopes of Darjeeling Tea Terraces"
+  },
+  {
+    "id": "gal-22",
+    "title": "Cardamom Forest Trail Leading to Hillside Cottages",
+    "category": "experiences",
+    "categoryLabel": "Experiences",
+    "image": "/images/mineral-springs/dawaipani-forest-trail-walk.jpg",
+    "aspect": "aspect-[4/3]",
+    "caption": "Cardamom Forest Trail Leading to Hillside Cottages"
+  },
+  {
+    "id": "gal-23",
+    "title": "Pine Timber Verandah & Mountain Valley Breeze",
+    "category": "stay",
+    "categoryLabel": "Stay",
+    "image": "/images/mineral-springs/retreat-wooden-verandah-balcony.jpg",
+    "aspect": "aspect-[4/3]",
+    "caption": "Pine Timber Verandah & Mountain Valley Breeze"
+  },
+  {
+    "id": "gal-24",
+    "title": "Red-Roofed Eco-Cottage Surrounded by Canopy Foliage",
+    "category": "stay",
+    "categoryLabel": "Stay",
+    "image": "/images/mineral-springs/retreat-cottage-hillside-canopy.jpg",
+    "aspect": "aspect-[4/3]",
+    "caption": "Red-Roofed Eco-Cottage Surrounded by Canopy Foliage"
+  },
+  {
+    "id": "gal-25",
+    "title": "Transparent Crystal Mountain Stream & Riverbed Moss",
+    "category": "nature",
+    "categoryLabel": "Nature",
+    "image": "/images/mineral-springs/mineral-springs-crystal-stream.jpg",
+    "aspect": "aspect-[3/4]",
+    "caption": "Transparent Crystal Mountain Stream & Riverbed Moss"
+  },
+  {
+    "id": "gal-26",
+    "title": "Retreat Founder & Host in Homestay Studio",
+    "category": "culture",
+    "categoryLabel": "Culture",
+    "image": "/images/mineral-springs/host-founder-portrait.jpg",
+    "aspect": "aspect-[16/9]",
+    "caption": "Retreat Founder & Host in Homestay Studio"
+  },
+  {
+    "id": "gal-27",
+    "title": "Warm Himalayan Hospitality - Resident Hostess",
+    "category": "culture",
+    "categoryLabel": "Culture",
+    "image": "/images/mineral-springs/host-co-founder-portrait.jpg",
+    "aspect": "aspect-[16/9]",
+    "caption": "Warm Himalayan Hospitality - Resident Hostess"
+  },
+  {
+    "id": "gal-28",
+    "title": "Misty Morning Valley Drift from Room Balcony",
+    "category": "scenery",
+    "categoryLabel": "Scenery",
+    "image": "/images/mineral-springs/dawaipani-misty-valley-morning.jpg",
+    "aspect": "aspect-[4/3]",
+    "caption": "Misty Morning Valley Drift from Room Balcony"
+  }
+];
+
+  const getCategoryGroup = (cat = '') => {
+    const c = String(cat).toLowerCase();
+    if (['rooms', 'stay', 'property'].includes(c)) return 'stay';
+    if (['scenery', 'surroundings', 'mountains', 'views', 'landscape'].includes(c)) return 'scenery';
+    if (['experiences', 'activities', 'trails'].includes(c)) return 'experiences';
+    if (['culture', 'hosts', 'heritage'].includes(c)) return 'culture';
+    if (['nature', 'flora', 'streams'].includes(c)) return 'nature';
+    return 'other';
+  };
 
   const photos = (appGallery && appGallery.length > 0)
     ? appGallery.map((g, idx) => ({
@@ -167,28 +285,25 @@ export default function CozyGalleryPage({ setActivePage }) {
         category: (g.category || 'property').toLowerCase(),
         categoryLabel: g.category || 'Property & Verandahs',
         image: g.image,
-        aspect: g.aspect || 'aspect-[4/3]',
+        aspect: g.aspect === 'tall' ? 'aspect-[3/4]' : g.aspect === 'wide' ? 'aspect-[16/9]' : (g.aspect || 'aspect-[4/3]'),
         caption: g.altText || g.caption || g.title
       }))
     : defaultPhotos;
 
   const categories = [
     { id: 'all', label: `All Photos (${photos.length})` },
-    { id: 'rooms', label: `Rooms & Suites (${photos.filter(p => p.category === 'rooms').length})` },
-    { id: 'property', label: `Property & Verandahs (${photos.filter(p => p.category === 'property' || p.category === 'general' || p.category === 'landscape').length})` },
-    { id: 'mountains', label: `Himalayan Ridge View (${photos.filter(p => p.category === 'mountains' || p.category === 'views').length})` },
+    { id: 'scenery', label: `Scenery & Vistas (${photos.filter(p => getCategoryGroup(p.category) === 'scenery').length})` },
+    { id: 'stay', label: `Rooms & Verandahs (${photos.filter(p => getCategoryGroup(p.category) === 'stay').length})` },
+    { id: 'experiences', label: `Experiences & Trails (${photos.filter(p => getCategoryGroup(p.category) === 'experiences').length})` },
+    { id: 'culture', label: `Culture & Heritage (${photos.filter(p => getCategoryGroup(p.category) === 'culture').length})` },
+    { id: 'nature', label: `Nature & Streams (${photos.filter(p => getCategoryGroup(p.category) === 'nature').length})` },
   ];
 
   const filteredPhotos = activeCategory === 'all'
     ? photos
-    : photos.filter(p => {
-        if (activeCategory === 'rooms') return p.category === 'rooms';
-        if (activeCategory === 'property') return p.category === 'property' || p.category === 'general' || p.category === 'landscape';
-        if (activeCategory === 'mountains') return p.category === 'mountains' || p.category === 'views';
-        return p.category === activeCategory;
-      });
+    : photos.filter(p => getCategoryGroup(p.category) === activeCategory);
 
-  const handleOpenLightbox = (index) => {
+    const handleOpenLightbox = (index) => {
     setLightboxIndex(index);
     document.body.style.overflow = 'hidden';
   };

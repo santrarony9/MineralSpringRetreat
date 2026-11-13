@@ -9,7 +9,7 @@ export default function CozyHero({ setActivePage }) {
   const [scrollY, setScrollY] = useState(0);
 
   const heroData = pages?.home?.hero;
-  const heroImage = heroData?.image || settings?.heroImage || '/images/mineral-springs/dawaipani-balcony-valley-vista.jpg';
+  const heroImage = heroData?.image || settings?.heroImage || '/images/mineral-springs/dawaipani-balcony-sunset-clouds.jpg';
   const heroBadge = heroData?.badge || 'BOUTIQUE RETREAT OFFERING TIMELESS HIMALAYAN TRANQUILITY';
   const heroTitle = heroData?.title || 'A Peaceful Escape in the\nHeart of the Mountains';
   const heroStats = heroData?.stats || [
