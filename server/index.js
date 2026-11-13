@@ -51,10 +51,12 @@ app.use(express.urlencoded({ extended: true, limit: '35mb' }));
 // Ensure uploads folder exists in public and dist
 const uploadsDir = path.join(__dirname, '..', 'public', 'uploads');
 const distUploadsDir = path.join(__dirname, '..', 'dist', 'uploads');
-if (!fs.existsSync(uploadsDir)) fs.mkdirSync(uploadsDir, { recursive: true });
-if (fs.existsSync(path.join(__dirname, '..', 'dist')) && !fs.existsSync(distUploadsDir)) {
-  fs.mkdirSync(distUploadsDir, { recursive: true });
-}
+try {
+  if (!fs.existsSync(uploadsDir)) fs.mkdirSync(uploadsDir, { recursive: true });
+  if (fs.existsSync(path.join(__dirname, '..', 'dist')) && !fs.existsSync(distUploadsDir)) {
+    fs.mkdirSync(distUploadsDir, { recursive: true });
+  }
+} catch (e) {}
 
 // Global cache-prevention middleware for all API requests
 app.use('/api', (req, res, next) => {

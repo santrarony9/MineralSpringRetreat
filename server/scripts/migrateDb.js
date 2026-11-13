@@ -2,22 +2,19 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { hashPassword } from '../auth.js';
+import { readDB, writeDB } from '../db.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const DB_PATH = path.join(__dirname, '..', 'data', 'db.json');
-
 export function runMigration() {
-  console.log('[MIGRATION] Starting database migration & schema expansion...');
-  let db = {};
-  if (fs.existsSync(DB_PATH)) {
-    try {
-      db = JSON.parse(fs.readFileSync(DB_PATH, 'utf-8'));
-    } catch (e) {
-      console.warn('[MIGRATION] Existing db read error, starting fresh structure:', e.message);
-    }
+  if (process.env.VERCEL) {
+    // In Vercel serverless, schema is pre-seeded via db.example.json or Vercel KV
+    console.log('[MIGRATION] Serverless environment detected; skipping disk migration.');
+    return true;
   }
+  console.log('[MIGRATION] Starting database migration & schema expansion...');
+  let db = readDB() || {};
 
   // 1. ADMIN USERS
   if (!db.users || !Array.isArray(db.users) || db.users.length === 0) {
@@ -302,8 +299,8 @@ export function runMigration() {
     db.draftPages = JSON.parse(JSON.stringify(db.pages));
   }
 
-  // Save atomically
-  fs.writeFileSync(DB_PATH, JSON.stringify(db, null, 2), 'utf-8');
+  // Save atomically via db abstraction
+  writeDB(db);
   console.log('[MIGRATION] Database migration successfully completed!');
   return true;
 }
