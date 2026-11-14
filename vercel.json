@@ -12,11 +12,24 @@
       "destination": "/uploads/$1"
     },
     {
-      "source": "/((?!api/|uploads/|images/|assets/|videos/|favicon.svg|robots\\.txt|sitemap\\.xml).*)",
+      "source": "/((?!api/|uploads/|images/|assets/|videos/|favicon.svg|robots\\.txt|sitemap\\.xml|google[a-zA-Z0-9]+\\.html).*)",
       "destination": "/index.html"
     }
   ],
   "headers": [
+    {
+      "source": "/(google[a-zA-Z0-9]+\\.html)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        }
+      ]
+    },
     {
       "source": "/sitemap.xml",
       "headers": [
