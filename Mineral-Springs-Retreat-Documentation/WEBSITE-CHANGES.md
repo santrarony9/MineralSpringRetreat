@@ -71,13 +71,3 @@ This document tracks all changes made to the codebase, content schemas, visual c
 
 ### 9. `src/components/AdminPanel.jsx`
 - Expanded `RETREAT_LIBRARY_PHOTOS` with 23 new assets (`lib-20` through `lib-42`) to enable immediate one-click image assignment in the administrative dashboard.
-
-### 10. `src/components/cozystay/StackingCards.jsx` & `src/index.css`
-- Created dedicated Stacking Cards Scroll Engine (`StackingCardsContainer` and `StackingCard`) utilizing native CSS `position: sticky` and requestAnimationFrame passive scroll listeners.
-- Automatically computes progressive scale-down transforms (`1.0` -> `0.965` -> `0.93`), multi-layered dynamic drop shadows, and ambient scrim shading on cards underneath as subsequent cards scroll into view.
-- Added responsive offsets: Desktop (112px base, 14px step, 56px gap), Tablet (86px base, 10px step, 40px gap), Mobile (74px base, 8px step, 28px gap).
-- Full accessibility support with `prefers-reduced-motion: reduce` fallback.
-
-### 11. `src/components/cozystay/CozyDawaipani.jsx` (Homepage Isolation)
-- Wrapped Section 2 Mountain Vista cards ("Above the Clouds, Close to Nature") in `<StackingCardsContainer>` exclusively when rendered on the homepage (`!standalone`).
-- Preserved all internal subpages (`/experiences`, `/stay`, `/about`, `/gallery`, `/travel`, and standalone `/dawaipani`) in their original flat layout without stacking.
