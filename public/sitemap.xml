@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- 1. Homepage -->
+  <url>
+    <loc>https://mineralspringretreat.com/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://mineralspringretreat.com/images/mineral-springs/dawaipani-reel-poster.webp</image:loc>
+      <image:title>Mineral Springs Retreat - Drone Himalayan Mountain Panorama</image:title>
+      <image:caption>Scenic aerial view of Dawaipani Himalayan valley and rolling sea of clouds opposite Darjeeling</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mineralspringretreat.com/images/mineral-springs/dawaipani-balcony-sunset-clouds.jpg</image:loc>
+      <image:title>Dawaipani Sunset Clouds and Mt Kanchenjunga Balcony Vista</image:title>
+      <image:caption>Golden sunset and cloud sea viewed from the wooden verandah at Mineral Springs Retreat</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mineralspringretreat.com/images/mineral-springs/mineral-springs-retreat-complex-facade.jpg</image:loc>
+      <image:title>Mineral Springs Retreat Eco-Lodge Facade</image:title>
+      <image:caption>Authentic wooden eco-cottages on the terraced mountain slope in Dawaipani</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 2. Stay & Accommodations -->
+  <url>
+    <loc>https://mineralspringretreat.com/stay</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://mineralspringretreat.com/images/mineral-springs/room-cozy-pine-bedroom.jpg</image:loc>
+      <image:title>Handcrafted Pine Wood Bedroom</image:title>
+      <image:caption>Cozy mountain room featuring local pine timber finish and scenic forest views</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mineralspringretreat.com/images/mineral-springs/retreat-wooden-verandah-balcony.jpg</image:loc>
+      <image:title>Wooden Verandah Balcony</image:title>
+      <image:caption>Private balcony overlooking the valley, tea gardens, and Mount Kanchenjunga</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mineralspringretreat.com/images/mineral-springs/retreat-cottage-hillside-canopy.jpg</image:loc>
+      <image:title>Hillside Cottage in Pine Canopy</image:title>
+      <image:caption>Traditional Himalayan stilt cottage surrounded by cardamom trees</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 3. Curated Experiences & Nature Trails -->
+  <url>
+    <loc>https://mineralspringretreat.com/experiences</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://mineralspringretreat.com/images/mineral-springs/meditation-waterfall-river-rocks.webp</image:loc>
+      <image:title>Mindful Meditation on Mountain River Rocks</image:title>
+      <image:caption>Mineral Springs waterfall and crystal stream pools deep in the Himalayan valley</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mineralspringretreat.com/images/mineral-springs/darjeeling-tea-gardens-panoramic.jpg</image:loc>
+      <image:title>Organic Tea Garden Walk and First Flush Tasting</image:title>
+      <image:caption>Rolling emerald tea terraces in nearby organic Darjeeling tea estates</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mineralspringretreat.com/images/mineral-springs/forest-railway-nature-walk.webp</image:loc>
+      <image:title>Forest Railway and Nature Walk Experience</image:title>
+      <image:caption>Heritage narrow-gauge mountain railway trail winding through misty pine forests</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mineralspringretreat.com/images/mineral-springs/dawaipani-forest-trail-walk.jpg</image:loc>
+      <image:title>Cardamom Forest and Village Ridge Trails</image:title>
+      <image:caption>Stone walking trails past prayer flags and hillside hamlets in Dawaipani</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 4. About Us & Himalayan Hosts -->
+  <url>
+    <loc>https://mineralspringretreat.com/about</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mineralspringretreat.com/images/mineral-springs/host-founder-portrait.jpg</image:loc>
+      <image:title>Retreat Founder</image:title>
+      <image:caption>Himalayan hospitality and stewardship at Mineral Springs Retreat</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mineralspringretreat.com/images/mineral-springs/host-co-founder-portrait.jpg</image:loc>
+      <image:title>Retreat Co-Founder</image:title>
+      <image:caption>Warm homestay welcome and community heritage in Dawaipani</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 5. Darjeeling & Dawaipani Travel Guide -->
+  <url>
+    <loc>https://mineralspringretreat.com/travel</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mineralspringretreat.com/images/mineral-springs/darjeeling-unesco-steam-locomotive.jpg</image:loc>
+      <image:title>UNESCO World Heritage Darjeeling Himalayan Railway</image:title>
+      <image:caption>Historic DHR blue steam locomotive at Batasia Loop in the Darjeeling hills</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mineralspringretreat.com/images/mineral-springs/darjeeling-toy-train-tracks.jpg</image:loc>
+      <image:title>Narrow-Gauge Mountain Rail Trail</image:title>
+      <image:caption>Scenic railway tracks carving through high-altitude pine forests</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 6. Photo Gallery -->
+  <url>
+    <loc>https://mineralspringretreat.com/gallery</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 7. About Dawaipani Mountain Hamlet -->
+  <url>
+    <loc>https://mineralspringretreat.com/dawaipani</loc>
+    <lastmod>2026-11-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://mineralspringretreat.com/images/mineral-springs/dawaipani-kanchenjunga-snow-peaks.jpg</image:loc>
+      <image:title>Mount Kanchenjunga Sleeping Buddha Panorama</image:title>
+      <image:caption>Clear mountain vista of the sacred Sleeping Buddha snow peaks from Dawaipani</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mineralspringretreat.com/images/mineral-springs/dawaipani-drone-canopy-aerial.jpg</image:loc>
+      <image:title>Dawaipani Forest Canopy Drone Aerial</image:title>
+      <image:caption>Subtropical pine canopy and valley ridge aerial view</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://mineralspringretreat.com/images/mineral-springs/dawaipani-darjeeling-night-lights.jpg</image:loc>
+      <image:title>Darjeeling Town Night Lights Over Cloud Sea</image:title>
+      <image:caption>Glittering night skyline of Darjeeling hill town seen across the Dawaipani valley</image:caption>
+    </image:image>
+  </url>
+
+</urlset>

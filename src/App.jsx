@@ -21,6 +21,45 @@ import CozyGalleryPage from './components/cozystay/CozyGalleryPage';
 import CozyAboutPage from './components/cozystay/CozyAboutPage';
 import CozyTravelPage from './components/cozystay/CozyTravelPage';
 
+// Canonical SEO metadata per public page
+const PAGE_SEO = {
+  home: {
+    title: 'Mineral Springs Retreat | Authentic Himalayan Homestay in Dawaipani, Darjeeling',
+    description: 'Experience peaceful Himalayan tranquility at Mineral Springs Retreat in Dawaipani, Darjeeling. Panoramic Kanchenjunga snow peak vistas, organic farm dining, and cardamom forest trails at 6,500 ft.',
+    canonical: 'https://mineralspringretreat.com/'
+  },
+  stay: {
+    title: 'Rooms & Wooden Cottages | Mineral Springs Retreat, Dawaipani',
+    description: 'Discover handcrafted pine wood bedrooms, private verandahs with Himalayan mountain vistas, and traditional eco-cottages nestled amidst Dawaipani\'s mountain slopes.',
+    canonical: 'https://mineralspringretreat.com/stay'
+  },
+  experiences: {
+    title: 'Mountain Experiences & Nature Trails | Mineral Springs Retreat',
+    description: 'Explore natural mineral springs waterfalls, mindful river rock meditation, organic tea garden tastings, and UNESCO Toy Train excursions in the Darjeeling hills.',
+    canonical: 'https://mineralspringretreat.com/experiences'
+  },
+  about: {
+    title: 'Our Story & Himalayan Hosts | Mineral Springs Retreat, Dawaipani',
+    description: 'Meet your local hosts and discover the heritage of Mineral Springs Retreat in Dawaipani—a sustainable Himalayan sanctuary founded on warm Gorkha hospitality.',
+    canonical: 'https://mineralspringretreat.com/about'
+  },
+  travel: {
+    title: 'Dawaipani & Darjeeling Travel Guide | Weather, How to Reach & FAQ',
+    description: 'Complete travel guide for reaching Dawaipani from NJP & Bagdogra (70 km). Mountain route directions, seasonal climate guide, packing essentials, and UNESCO Toy Train history.',
+    canonical: 'https://mineralspringretreat.com/travel'
+  },
+  gallery: {
+    title: 'Photo Gallery | Scenic Vistas & Mountain Life at Mineral Springs Retreat',
+    description: 'Explore authentic photographs of Mt. Kanchenjunga sunrise, rolling sea-of-clouds inversions, cozy pine cottages, and pristine mountain stream trails.',
+    canonical: 'https://mineralspringretreat.com/gallery'
+  },
+  dawaipani: {
+    title: 'About Dawaipani Hamlet | Hidden Himalayan Village Opposite Darjeeling',
+    description: 'Learn about Dawaipani, the peaceful mountain hamlet renowned for medicinal mineral springs, unobstructed Kanchenjunga panoramas, and virgin pine forests.',
+    canonical: 'https://mineralspringretreat.com/dawaipani'
+  }
+};
+
 // Modals & Administrative CMS Overlays
 import BookingModal from './components/BookingModal';
 import PolicyModals from './components/PolicyModals';
@@ -41,9 +80,15 @@ function MainWebsite() {
 
   const [activePage, setActivePage] = useState(() => {
     if (isDirectAdmin) return 'admin';
-    const hash = window.location.hash.replace('#', '').toLowerCase();
-    if (['home', 'about', 'rooms', 'stay', 'experiences', 'travel', 'gallery', 'menus', 'dawaipani', 'admin'].includes(hash)) {
-      return hash === 'rooms' ? 'stay' : hash;
+    if (typeof window !== 'undefined') {
+      const path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '').toLowerCase();
+      if (['about', 'rooms', 'stay', 'experiences', 'travel', 'gallery', 'menus', 'dawaipani'].includes(path)) {
+        return path === 'rooms' ? 'stay' : path;
+      }
+      const hash = window.location.hash.replace('#', '').toLowerCase();
+      if (['home', 'about', 'rooms', 'stay', 'experiences', 'travel', 'gallery', 'menus', 'dawaipani', 'admin'].includes(hash)) {
+        return hash === 'rooms' ? 'stay' : hash;
+      }
     }
     return 'home';
   });
@@ -53,14 +98,24 @@ function MainWebsite() {
     setActivePage(normalizedPage);
     if (normalizedPage === 'admin') {
       window.location.hash = 'admin';
+    } else if (normalizedPage === 'home') {
+      if (window.location.hash) window.location.hash = '';
+      if (window.location.pathname !== '/') window.history.pushState(null, '', '/');
     } else {
-      window.location.hash = normalizedPage === 'home' ? '' : normalizedPage;
+      window.history.pushState(null, '', `/${normalizedPage}`);
     }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  // Sync with browser navigation (popstate & hashchange)
   useEffect(() => {
-    const handleHash = () => {
+    const handleLocationChange = () => {
+      const path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '').toLowerCase();
+      if (['about', 'rooms', 'stay', 'experiences', 'travel', 'gallery', 'menus', 'dawaipani'].includes(path)) {
+        setActivePage(path === 'rooms' ? 'stay' : path);
+        window.scrollTo(0, 0);
+        return;
+      }
       const hash = window.location.hash.replace('#', '').toLowerCase();
       if (['home', 'about', 'rooms', 'stay', 'experiences', 'travel', 'gallery', 'menus', 'dawaipani', 'admin'].includes(hash)) {
         setActivePage(hash === 'rooms' ? 'stay' : hash);
@@ -69,9 +124,45 @@ function MainWebsite() {
       }
       window.scrollTo(0, 0);
     };
-    window.addEventListener('hashchange', handleHash);
-    return () => window.removeEventListener('hashchange', handleHash);
+
+    window.addEventListener('popstate', handleLocationChange);
+    window.addEventListener('hashchange', handleLocationChange);
+    return () => {
+      window.removeEventListener('popstate', handleLocationChange);
+      window.removeEventListener('hashchange', handleLocationChange);
+    };
   }, [isDirectAdmin]);
+
+  // Dynamic Document SEO (Title, Meta Description, Canonical Link)
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+    const seo = PAGE_SEO[activePage] || PAGE_SEO.home;
+    document.title = seo.title;
+
+    let descMeta = document.querySelector('meta[name="description"]');
+    if (!descMeta) {
+      descMeta = document.createElement('meta');
+      descMeta.setAttribute('name', 'description');
+      document.head.appendChild(descMeta);
+    }
+    descMeta.setAttribute('content', seo.description);
+
+    let canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (!canonicalLink) {
+      canonicalLink = document.createElement('link');
+      canonicalLink.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonicalLink);
+    }
+    canonicalLink.setAttribute('href', seo.canonical);
+
+    // Update OpenGraph tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', seo.title);
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute('content', seo.description);
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute('content', seo.canonical);
+  }, [activePage]);
 
   useEffect(() => {
     const cleanup = initScrollObserver();

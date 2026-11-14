@@ -1,0 +1,27 @@
+# ===================================================
+# Robots.txt for Mineral Springs Retreat
+# Domain: https://mineralspringretreat.com
+# ===================================================
+
+User-agent: *
+Allow: /
+Allow: /stay
+Allow: /experiences
+Allow: /about
+Allow: /travel
+Allow: /gallery
+Allow: /dawaipani
+Allow: /images/
+Allow: /videos/
+Allow: /assets/
+
+# Disallow administrative, authentication, and private endpoints
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+Disallow: /scratch/
+Disallow: /_vercel/
+
+# Search Engine Sitemaps
+Sitemap: https://mineralspringretreat.com/sitemap.xml
+Host: mineralspringretreat.com
