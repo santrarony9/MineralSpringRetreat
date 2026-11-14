@@ -53,7 +53,9 @@ const RETREAT_LIBRARY_PHOTOS = [
   { id: 'lib-40', url: '/images/mineral-springs/host-co-founder-portrait.jpg', title: 'Retreat Co-Founder & Resident Hostess', category: 'Culture' },
   { id: 'lib-41', url: '/images/mineral-springs/host-hospitality-portrait.jpg', title: 'Warm Homestay Welcome Portrait', category: 'Culture' },
   { id: 'lib-42', url: '/images/mineral-springs/dawaipani-misty-valley-morning.jpg', title: 'Misty Morning Valley Drift from Balcony', category: 'Views' },
-  { id: 'lib-43', url: '/videos/dawaipani-reel.mp4', title: 'Dawaipani Rolling Clouds & Valley (Desktop Hero Video)', category: 'Views', type: 'video' }
+  { id: 'lib-43', url: '/videos/dawaipani-reel.mp4', title: 'Dawaipani Rolling Clouds & Valley (Desktop Hero Video)', category: 'Views', type: 'video' },
+  { id: 'lib-44', url: '/images/mineral-springs/meditation-waterfall-river-rocks.webp', title: 'Mindful Meditation on Mountain River Rocks', category: 'Experiences' },
+  { id: 'lib-45', url: '/images/mineral-springs/forest-railway-nature-walk.webp', title: 'Forest Railway & Nature Walk Stroll', category: 'Experiences' }
 ];
 
 function ImageFieldWithPicker({

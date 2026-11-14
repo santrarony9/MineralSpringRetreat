@@ -9,7 +9,8 @@ const defaultExperiences = [
     category: 'TREKKING',
     title: 'Mineral Springs Waterfall Trek',
     desc: 'Hike through cardamom forests down to natural cascades and crystal stream pools deep in the Himalayan valley.',
-    image: '/images/mineral-springs/mineral-springs-waterfall-stream.jpg',
+    image: '/images/mineral-springs/meditation-waterfall-river-rocks.webp',
+    objectPosition: 'center 35%',
     isStaggered: false
   },
   {
@@ -55,7 +56,10 @@ export default function CozyExperiences({ setActivePage }) {
         category: (exp.category || 'NATURE').toUpperCase(),
         title: exp.title,
         desc: exp.description || exp.desc,
-        image: exp.image || '/images/mineral-springs/dawaipani-balcony-valley-vista.jpg',
+        image: (exp.id === 'waterfall-trek' || exp.id === 'exp-1')
+          ? '/images/mineral-springs/meditation-waterfall-river-rocks.webp'
+          : (exp.image || '/images/mineral-springs/dawaipani-balcony-valley-vista.jpg'),
+        objectPosition: exp.objectPosition || ((exp.id === 'waterfall-trek' || exp.id === 'exp-1') ? 'center 35%' : 'center'),
         isStaggered: idx % 2 === 1
       }))
     : defaultExperiences;
@@ -88,6 +92,7 @@ export default function CozyExperiences({ setActivePage }) {
               <img
                 src={exp.image}
                 alt={exp.title}
+                style={{ objectPosition: exp.objectPosition || 'center' }}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
               />

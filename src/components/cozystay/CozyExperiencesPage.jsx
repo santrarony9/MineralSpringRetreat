@@ -9,7 +9,8 @@ const defaultExperiences = [
     title: 'Mineral Springs Waterfall & River Trek',
     subtitle: 'Cascading natural waters, riverbed boulders & untouched wilderness',
     icon: Waves,
-    image: '/images/mineral-springs/mineral-springs-waterfall-stream.jpg',
+    image: '/images/mineral-springs/meditation-waterfall-river-rocks.webp',
+    objectPosition: 'center 35%',
     description: 'Hike through cardamom groves and virgin subtropical forests down to the authentic Mineral Springs mountain waterfalls. Wade in crystal pools, sit on moss-covered boulders, and immerse in pristine Himalayan sounds.',
     points: [
       'Natural freshwater waterfall cascades and crystal mountain pools',
@@ -61,7 +62,8 @@ const defaultExperiences = [
     title: 'UNESCO Darjeeling Toy Train Heritage Excursion',
     subtitle: 'Historic steam locomotive winding through misty pine forests',
     icon: Sparkles,
-    image: '/images/mineral-springs/darjeeling-unesco-steam-locomotive.jpg',
+    image: '/images/mineral-springs/forest-railway-nature-walk.webp',
+    objectPosition: 'center 40%',
     description: 'Take a scenic excursion to the Darjeeling Himalayan Railway (DHR). Watch authentic blue steam engines puff smoke along narrow-gauge tracks carved into steep mountain slopes—a UNESCO World Heritage landmark.',
     points: [
       'Historic 140-year-old steam locomotive heritage experience',
@@ -97,12 +99,22 @@ export default function CozyExperiencesPage({ setActivePage }) {
   const experiences = (appExperiences && appExperiences.length > 0)
     ? appExperiences.map((exp, idx) => {
         const def = defaultExperiences[idx] || {};
+        let image = exp.image || def.image || '/images/mineral-springs/dawaipani-balcony-valley-vista.jpg';
+        let objectPosition = exp.objectPosition || def.objectPosition || 'center';
+        if (exp.id === 'exp-1') {
+          image = '/images/mineral-springs/meditation-waterfall-river-rocks.webp';
+          objectPosition = exp.objectPosition || 'center 35%';
+        } else if (exp.id === 'exp-5') {
+          image = '/images/mineral-springs/forest-railway-nature-walk.webp';
+          objectPosition = exp.objectPosition || 'center 40%';
+        }
         return {
           id: exp.id,
           title: exp.title || def.title || 'Mountain Experience',
           subtitle: exp.highlight || exp.timing || def.subtitle || 'Curated Retreat Activity',
           icon: def.icon || icons[idx % icons.length],
-          image: exp.image || def.image || '/images/mineral-springs/dawaipani-balcony-valley-vista.jpg',
+          image,
+          objectPosition,
           description: exp.description || def.description || '',
           points: exp.highlights || def.points || [
             'Direct mountain vistas and peaceful forest surroundings',
@@ -149,6 +161,7 @@ export default function CozyExperiencesPage({ setActivePage }) {
                   <img
                     src={exp.image}
                     alt={exp.title}
+                    style={{ objectPosition: exp.objectPosition || 'center' }}
                     className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                     loading="lazy"
                   />

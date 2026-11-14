@@ -426,12 +426,13 @@
       "difficulty": "Moderate",
       "tagline": "Cascading natural waters, riverbed boulders & untouched wilderness",
       "description": "Hike through cardamom groves and virgin subtropical forests down to the authentic Mineral Springs mountain waterfalls. Wade in crystal pools, sit on moss-covered boulders, and immerse in pristine Himalayan sounds.",
-      "image": "/images/mineral-springs/mineral-springs-waterfall-stream.jpg",
+      "image": "/images/mineral-springs/meditation-waterfall-river-rocks.webp",
       "highlights": [
         "Natural freshwater waterfall cascades",
         "River boulder meditation",
         "Dense subtropical canopy birdwatching"
-      ]
+      ],
+      "objectPosition": "center 35%"
     },
     {
       "id": "exp-2",
@@ -482,12 +483,13 @@
       "difficulty": "Easy / Sightseeing",
       "tagline": "Historic steam locomotive winding through misty pine forests",
       "description": "Take a scenic excursion to the Darjeeling Himalayan Railway (DHR). Watch authentic blue steam engines puff smoke along narrow-gauge tracks carved into steep mountain slopes—a UNESCO World Heritage landmark.",
-      "image": "/images/mineral-springs/darjeeling-unesco-steam-locomotive.jpg",
+      "image": "/images/mineral-springs/forest-railway-nature-walk.webp",
       "highlights": [
         "140-year-old steam engine heritage",
         "Narrow-gauge trackside photography",
         "Batasia Loop & Ghoom station views"
-      ]
+      ],
+      "objectPosition": "center 40%"
     }
   ],
   "testimonials": [
@@ -1026,6 +1028,18 @@
       "url": "/images/mineral-springs/retreat-covered-porch-lantern.jpg",
       "title": "Covered Porch with Warm Lantern",
       "category": "Property"
+    },
+    {
+      "id": "lib-44",
+      "url": "/images/mineral-springs/meditation-waterfall-river-rocks.webp",
+      "title": "Mindful Meditation on Mountain River Rocks",
+      "category": "Experiences"
+    },
+    {
+      "id": "lib-45",
+      "url": "/images/mineral-springs/forest-railway-nature-walk.webp",
+      "title": "Forest Railway & Nature Walk Stroll",
+      "category": "Experiences"
     }
   ],
   "draftPages": {

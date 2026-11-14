@@ -32,6 +32,8 @@ This document tracks all changes made to the codebase, content schemas, visual c
 | 22 | `host-hospitality-portrait.jpg` | Resident hostess welcome portrait (Landscape) | Media Library & Admin Panel | `db.media`, `AdminPanel.jsx` |
 | 23 | `dawaipani-misty-valley-morning.jpg` | Early morning mist rising from valley (Landscape) | Gallery & Media Library | `CozyGalleryPage.jsx`, `db.gallery`, `db.media` |
 | 24 | `dawaipani-reel.mp4` | 30s 1080p rolling sea of clouds & valley (Portrait Reel) | Desktop Homepage Hero (&ge; 1024px) | `CozyHero.jsx`, `db.pages.home.hero.video`, `db.settings.heroVideo` |
+| 25 | `meditation-waterfall-river-rocks.webp` | Man meditating in lotus pose before rushing waterfall (Portrait) | Experience 1 (Homepage & Subpage) | `CozyExperiences.jsx`, `CozyExperiencesPage.jsx`, `db.experiences[0]` |
+| 26 | `forest-railway-nature-walk.webp` | Casual stroll on train tracks through pine forest (Portrait) | Experience 5 (Subpage) | `CozyExperiencesPage.jsx`, `db.experiences[4]` |
 
 ---
 
@@ -67,7 +69,12 @@ This document tracks all changes made to the codebase, content schemas, visual c
 - Replaced hardcoded 16 items with all 28 authentic photos and expanded categories to 6 modern filters: All Photos, Scenery & Vistas, Rooms & Verandahs, Experiences & Trails, Culture & Heritage, Nature & Streams.
 
 ### 8. `src/components/cozystay/CozyExperiences.jsx` & `CozyExperiencesPage.jsx`
-- Updated both homepage and dedicated experiences pages to showcase real Mineral Springs activities: Waterfall Trek, Organic Tea Tasting, Kanchenjunga Sunrise, Cardamom Forest Trails, and UNESCO Toy Train excursion.
+- Upgraded Experience photographs with ultra-high-resolution, optimized WebP imagery:
+  - **Experience 1 (Mineral Springs Waterfall & River Trek):** Replaced previous asset with Unsplash photograph `meditation-waterfall-river-rocks.webp` (1600x2133, photographer Ali Sayed). Implemented `objectPosition: 'center 35%'` so the meditating subject and cascading waterfall torrent remain prominently centered without awkward cropping across desktop, tablet, and mobile.
+  - **Experience 5 (UNESCO Darjeeling Toy Train Heritage Excursion / Forest Railway Nature Walk):** Replaced previous asset with Pexels photograph `forest-railway-nature-walk.webp` (1600x2400, photographer Vijil Vincent). Implemented `objectPosition: 'center 40%'` keeping the track-walking subjects cleanly framed amidst towering forest canopies.
+- Preserved existing layout, card dimensions, typography, badges, and interactive functionality.
+- Maintained zero duplication across the website.
 
-### 9. `src/components/AdminPanel.jsx`
-- Expanded `RETREAT_LIBRARY_PHOTOS` with 23 new assets (`lib-20` through `lib-42`) to enable immediate one-click image assignment in the administrative dashboard.
+### 9. `src/components/AdminPanel.jsx` & CMS Database
+- Expanded `RETREAT_LIBRARY_PHOTOS` with `lib-44` (`meditation-waterfall-river-rocks.webp`) and `lib-45` (`forest-railway-nature-walk.webp`), enabling immediate administrative management and selection.
+- Synchronized `server/data/db.json` and `server/data/db.example.json` experiences and media arrays.
