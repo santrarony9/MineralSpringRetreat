@@ -40,11 +40,14 @@ This document tracks all changes made to the codebase, content schemas, visual c
 ## 🛠️ Component-Level Modifications
 
 ### 1. `src/components/cozystay/CozyHero.jsx`
-- Added desktop-only video background (`heroVideo`, defaulting to `/videos/dawaipani-reel.mp4`).
-- Implemented strict viewport isolation: `<video>` renders exclusively on screens with width &ge; 1024px (`hidden lg:block`), with `autoPlay`, `loop`, `muted`, `playsInline`, `poster={heroImage}`, and `object-[center_35%]`.
-- Kept mobile and tablet homepage completely unchanged: `<img src={heroImage} className="block lg:hidden ... scale-105 animate-hero-drift" />`.
-- Added `prefers-reduced-motion` detection and `onError` automatic fallback to preserve luxury aesthetic with zero broken video state.
-- Retained parallax scroll dynamics, dark vignette styling, and gold retreat badge.
+- Replaced the desktop homepage hero background exclusively with the authentic Google Drive drone footage (`/videos/dawaipani-reel.mp4`).
+- Completely eliminated the old sunset image (`dawaipani-balcony-sunset-clouds.jpg`) from desktop/laptop rendering:
+  - Replaced the video `poster` with the drone footage poster frame (`/images/mineral-springs/dawaipani-reel-poster.webp`).
+  - Replaced desktop fallback with the drone footage poster, guaranteeing that the sunset photograph is never displayed behind or alongside the video.
+- Enforced DOM-level `muted` attributes and properties (`video.defaultMuted = true; video.muted = true; video.setAttribute('muted', '')`) to eliminate the React 18/19 autoplay block in Chrome/Safari.
+- Tuned the dark overlay to a subtle, natural scrim (`bg-black/25` and `from-black/75 via-transparent to-black/40`), ensuring the Himalayan mountains, tea garden slopes, and swirling clouds are vivid and clear while text remains crisp.
+- Maintained mobile and tablet viewports completely unchanged: `<img src={mobileHeroImage} className="block lg:hidden ... scale-105 animate-hero-drift" />`.
+- Preserved navigation bar, hero title, gold badge, statistics, and parallax scroll dynamics.
 
 ### 2. `src/components/cozystay/CozyAbout.jsx`
 - Replaced generic exterior items in `defaultImages` carousel with authentic property photos: `mineral-springs-retreat-complex-facade.jpg`, `retreat-wooden-verandah-balcony.jpg`, and `retreat-cottage-hillside-canopy.jpg`.

@@ -39,7 +39,8 @@
       "apiVersion": "v21.0",
       "updatedAt": "2026-11-12T14:36:34.729Z"
     },
-    "heroVideo": "/videos/dawaipani-reel.mp4"
+    "heroVideo": "/videos/dawaipani-reel.mp4",
+    "heroPoster": "/images/mineral-springs/dawaipani-reel-poster.webp"
   },
   "tariffDetails": {
     "doubleSharing": {
@@ -569,7 +570,8 @@
             "label": "FROM NJP & BAGDOGRA"
           }
         ],
-        "video": "/videos/dawaipani-reel.mp4"
+        "video": "/videos/dawaipani-reel.mp4",
+        "poster": "/images/mineral-springs/dawaipani-reel-poster.webp"
       },
       "intro": {
         "eyebrow": "HIMALAYAN SERENITY MEETS RUSTIC COMFORT",

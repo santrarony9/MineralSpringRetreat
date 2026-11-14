@@ -12,10 +12,16 @@ export default function CozyHero({ setActivePage }) {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
   const heroData = pages?.home?.hero;
-  const heroImage = heroData?.image || settings?.heroImage || '/images/mineral-springs/dawaipani-balcony-sunset-clouds.jpg';
-  const heroVideo = heroData?.video ?? settings?.heroVideo ?? '/videos/dawaipani-reel.mp4';
+  
+  // Mobile / Tablet photograph (< 1024px) - completely unchanged
+  const mobileHeroImage = heroData?.image || settings?.heroImage || '/images/mineral-springs/dawaipani-balcony-sunset-clouds.jpg';
+  
+  // Desktop / Laptop Drone Footage (>= 1024px) - original Google Drive drone asset
+  const desktopHeroVideo = heroData?.video || settings?.heroVideo || '/videos/dawaipani-reel.mp4';
+  const desktopPoster = heroData?.poster || settings?.heroPoster || '/images/mineral-springs/dawaipani-reel-poster.webp';
+
   const heroBadge = heroData?.badge || 'BOUTIQUE RETREAT OFFERING TIMELESS HIMALAYAN TRANQUILITY';
-  const heroTitle = heroData?.title || 'A Peaceful Escape in the\nHeart of the Mountains';
+  const heroTitle = (heroData?.title && heroData.title.trim()) || 'A Peaceful Escape in the\nHeart of the Mountains';
   const heroStats = heroData?.stats || [
     { value: '6,500', unit: 'ft', label: 'RETREAT ALTITUDE' },
     { value: '4', unit: 'Meals', label: 'DAILY INCLUDED' },
@@ -31,15 +37,39 @@ export default function CozyHero({ setActivePage }) {
     return () => mq.removeEventListener('change', handler);
   }, []);
 
-  // Ensure autoplay on desktop when ready
+  // Ensure unblocked autoplay on desktop and laptop
   useEffect(() => {
-    if (videoRef.current && window.innerWidth >= 1024 && !prefersReducedMotion && !videoError) {
-      const p = videoRef.current.play();
+    const video = videoRef.current;
+    if (!video) return;
+
+    // Explicitly enforce muted properties on DOM node for guaranteed browser autoplay
+    video.defaultMuted = true;
+    video.muted = true;
+    video.setAttribute('muted', '');
+    video.setAttribute('playsinline', '');
+
+    const playVideo = () => {
+      const p = video.play();
       if (p !== undefined) {
-        p.catch(() => {});
+        p.catch(() => {
+          // If browser policy delays until user interaction:
+          const onInteract = () => {
+            video.play().catch(() => {});
+            ['click', 'touchstart', 'scroll'].forEach((evt) =>
+              window.removeEventListener(evt, onInteract)
+            );
+          };
+          ['click', 'touchstart', 'scroll'].forEach((evt) =>
+            window.addEventListener(evt, onInteract, { once: true, passive: true })
+          );
+        });
       }
+    };
+
+    if (window.innerWidth >= 1024 && !prefersReducedMotion) {
+      playVideo();
     }
-  }, [prefersReducedMotion, videoError, heroVideo]);
+  }, [prefersReducedMotion, desktopHeroVideo]);
 
   useEffect(() => {
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -90,40 +120,39 @@ export default function CozyHero({ setActivePage }) {
         className="absolute inset-0 z-0 will-change-transform"
         style={{ transform: `translate3d(0, ${scrollY * 0.28}px, 0)` }}
       >
-        {/* Desktop / Laptop Cinematic Video Background (Viewport >= 1024px only) */}
-        {heroVideo && !videoError && !prefersReducedMotion ? (
-          <>
-            <video
-              ref={videoRef}
-              autoPlay
-              loop
-              muted
-              playsInline
-              poster={heroImage}
-              onError={() => setVideoError(true)}
-              className="hidden lg:block w-full h-full object-cover object-[center_35%]"
-              preload="auto"
-            >
-              <source src={heroVideo} type="video/mp4" />
-            </video>
-            {/* Mobile & Tablet Static Photograph (< 1024px) */}
-            <img
-              src={heroImage}
-              alt="Mineral Springs Retreat - Mountain vistas and tea garden slopes in Dawaipani"
-              className="block lg:hidden w-full h-full object-cover object-center scale-105 animate-hero-drift"
-            />
-          </>
+        {/* Desktop / Laptop Cinematic Drone Video Background (Viewport >= 1024px only) */}
+        {!videoError && !prefersReducedMotion ? (
+          <video
+            ref={videoRef}
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster={desktopPoster}
+            onError={() => setVideoError(true)}
+            className="hidden lg:block w-full h-full object-cover object-[center_35%]"
+            preload="auto"
+          >
+            <source src={desktopHeroVideo} type="video/mp4" />
+          </video>
         ) : (
           <img
-            src={heroImage}
-            alt="Mineral Springs Retreat - Mountain vistas and tea garden slopes in Dawaipani"
-            className="w-full h-full object-cover object-center scale-105 animate-hero-drift"
+            src={desktopPoster}
+            alt="Mineral Springs Retreat - Drone Himalayan Mountain Panorama"
+            className="hidden lg:block w-full h-full object-cover object-[center_35%]"
           />
         )}
 
-        {/* Subtle Dark Vignette Matching CozyStay */}
-        <div className="absolute inset-0 bg-black/45 pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/50 pointer-events-none" />
+        {/* Mobile & Tablet Static Photograph (< 1024px) - Completely Unchanged */}
+        <img
+          src={mobileHeroImage}
+          alt="Mineral Springs Retreat - Mountain vistas and tea garden slopes in Dawaipani"
+          className="block lg:hidden w-full h-full object-cover object-center scale-105 animate-hero-drift"
+        />
+
+        {/* Subtle Dark Overlay for Natural Luxury Retreat Aesthetics & Text Legibility */}
+        <div className="absolute inset-0 bg-black/25 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/40 pointer-events-none" />
       </div>
 
       {/* Generous Clearance Spacer for Fixed Header */}
