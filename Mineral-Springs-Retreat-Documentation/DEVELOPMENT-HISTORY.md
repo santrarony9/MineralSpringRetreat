@@ -35,3 +35,13 @@
 - Guaranteed zero changes to mobile and tablet homepage displays (< 1024px), preserving the original static mountain photograph and CSS drift animation.
 - Added CMS controls to Admin Panel (`/admin`) under Homepage content management for real-time video URL configuration and removal.
 - Staged, committed, and deployed to production Vercel with verified HTTP 206/200 streaming delivery.
+
+### Phase 6: Premium Stacking Cards Scroll Effect (Homepage Only)
+- Reverted initial subpage stacking attempts per explicit user requirements to ensure internal pages (`/experiences`, `/stay`, `/about`, `/gallery`, `/travel`) remain 100% untouched.
+- Engineered hardware-accelerated Stacking Cards Engine (`StackingCards.jsx`) featuring CSS `position: sticky` and requestAnimationFrame passive scroll listeners.
+- Integrated Stacking Cards exclusively into Homepage Section 2 Mountain Vistas (`CozyDawaipani.jsx` when `!standalone`).
+- Dynamic progressive scale down (`1.0` -> `0.965` -> `0.93`), multi-layer depth shadow, and ambient scrim as cards stack.
+- Configured responsive offsets for Desktop (112px base, 14px step), Tablet (86px base, 10px step), and Mobile (74px base, 8px step).
+- Verified full visual stacking behavior and clean release across Desktop (1440x900), Tablet (768x1024), and Mobile (390x844).
+- Verified internal pages maintain standard non-stacking layouts.
+- Built production bundle and deployed to Vercel production at `https://mineral-springs-retreat.vercel.app`.

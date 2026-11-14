@@ -22,6 +22,7 @@ import {
   Home,
   Info
 } from 'lucide-react';
+import { StackingCardsContainer, StackingCard } from './StackingCards';
 
 export default function CozyDawaipani({ setActivePage, standalone = false }) {
   const { openBooking, settings, pages } = useApp();
@@ -41,6 +42,53 @@ export default function CozyDawaipani({ setActivePage, standalone = false }) {
       if (el) el.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const mountainHighlights = [
+    {
+      id: 'sleeping-buddha',
+      eyebrow: 'MOUNTAIN ICON',
+      title: 'The Sleeping Buddha View',
+      description: 'Dawaipani offers expansive panoramic views of the Kanchenjunga mountain range, often revealing the magnificent Sleeping Buddha formation on clear days.',
+      note: 'Best observed during early crisp mornings in autumn and spring',
+      icon: Sparkles,
+      image: '/images/mineral-springs/dawaipani-kanchenjunga-snow-peaks.jpg',
+      alt: 'The Sleeping Buddha Mount Kanchenjunga vista from Dawaipani',
+      reversed: false
+    },
+    {
+      id: 'valley-landscapes',
+      eyebrow: 'VALLEY PANORAMAS',
+      title: 'Beautiful Valley Landscapes',
+      description: 'On clear days, visitors may be able to spot the Chardham temple complex in Namchi, Sikkim, and Samdruptse Monastery across the valley.',
+      note: 'Sweeping vistas spanning West Bengal and Sikkim hills',
+      icon: Compass,
+      image: '/images/mineral-springs/dawaipani-drone-canopy-aerial.jpg',
+      alt: 'Canopy and valley mist across Dawaipani mountain slopes',
+      reversed: true
+    },
+    {
+      id: 'darjeeling-night',
+      eyebrow: 'EVENING SPECTACLE',
+      title: 'Darjeeling at Night',
+      description: 'After sunset, the distant lights of Darjeeling town create a beautiful view across the valley, shimmering like a jewel box in the quiet Himalayan night.',
+      note: 'Unbroken silence with glittering ridgeline city lights',
+      icon: Sparkles,
+      image: '/images/mineral-springs/dawaipani-darjeeling-night-lights.jpg',
+      alt: 'Evening mountain vista looking across to shimmering Darjeeling lights over cloud sea',
+      reversed: false
+    },
+    {
+      id: 'tea-gardens',
+      eyebrow: 'ORGANIC TEA HERITAGE',
+      title: 'Surrounded by Tea Gardens',
+      description: 'Dawaipani is surrounded by the beautiful landscapes of the Eastern Himalayan tea-growing region, with nearby estates including Lamahatta, Glenburn and Takdah.',
+      note: 'Peaceful walking trails winding directly through emerald tea slopes',
+      icon: Footprints,
+      image: '/images/mineral-springs/darjeeling-tea-gardens-panoramic.jpg',
+      alt: 'Retreat cottages and manicured emerald tea garden slopes surrounding Dawaipani',
+      reversed: true
+    }
+  ];
 
   return (
     <article
@@ -143,126 +191,80 @@ export default function CozyDawaipani({ setActivePage, standalone = false }) {
             </p>
           </div>
 
-          {/* 4 Editorial Image-and-Text Highlights */}
-          <div className="space-y-16 sm:space-y-24">
-            
-            {/* Highlight 1: Sleeping Buddha */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center reveal-init">
-              <div className="lg:col-span-6 order-2 lg:order-1 space-y-4">
-                <span className="typo-eyebrow text-[#B89D77] block">
-                  MOUNTAIN ICON
-                </span>
-                <h3 className="typo-subsection-heading text-[#1A241E] font-normal">
-                  The Sleeping Buddha View
-                </h3>
-                <p className="typo-small text-[#4A524D] leading-relaxed font-light">
-                  Dawaipani offers expansive panoramic views of the Kanchenjunga mountain range, often revealing the magnificent Sleeping Buddha formation on clear days.
-                </p>
-                <div className="pt-2 flex items-center space-x-2 typo-small text-xs text-[#8E704F]">
-                  <Sparkles className="w-4 h-4 text-[#B89D77]" />
-                  <span>Best observed during early crisp mornings in autumn and spring</span>
-                </div>
-              </div>
-              <div className="lg:col-span-6 order-1 lg:order-2">
-                <div className="aspect-[4/3] overflow-hidden bg-neutral-900 group">
-                  <img
-                    src="/images/mineral-springs/dawaipani-kanchenjunga-snow-peaks.jpg"
-                    alt="The Sleeping Buddha Mount Kanchenjunga vista from Dawaipani"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
+          {/* 4 Editorial Image-and-Text Highlights - Stacking Cards on Homepage Only */}
+          {!standalone ? (
+            <StackingCardsContainer className="mb-10 sm:mb-14">
+              {mountainHighlights.map((h) => {
+                const Icon = h.icon;
+                return (
+                  <StackingCard key={h.id}>
+                    <div className="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#EAE3D8] hover:border-[#B89D77]/80 shadow-[0_14px_40px_-10px_rgba(27,36,30,0.09)] grid grid-cols-1 lg:grid-cols-12 items-center p-6 sm:p-10 lg:p-12 gap-8 lg:gap-14 transition-all duration-300">
+                      <div className={`lg:col-span-6 space-y-4 ${h.reversed ? 'order-2' : 'order-2 lg:order-1'}`}>
+                        <span className="typo-eyebrow text-[#B89D77] block">
+                          {h.eyebrow}
+                        </span>
+                        <h3 className="typo-subsection-heading text-[#1A241E] font-normal">
+                          {h.title}
+                        </h3>
+                        <p className="typo-small text-[#4A524D] leading-relaxed font-light">
+                          {h.description}
+                        </p>
+                        <div className="pt-2 flex items-center space-x-2 typo-small text-xs text-[#8E704F]">
+                          <Icon className="w-4 h-4 text-[#B89D77] shrink-0" />
+                          <span>{h.note}</span>
+                        </div>
+                      </div>
+                      <div className={`lg:col-span-6 ${h.reversed ? 'order-1' : 'order-1 lg:order-2'}`}>
+                        <div className="aspect-[16/10] sm:aspect-[4/3] rounded-2xl overflow-hidden bg-neutral-900 group shadow-md">
+                          <img
+                            src={h.image}
+                            alt={h.alt}
+                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </StackingCard>
+                );
+              })}
+            </StackingCardsContainer>
+          ) : (
+            <div className="space-y-16 sm:space-y-24">
+              {mountainHighlights.map((h) => {
+                const Icon = h.icon;
+                return (
+                  <div key={h.id} className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center reveal-init">
+                    <div className={`lg:col-span-6 space-y-4 ${h.reversed ? 'order-2' : 'order-2 lg:order-1'}`}>
+                      <span className="typo-eyebrow text-[#B89D77] block">
+                        {h.eyebrow}
+                      </span>
+                      <h3 className="typo-subsection-heading text-[#1A241E] font-normal">
+                        {h.title}
+                      </h3>
+                      <p className="typo-small text-[#4A524D] leading-relaxed font-light">
+                        {h.description}
+                      </p>
+                      <div className="pt-2 flex items-center space-x-2 typo-small text-xs text-[#8E704F]">
+                        <Icon className="w-4 h-4 text-[#B89D77] shrink-0" />
+                        <span>{h.note}</span>
+                      </div>
+                    </div>
+                    <div className={`lg:col-span-6 ${h.reversed ? 'order-1' : 'order-1 lg:order-2'}`}>
+                      <div className="aspect-[4/3] overflow-hidden bg-neutral-900 group">
+                        <img
+                          src={h.image}
+                          alt={h.alt}
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
-
-            {/* Highlight 2: Valley Landscapes */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center reveal-init">
-              <div className="lg:col-span-6 order-1">
-                <div className="aspect-[4/3] overflow-hidden bg-neutral-900 group">
-                  <img
-                    src="/images/mineral-springs/dawaipani-drone-canopy-aerial.jpg"
-                    alt="Canopy and valley mist across Dawaipani mountain slopes"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-              <div className="lg:col-span-6 order-2 space-y-4">
-                <span className="typo-eyebrow text-[#B89D77] block">
-                  VALLEY PANORAMAS
-                </span>
-                <h3 className="typo-subsection-heading text-[#1A241E] font-normal">
-                  Beautiful Valley Landscapes
-                </h3>
-                <p className="typo-small text-[#4A524D] leading-relaxed font-light">
-                  On clear days, visitors may be able to spot the Chardham temple complex in Namchi, Sikkim, and Samdruptse Monastery across the valley.
-                </p>
-                <div className="pt-2 flex items-center space-x-2 typo-small text-xs text-[#8E704F]">
-                  <Compass className="w-4 h-4 text-[#B89D77]" />
-                  <span>Sweeping vistas spanning West Bengal and Sikkim hills</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Highlight 3: Darjeeling at Night */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center reveal-init">
-              <div className="lg:col-span-6 order-2 lg:order-1 space-y-4">
-                <span className="typo-eyebrow text-[#B89D77] block">
-                  EVENING SPECTACLE
-                </span>
-                <h3 className="typo-subsection-heading text-[#1A241E] font-normal">
-                  Darjeeling at Night
-                </h3>
-                <p className="typo-small text-[#4A524D] leading-relaxed font-light">
-                  After sunset, the distant lights of Darjeeling town create a beautiful view across the valley, shimmering like a jewel box in the quiet Himalayan night.
-                </p>
-                <div className="pt-2 flex items-center space-x-2 typo-small text-xs text-[#8E704F]">
-                  <Sparkles className="w-4 h-4 text-[#B89D77]" />
-                  <span>Unbroken silence with glittering ridgeline city lights</span>
-                </div>
-              </div>
-              <div className="lg:col-span-6 order-1 lg:order-2">
-                <div className="aspect-[4/3] overflow-hidden bg-neutral-900 group">
-                  <img
-                    src="/images/mineral-springs/dawaipani-darjeeling-night-lights.jpg"
-                    alt="Evening mountain vista looking across to shimmering Darjeeling lights over cloud sea"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Highlight 4: Surrounded by Tea Gardens */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center reveal-init">
-              <div className="lg:col-span-6 order-1">
-                <div className="aspect-[4/3] overflow-hidden bg-neutral-900 group">
-                  <img
-                    src="/images/mineral-springs/darjeeling-tea-gardens-panoramic.jpg"
-                    alt="Retreat cottages and manicured emerald tea garden slopes surrounding Dawaipani"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-              <div className="lg:col-span-6 order-2 space-y-4">
-                <span className="typo-eyebrow text-[#B89D77] block">
-                  ORGANIC TEA HERITAGE
-                </span>
-                <h3 className="typo-subsection-heading text-[#1A241E] font-normal">
-                  Surrounded by Tea Gardens
-                </h3>
-                <p className="typo-small text-[#4A524D] leading-relaxed font-light">
-                  Dawaipani is surrounded by the beautiful landscapes of the Eastern Himalayan tea-growing region, with nearby estates including Lamahatta, Glenburn and Takdah.
-                </p>
-                <div className="pt-2 flex items-center space-x-2 typo-small text-xs text-[#8E704F]">
-                  <Footprints className="w-4 h-4 text-[#B89D77]" />
-                  <span>Peaceful walking trails winding directly through emerald tea slopes</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
+          )}
 
           {/* Visibility Disclaimer Callout */}
           <div className="mt-14 max-w-2xl mx-auto text-center p-4 bg-white border border-[#E5DFD5]">

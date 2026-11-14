@@ -63,3 +63,21 @@
   - *Mobile & Tablet Devices (&lt; 1024px):* The `<video>` element is completely omitted from rendering; the existing static mountain photograph (`heroImage`) is displayed with subtle CSS drift animation to ensure zero cellular data consumption and identical performance.
 - **Accessibility & Error Resilience:** Automatically detects `prefers-reduced-motion` and video load errors, immediately reverting to the static photograph without visual clipping or broken media states.
 - **CMS Management:** Configured in `pages.home.hero.video` and `settings.heroVideo`; editable in real-time through the Admin Panel (`/admin`) with asset picker and one-click removal controls.
+
+---
+
+## 6. Premium Homepage Stacking Cards Scroll System
+- **Strict Homepage Isolation:** Applied exclusively to the homepage Section 2 Mountain Vistas ("Above the Clouds, Close to Nature" at `#dawaipani`), preserving all internal subpages (`/experiences`, `/stay`, `/about`, `/gallery`, `/travel`, and standalone `/dawaipani`) in their clean standard layouts.
+- **Hardware-Accelerated Sticky Engine (`StackingCards.jsx`):**
+  - Uses CSS `position: sticky` as the robust, non-flickering browser layout foundation.
+  - Responsive sticky offset computation:
+    - *Desktop ($\ge 1024\text{px}$):* `baseTop = 112px`, `step = 14px`, `gap = 56px`, `scaleStep = 0.035`.
+    - *Tablet ($768\text{px} - 1023\text{px}$):* `baseTop = 86px`, `step = 10px`, `gap = 40px`, `scaleStep = 0.025`.
+    - *Mobile ($< 768\text{px}$):* `baseTop = 74px`, `step = 8px`, `gap = 28px`, `scaleStep = 0.02`.
+- **Dynamic Optical Depth & Progressive Scaling:**
+  - Employs lightweight passive scroll listeners synchronized with `requestAnimationFrame`.
+  - As succeeding cards slide up into view, underlying cards scale down subtly (`1.0` &rarr; `0.965` &rarr; `0.93`), their multi-tier shadow deepens, and a subtle scrim layers depth.
+  - Overlapping cards do not flicker, jump, or clip.
+  - The final card unpins and releases smoothly as scrolling continues naturally into Section 4 ("Getting to Dawaipani").
+- **Zero Content Redesign:** Preserves all existing mountain highlight copy, headings, typography, photography, and colors without changing any navigation or layout structure.
+- **Full Accessibility:** Automatically detects `prefers-reduced-motion: reduce` and renders the cards in standard static flow with zero scaling or transitions.

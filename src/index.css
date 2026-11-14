@@ -708,49 +708,44 @@
   color: #FFFFFF;
 }
 
+/* ========================================================================= */
+/* PREMIUM STACKING CARDS SCROLL SYSTEM (HOMEPAGE ONLY)                      */
+/* ========================================================================= */
+.stacking-cards-container {
+  position: relative;
+  width: 100%;
+}
+
+.stacking-card-item {
+  position: sticky;
+  will-change: transform;
+}
+
+.stacking-card-inner {
+  transform-origin: top center;
+  will-change: transform, box-shadow;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.stacking-card-scrim {
+  will-change: opacity;
+  pointer-events: none;
+}
+
 /* Accessible reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  *, ::before, ::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+  .stacking-card-item {
+    position: relative !important;
+    top: auto !important;
   }
-}
-
-/* Backward compatibility for any remaining wix-pill classes */
-.wix-pill-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  height: 42px;
-  padding: 0 24px;
-  border-radius: 9999px;
-  font-size: 14px;
-  font-weight: 500;
-  transition: all 0.25s ease;
-}
-.wix-pill-button-black {
-  background-color: #1E2C22;
-  color: #FFFFFF;
-}
-.wix-pill-button-black:hover {
-  background-color: #C5A880;
-  color: #151F18;
-}
-.wix-pill-button-white {
-  background-color: #FFFFFF;
-  color: #1E2C22;
-  border: 1px solid #E6DFD5;
-}
-.wix-pill-button-white:hover {
-  background-color: #1E2C22;
-  color: #FFFFFF;
-}
-
-/* Accessible reduced motion */
-@media (prefers-reduced-motion: reduce) {
+  .stacking-card-inner {
+    transform: none !important;
+    transition: none !important;
+  }
+  .stacking-card-scrim {
+    display: none !important;
+  }
   *, ::before, ::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
