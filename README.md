@@ -384,7 +384,7 @@ To enable automated WhatsApp notifications directly to the host's physical mobil
 To enable guest and owner sign-in with Google:
 1. Open the [Google Cloud Console Credentials](https://console.cloud.google.com/apis/credentials).
 2. Select your OAuth Client ID (or create one for Web Application):
-   `1071006060591-tmhssin2h21lcre235vtolojh4g403ep.apps.googleusercontent.com`
+   `465876529150-ttmo87mj8jdi1n4lh8u9e6uoqa6j133n.apps.googleusercontent.com`
 3. Under **Authorized JavaScript origins**, add:
    - `https://mineralspringretreat.com`
    - `https://www.mineralspringretreat.com`
