@@ -356,32 +356,42 @@ export function findOrCreateGoogleUser({ googleId, email, name, picture }) {
   // 1. First look up by stable Google sub ID
   let user = db.users.find(u => u.googleId === googleId);
 
-  // 2. If not found by googleId, check by email if guest
+  // 2. If not found by googleId, check by email
   if (!user && email) {
-    user = db.users.find(u => u.email && u.email.toLowerCase() === email.toLowerCase() && u.role === 'guest');
+    user = db.users.find(u => u.email && u.email.toLowerCase() === email.toLowerCase());
     if (user) {
       // Link stable Google ID
       user.googleId = googleId;
     }
   }
 
+  const normalizedEmail = (email || '').toLowerCase();
+  const isOwnerEmail = (
+    normalizedEmail === 'info.mineralspringretreat@gmail.com' ||
+    normalizedEmail === 'stay@mineralspringretreat.com' ||
+    normalizedEmail === 'stay@mineralspringsretreat.com'
+  );
+
   if (user) {
-    // Update profile with latest info from Google
+    // If owner email, ensure superadmin privileges
+    if (isOwnerEmail && user.role !== 'superadmin') {
+      user.role = 'superadmin';
+    }
     user.name = name || user.name || user.email?.split('@')[0] || 'Guest';
     if (email) user.email = email;
     if (picture) user.picture = picture;
     user.lastLoginAt = now;
     user.updatedAt = now;
   } else {
-    // Create new guest account
+    // Create new account: if owner email, assign superadmin role, otherwise guest
     user = {
-      id: 'guest-' + crypto.randomBytes(6).toString('hex'),
+      id: isOwnerEmail ? 'usr-owner-google' : 'guest-' + crypto.randomBytes(6).toString('hex'),
       googleId,
       email: email || '',
-      name: name || email?.split('@')[0] || 'Guest',
+      name: name || email?.split('@')[0] || (isOwnerEmail ? 'Retreat Owner' : 'Guest'),
       picture: picture || '',
       phone: '',
-      role: 'guest',
+      role: isOwnerEmail ? 'superadmin' : 'guest',
       createdAt: now,
       lastLoginAt: now,
       updatedAt: now

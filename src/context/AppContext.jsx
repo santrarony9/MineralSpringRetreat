@@ -183,6 +183,18 @@ export function AppProvider({ children }) {
     const urlParams = new URLSearchParams(window.location.search);
     const token = urlParams.get('token');
     const auth = urlParams.get('auth');
+    const authError = urlParams.get('auth_error');
+
+    if (authError) {
+      console.warn('[AUTH] Google OAuth error returned:', authError);
+      urlParams.delete('auth_error');
+      const newSearch = urlParams.toString();
+      const currentHash = window.location.hash;
+      const newUrl = window.location.pathname + (newSearch ? `?${newSearch}` : '') + currentHash;
+      window.history.replaceState({}, document.title, newUrl);
+      return;
+    }
+
     if (auth === 'success' && token) {
       localStorage.setItem('msr_guest_token', token);
       setGuestToken(token);
@@ -190,8 +202,16 @@ export function AppProvider({ children }) {
       urlParams.delete('auth');
       urlParams.delete('guestName');
       const newSearch = urlParams.toString();
-      const newUrl = window.location.pathname + (newSearch ? `?${newSearch}` : '') + window.location.hash;
+      const currentHash = window.location.hash;
+      const newUrl = window.location.pathname + (newSearch ? `?${newSearch}` : '') + currentHash;
       window.history.replaceState({}, document.title, newUrl);
+
+      // Restore user flow based on return hash
+      if (currentHash === '#reserve') {
+        setBookingModalOpen(true);
+      } else if (currentHash === '#my-bookings') {
+        setMyBookingsModalOpen(true);
+      }
     }
   }, []);
 
@@ -231,6 +251,12 @@ export function AppProvider({ children }) {
         if (data.authenticated && data.user) {
           setGuestUser(data.user);
           loadMyBookings(guestToken);
+          // If signed-in user is owner or admin, also grant admin session
+          if (['superadmin', 'admin', 'manager', 'staff'].includes(data.user.role)) {
+            setAdminToken(guestToken);
+            setAdminUser(data.user);
+            localStorage.setItem('msr_admin_token', guestToken);
+          }
         } else {
           setGuestToken('');
           setGuestUser(null);

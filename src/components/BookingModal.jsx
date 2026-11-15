@@ -39,15 +39,26 @@ export default function BookingModal() {
     if (bookingModalOpen) {
       setSuccessData(null);
       setErrorMessage('');
+
+      // Check if we have pending booking preserved in sessionStorage
+      let savedBooking = null;
+      try {
+        const raw = sessionStorage.getItem('msr_pending_booking');
+        if (raw) savedBooking = JSON.parse(raw);
+      } catch {}
+
       setFormData(prev => ({
         ...prev,
-        roomId: bookingPrefill.roomId || prev.roomId || (rooms[0]?.id || 'double-sharing'),
-        checkIn: bookingPrefill.checkIn || prev.checkIn || new Date(Date.now() + 86400000).toISOString().split('T')[0],
-        checkOut: bookingPrefill.checkOut || prev.checkOut || new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
-        adults: bookingPrefill.guests || prev.adults || 2,
+        roomId: savedBooking?.roomId || bookingPrefill.roomId || prev.roomId || (rooms[0]?.id || 'double-sharing'),
+        checkIn: savedBooking?.checkIn || bookingPrefill.checkIn || prev.checkIn || new Date(Date.now() + 86400000).toISOString().split('T')[0],
+        checkOut: savedBooking?.checkOut || bookingPrefill.checkOut || prev.checkOut || new Date(Date.now() + 86400000 * 3).toISOString().split('T')[0],
+        adults: savedBooking?.adults || bookingPrefill.guests || prev.adults || 2,
+        children: savedBooking?.children ?? prev.children ?? 0,
+        numRooms: savedBooking?.numRooms || prev.numRooms || 1,
+        specialRequests: savedBooking?.specialRequests || prev.specialRequests || '',
         guestName: guestUser?.name || prev.guestName || '',
         email: guestUser?.email || prev.email || '',
-        phone: guestUser?.phone || prev.phone || ''
+        phone: guestUser?.phone || savedBooking?.phone || prev.phone || ''
       }));
 
       if (modalRef.current) {
@@ -61,6 +72,22 @@ export default function BookingModal() {
   }, [bookingModalOpen, bookingPrefill, rooms, guestUser]);
 
   if (!bookingModalOpen) return null;
+
+  const handleOpenGoogleAuth = () => {
+    try {
+      sessionStorage.setItem('msr_pending_booking', JSON.stringify({
+        roomId: formData.roomId,
+        checkIn: formData.checkIn,
+        checkOut: formData.checkOut,
+        adults: formData.adults,
+        children: formData.children,
+        numRooms: formData.numRooms,
+        specialRequests: formData.specialRequests,
+        phone: formData.phone
+      }));
+    } catch {}
+    setGuestAuthModalOpen(true);
+  };
 
   const selectedRoom = rooms.find(r => r.id === formData.roomId) || rooms[0] || { pricePerNight: 3000, pricePerPerson: 1500, name: 'Double Sharing Eco Room' };
 
@@ -78,7 +105,7 @@ export default function BookingModal() {
 
     if (!guestToken) {
       setErrorMessage('Please sign in with your Google account to confirm your reservation inquiry.');
-      setGuestAuthModalOpen(true);
+      handleOpenGoogleAuth();
       setSubmitting(false);
       return;
     }
@@ -98,6 +125,9 @@ export default function BookingModal() {
         setErrorMessage(res.error || 'Authentication required');
         return;
       }
+      try {
+        sessionStorage.removeItem('msr_pending_booking');
+      } catch {}
       setSuccessData(res);
     } catch (err) {
       setErrorMessage(err.message || 'Error saving booking inquiry. Please try again.');
@@ -265,7 +295,7 @@ export default function BookingModal() {
                   </p>
                   <button
                     type="button"
-                    onClick={() => setGuestAuthModalOpen(true)}
+                    onClick={handleOpenGoogleAuth}
                     className="w-full py-2.5 bg-white hover:bg-neutral-50 border border-neutral-300 text-neutral-800 rounded-xl text-xs font-semibold flex items-center justify-center space-x-2 shadow-xs transition-colors"
                   >
                     <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24">

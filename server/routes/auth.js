@@ -225,13 +225,18 @@ export function resolveOAuthRedirectUri(req) {
     return 'http://localhost:5000/api/auth/google/callback';
   }
 
-  // On production (Vercel / custom domains):
+  // Canonicalize custom domains (both apex and www)
+  if (host === 'mineralspringretreat.com' || host === 'www.mineralspringretreat.com') {
+    return 'https://mineralspringretreat.com/api/auth/google/callback';
+  }
+
+  // On production (Vercel / preview domains):
   if (host) {
     const proto = req.headers['x-forwarded-proto'] || 'https';
     return `${proto}://${host}/api/auth/google/callback`;
   }
 
-  return process.env.GOOGLE_CALLBACK_URL || 'https://mineral-springs-retreat.vercel.app/api/auth/google/callback';
+  return process.env.GOOGLE_CALLBACK_URL || 'https://mineralspringretreat.com/api/auth/google/callback';
 }
 
 // Helper: Resolve the frontend client base URL for post-login redirect
@@ -250,7 +255,7 @@ export function resolveClientBaseUrl(req) {
   if (host) {
     return `${proto}://${host}`;
   }
-  return process.env.CLIENT_URL || 'https://mineral-springs-retreat.vercel.app';
+  return process.env.CLIENT_URL || 'https://mineralspringretreat.com';
 }
 
 // GET /api/auth/google/url
@@ -267,12 +272,14 @@ router.get('/google/url', (req, res) => {
 
   const redirectUri = resolveOAuthRedirectUri(req);
   const clientOrigin = resolveClientBaseUrl(req);
+  const returnHash = req.query.returnHash || req.query.returnTo || '#my-bookings';
 
-  // Encode state with CSRF nonce, client return origin, and redirectUri used
+  // Encode state with CSRF nonce, client return origin, returnHash, and redirectUri used
   const statePayload = {
     nonce: crypto.randomBytes(16).toString('hex'),
     origin: clientOrigin,
-    redirectUri: redirectUri
+    redirectUri: redirectUri,
+    returnHash: returnHash
   };
   const state = Buffer.from(JSON.stringify(statePayload)).toString('base64url');
 
@@ -291,6 +298,7 @@ router.get('/google/url', (req, res) => {
 router.get('/google/callback', async (req, res) => {
   let clientUrl = resolveClientBaseUrl(req);
   let redirectUri = resolveOAuthRedirectUri(req);
+  let returnHash = '#my-bookings';
 
   // Decode state payload if present
   if (req.query.state) {
@@ -298,6 +306,7 @@ router.get('/google/callback', async (req, res) => {
       const decoded = JSON.parse(Buffer.from(req.query.state, 'base64url').toString('utf8'));
       if (decoded.origin) clientUrl = decoded.origin;
       if (decoded.redirectUri) redirectUri = decoded.redirectUri;
+      if (decoded.returnHash) returnHash = decoded.returnHash;
     } catch (e) {
       // fallback to resolved defaults
     }
@@ -306,11 +315,11 @@ router.get('/google/callback', async (req, res) => {
   const { code, error } = req.query;
 
   if (error) {
-    return res.redirect(`${clientUrl}/?auth_error=${encodeURIComponent(error)}#reserve`);
+    return res.redirect(`${clientUrl}/?auth_error=${encodeURIComponent(error)}${returnHash}`);
   }
 
   if (!code) {
-    return res.redirect(`${clientUrl}/?auth_error=No+authorization+code+provided#reserve`);
+    return res.redirect(`${clientUrl}/?auth_error=No+authorization+code+provided${returnHash}`);
   }
 
   try {
@@ -358,11 +367,11 @@ router.get('/google/callback', async (req, res) => {
     logActivity('GOOGLE_OAUTH_LOGIN', `Guest '${guest.name}' logged in via Google (${guest.email})`, ip, guest.email);
 
     return res.redirect(
-      `${clientUrl}/?auth=success&token=${session.token}&guestName=${encodeURIComponent(guest.name)}#my-bookings`
+      `${clientUrl}/?auth=success&token=${session.token}&guestName=${encodeURIComponent(guest.name)}${returnHash}`
     );
   } catch (err) {
     console.error('[GOOGLE_OAUTH] Callback error:', err);
-    return res.redirect(`${clientUrl}/?auth_error=${encodeURIComponent(err.message)}#reserve`);
+    return res.redirect(`${clientUrl}/?auth_error=${encodeURIComponent(err.message)}${returnHash}`);
   }
 });
 

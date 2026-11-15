@@ -6,6 +6,7 @@ export default function GuestAuthModal() {
   const {
     guestAuthModalOpen,
     setGuestAuthModalOpen,
+    bookingModalOpen,
     guestLoading,
     settings
   } = useApp();
@@ -35,7 +36,8 @@ export default function GuestAuthModal() {
   const handleGoogleSignIn = async () => {
     setError('');
     try {
-      const res = await fetch('/api/auth/google/url');
+      const returnHash = bookingModalOpen ? '#reserve' : (window.location.hash || '#my-bookings');
+      const res = await fetch(`/api/auth/google/url?returnHash=${encodeURIComponent(returnHash)}`);
       if (!res.ok) {
         const errData = await res.json().catch(() => ({}));
         throw new Error(errData.error || 'Google Sign-in service unavailable');
