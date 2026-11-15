@@ -38,6 +38,7 @@ export default function CozyTravelGuide() {
   const directionsUrl = settings?.googleDirectionsUrl || 'https://www.google.com/search?sa=X&q=mineral+springs+retreat+dawaipani+address&ludocid=12917762238512786598';
   const phone1 = settings?.phone || '+91 79081 92498';
   const phone2 = settings?.phone2 || '+91 98303 55105';
+  const phone = phone1;
 
   const routes = (travelData?.distances && travelData.distances.length > 0)
     ? travelData.distances.slice(0, 3).map((d) => ({

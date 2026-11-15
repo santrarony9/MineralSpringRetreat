@@ -19,6 +19,7 @@ export default function ContactSection() {
 
   const phone1 = settings?.phone || '+91 79081 92498';
   const phone2 = settings?.phone2 || '+91 98303 55105';
+  const phone = phone1;
   const email = settings?.email || 'stay@mineralspringsretreat.com';
   const address = settings?.address || 'Mineral Springs, Yankoo, Dawaipani, Lebong and Mineral Spring Tea Garden, West Bengal – 734105, India.';
   const officialName = settings?.officialName || 'Mineral Springs Retreat';

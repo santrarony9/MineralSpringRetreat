@@ -44,6 +44,7 @@ export default function CozyHeader({ activePage, setActivePage }) {
 
   const phone1 = settings?.phone || '+91 79081 92498';
   const phone2 = settings?.phone2 || '+91 98303 55105';
+  const phone = phone1;
   const whatsapp1 = settings?.whatsapp || '+91 79081 92498';
   const whatsapp2 = settings?.whatsapp2 || '+91 98303 55105';
   const cleanWa1 = whatsapp1.replace(/[^0-9]/g, '');

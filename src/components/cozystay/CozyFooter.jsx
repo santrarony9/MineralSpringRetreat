@@ -13,6 +13,7 @@ export default function CozyFooter({ setActivePage }) {
   const bio = footerData?.bio || 'Mineral Springs Retreat is a rustic boutique eco-stay in Dawaipani village, overlooking Mount Kanchenjunga and the expansive Lebong tea gardens. Offering simple clean accommodation, home-cooked Gorkha meals, and unbroken mountain peace.';
   const phone1 = footerData?.phone || settings?.phone || '+91 79081 92498';
   const phone2 = footerData?.phone2 || settings?.phone2 || '+91 98303 55105';
+  const phone = phone1;
   const whatsapp1 = footerData?.whatsapp || settings?.whatsapp || '+91 79081 92498';
   const whatsapp2 = footerData?.whatsapp2 || settings?.whatsapp2 || '+91 98303 55105';
   const cleanWa1 = whatsapp1.replace(/[^0-9]/g, '');

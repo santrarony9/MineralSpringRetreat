@@ -38,6 +38,7 @@ export default function CozyTravelPage({ setActivePage }) {
   const directionsUrl = settings?.googleDirectionsUrl || 'https://www.google.com/search?sa=X&q=mineral+springs+retreat+dawaipani+address&ludocid=12917762238512786598';
   const phone1 = settings?.phone || '+91 79081 92498';
   const phone2 = settings?.phone2 || '+91 98303 55105';
+  const phone = phone1;
 
   const routes = (travelData?.distances && travelData.distances.length > 0)
     ? travelData.distances.slice(0, 3).map((d) => ({
@@ -99,11 +100,19 @@ export default function CozyTravelPage({ setActivePage }) {
               </a>
 
               <a
-                href={`tel:${phone.replace(/[^0-9+]/g, '')}`}
-                className="cozy-btn-outline-light typo-btn justify-center py-3.5 px-6 inline-flex items-center space-x-2"
+                href={`tel:${phone1.replace(/[^0-9+]/g, '')}`}
+                className="cozy-btn-outline-light typo-btn justify-center py-3.5 px-4 inline-flex items-center space-x-2"
               >
                 <Phone className="w-3.5 h-3.5 text-cozy-sand" />
-                <span>Call Host</span>
+                <span>Call {phone1}</span>
+              </a>
+
+              <a
+                href={`tel:${phone2.replace(/[^0-9+]/g, '')}`}
+                className="cozy-btn-outline-light typo-btn justify-center py-3.5 px-4 inline-flex items-center space-x-2"
+              >
+                <Phone className="w-3.5 h-3.5 text-cozy-sand" />
+                <span>Call {phone2}</span>
               </a>
             </div>
           </div>
