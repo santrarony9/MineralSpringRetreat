@@ -381,13 +381,22 @@ To enable automated WhatsApp notifications directly to the host's physical mobil
 
 ## 🔑 Google OAuth 2.0 Setup
 
-To enable guest sign-in with Google:
-1. Open the [Google Cloud Console](https://console.cloud.google.com/).
-2. Create a project and navigate to **APIs & Services &rarr; Credentials**.
-3. Create **OAuth Client ID** &rarr; Application type **Web Application**.
-4. Under **Authorized JavaScript origins**, add your live domain (e.g. `https://yourdomain.com`).
-5. Under **Authorized redirect URIs**, add `https://yourdomain.com/api/auth/google/callback`.
-6. Copy the Client ID and Client Secret into your `.env` or production dashboard settings.
+To enable guest and owner sign-in with Google:
+1. Open the [Google Cloud Console Credentials](https://console.cloud.google.com/apis/credentials).
+2. Select your OAuth Client ID (or create one for Web Application):
+   `1071006060591-tmhssin2h21lcre235vtolojh4g403ep.apps.googleusercontent.com`
+3. Under **Authorized JavaScript origins**, add:
+   - `https://mineralspringretreat.com`
+   - `https://www.mineralspringretreat.com`
+   - `https://mineral-springs-retreat.vercel.app`
+   - `http://localhost:3000`
+   - `http://localhost:5000`
+4. Under **Authorized redirect URIs**, add:
+   - `https://mineralspringretreat.com/api/auth/google/callback`
+   - `https://www.mineralspringretreat.com/api/auth/google/callback`
+   - `https://mineral-springs-retreat.vercel.app/api/auth/google/callback`
+   - `http://localhost:5000/api/auth/google/callback`
+5. Configure the Client ID and Client Secret in Vercel environment variables or local `.env`.
 
 ---
 
