@@ -17,19 +17,27 @@ export default function ContactSection() {
   const [submitting, setSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
-  const phone = settings?.phone || '+91 98320 12345';
+  const phone1 = settings?.phone || '+91 79081 92498';
+  const phone2 = settings?.phone2 || '+91 98303 55105';
   const email = settings?.email || 'stay@mineralspringsretreat.com';
   const address = settings?.address || 'Mineral Springs, Yankoo, Dawaipani, Lebong and Mineral Spring Tea Garden, West Bengal – 734105, India.';
   const officialName = settings?.officialName || 'Mineral Springs Retreat';
   const propertyCategory = settings?.propertyCategory || 'Homestay in Lebong and Mineral Spring Tea Garden, West Bengal.';
   const directionsUrl = settings?.googleDirectionsUrl || 'https://www.google.com/search?sa=X&q=mineral+springs+retreat+dawaipani+address&ludocid=12917762238512786598';
-  const whatsapp = settings?.whatsapp || '+919832012345';
-  const cleanPhone = whatsapp.replace(/[^0-9]/g, '');
+  const whatsapp1 = settings?.whatsapp || '+91 79081 92498';
+  const whatsapp2 = settings?.whatsapp2 || '+91 98303 55105';
+  const cleanPhone1 = whatsapp1.replace(/[^0-9]/g, '');
+  const cleanPhone2 = whatsapp2.replace(/[^0-9]/g, '');
   const mapsEmbed = settings?.googleMapsEmbedUrl || "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14197.647313883734!2d88.2917!3d27.0543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e6a575a7f29c41%3A0x6b3f749553755b46!2sDawaipani%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin";
 
-  const handleWhatsAppClick = () => {
+  const handleWhatsAppClick1 = () => {
     const text = encodeURIComponent(`Hello! I'm interested in staying at ${settings?.homestayName || 'Mineral Springs Retreat'}. Could you provide more details about current availability?`);
-    window.open(`https://wa.me/${cleanPhone}?text=${text}`, '_blank');
+    window.open(`https://wa.me/${cleanPhone1}?text=${text}`, '_blank');
+  };
+
+  const handleWhatsAppClick2 = () => {
+    const text = encodeURIComponent(`Hello! I'm interested in staying at ${settings?.homestayName || 'Mineral Springs Retreat'}. Could you provide more details about current availability?`);
+    window.open(`https://wa.me/${cleanPhone2}?text=${text}`, '_blank');
   };
 
   const handleDirectionsClick = () => {
@@ -113,11 +121,16 @@ export default function ContactSection() {
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-xs uppercase tracking-widest font-semibold text-earth-900 mb-1">Telephone</h4>
-                  <a href={`tel:${phone}`} className="text-xs text-earth-900/80 hover:text-moss-700 font-light">
-                    {phone}
-                  </a>
-                  <div className="text-[10px] text-sand-400 font-light mt-0.5">Available 8:00 AM – 8:00 PM PST</div>
+                  <h4 className="text-xs uppercase tracking-widest font-semibold text-earth-900 mb-1">Telephone / Direct Call</h4>
+                  <div className="space-y-1">
+                    <a href={`tel:${phone1.replace(/[^0-9+]/g, '')}`} className="text-xs text-earth-900/90 hover:text-moss-700 font-medium block">
+                      {phone1}
+                    </a>
+                    <a href={`tel:${phone2.replace(/[^0-9+]/g, '')}`} className="text-xs text-earth-900/90 hover:text-moss-700 font-medium block">
+                      {phone2}
+                    </a>
+                  </div>
+                  <div className="text-[10px] text-sand-400 font-light mt-1">Available 7:00 AM – 9:00 PM IST</div>
                 </div>
               </div>
 
@@ -135,14 +148,23 @@ export default function ContactSection() {
               </div>
             </div>
 
-            {/* WhatsApp Direct Action Button */}
-            <div className="pt-2">
+            {/* WhatsApp Direct Action Buttons */}
+            <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-2.5">
               <button
-                onClick={handleWhatsAppClick}
-                className="w-full py-4 px-6 bg-emerald-800 hover:bg-emerald-900 text-white uppercase tracking-widest text-xs font-semibold shadow-md hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2"
+                type="button"
+                onClick={handleWhatsAppClick1}
+                className="w-full py-3.5 px-3 bg-emerald-800 hover:bg-emerald-900 text-white uppercase tracking-wider text-[11px] font-semibold shadow-md hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2"
               >
-                <MessageSquare className="w-4 h-4" />
-                <span>CHAT WITH HOST ON WHATSAPP</span>
+                <MessageSquare className="w-4 h-4 shrink-0" />
+                <span>CHAT: {phone1}</span>
+              </button>
+              <button
+                type="button"
+                onClick={handleWhatsAppClick2}
+                className="w-full py-3.5 px-3 bg-emerald-800 hover:bg-emerald-900 text-white uppercase tracking-wider text-[11px] font-semibold shadow-md hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2"
+              >
+                <MessageSquare className="w-4 h-4 shrink-0" />
+                <span>CHAT: {phone2}</span>
               </button>
             </div>
           </div>
@@ -222,7 +244,7 @@ export default function ContactSection() {
                     </label>
                     <input
                       type="tel"
-                      placeholder="+1 (555) 000-0000"
+                      placeholder="+91 79081 92498"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full px-4 py-3 bg-cream-50 border border-sand-300 text-xs text-earth-900 focus:outline-none focus:border-earth-900 transition-colors"

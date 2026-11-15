@@ -11,7 +11,12 @@ export default function CozyFooter({ setActivePage }) {
   const brandTitle = footerData?.brandTitle || 'MINERAL SPRINGS';
   const brandSubtitle = footerData?.brandSubtitle || 'RETREAT · DAWAIPANI';
   const bio = footerData?.bio || 'Mineral Springs Retreat is a rustic boutique eco-stay in Dawaipani village, overlooking Mount Kanchenjunga and the expansive Lebong tea gardens. Offering simple clean accommodation, home-cooked Gorkha meals, and unbroken mountain peace.';
-  const phone = footerData?.phone || settings?.phone || '+91 98320 12345';
+  const phone1 = footerData?.phone || settings?.phone || '+91 79081 92498';
+  const phone2 = footerData?.phone2 || settings?.phone2 || '+91 98303 55105';
+  const whatsapp1 = footerData?.whatsapp || settings?.whatsapp || '+91 79081 92498';
+  const whatsapp2 = footerData?.whatsapp2 || settings?.whatsapp2 || '+91 98303 55105';
+  const cleanWa1 = whatsapp1.replace(/[^0-9]/g, '');
+  const cleanWa2 = whatsapp2.replace(/[^0-9]/g, '');
   const email = footerData?.email || settings?.email || 'stay@mineralspringsretreat.com';
   const fullAddress = footerData?.address || settings?.address || 'Mineral Springs, Yankoo, Dawaipani, Lebong and Mineral Spring Tea Garden, West Bengal – 734105, India.';
   const directionsUrl = footerData?.directionsUrl || settings?.googleDirectionsUrl || 'https://www.google.com/search?sa=X&q=mineral+springs+retreat+dawaipani+address&ludocid=12917762238512786598';
@@ -88,8 +93,32 @@ export default function CozyFooter({ setActivePage }) {
               </p>
               <p>
                 <span className="text-white/50">Tel:</span>{' '}
-                <a href={`tel:${phone.replace(/[^0-9+]/g, '')}`} className="text-white hover:text-[#B89D77] transition-colors">
-                  {phone}
+                <a href={`tel:${phone1.replace(/[^0-9+]/g, '')}`} className="text-white hover:text-[#B89D77] transition-colors whitespace-nowrap">
+                  {phone1}
+                </a>
+                <span className="text-white/40 mx-2">/</span>
+                <a href={`tel:${phone2.replace(/[^0-9+]/g, '')}`} className="text-white hover:text-[#B89D77] transition-colors whitespace-nowrap">
+                  {phone2}
+                </a>
+              </p>
+              <p className="flex items-center flex-wrap gap-x-2 gap-y-1">
+                <span className="text-white/50">WhatsApp:</span>{' '}
+                <a
+                  href={`https://wa.me/${cleanWa1}?text=${encodeURIComponent('Hello Mineral Springs Retreat, I would like to inquire about a booking.')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-emerald-400 transition-colors whitespace-nowrap"
+                >
+                  {phone1}
+                </a>
+                <span className="text-white/40">/</span>
+                <a
+                  href={`https://wa.me/${cleanWa2}?text=${encodeURIComponent('Hello Mineral Springs Retreat, I would like to inquire about a booking.')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-emerald-400 transition-colors whitespace-nowrap"
+                >
+                  {phone2}
                 </a>
               </p>
               <p className="pt-1 text-white/80">

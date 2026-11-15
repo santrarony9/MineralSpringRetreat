@@ -22,9 +22,10 @@ export default function Footer() {
   };
 
   const homestayName = settings?.homestayName || 'MINERAL SPRINGS RETREAT';
-  const phone = settings?.phone || '+1 (555) 782-9901';
-  const email = settings?.email || 'stay@theserenehaven.com';
-  const address = settings?.address || 'Whispering Pines Valley, High Ridge Road, Sanctuary Hills, CA 95476';
+  const phone1 = settings?.phone || '+91 79081 92498';
+  const phone2 = settings?.phone2 || '+91 98303 55105';
+  const email = settings?.email || 'stay@mineralspringsretreat.com';
+  const address = settings?.address || 'Mineral Springs, Yankoo, Dawaipani, Lebong and Mineral Spring Tea Garden, West Bengal – 734105, India';
 
   return (
     <footer className="bg-earth-950 text-cream-100 pt-20 pb-12 border-t border-earth-900">
@@ -100,11 +101,16 @@ export default function Footer() {
                 <MapPin className="w-4 h-4 text-brass-400 shrink-0 mt-0.5" />
                 <span>{address}</span>
               </div>
-              <div className="flex items-center space-x-2.5">
-                <Phone className="w-4 h-4 text-brass-400 shrink-0" />
-                <a href={`tel:${phone}`} className="hover:text-white transition-colors">
-                  {phone}
-                </a>
+              <div className="flex items-start space-x-2.5">
+                <Phone className="w-4 h-4 text-brass-400 shrink-0 mt-0.5" />
+                <div className="space-y-0.5">
+                  <a href={`tel:${phone1.replace(/[^0-9+]/g, '')}`} className="hover:text-white transition-colors block">
+                    {phone1}
+                  </a>
+                  <a href={`tel:${phone2.replace(/[^0-9+]/g, '')}`} className="hover:text-white transition-colors block">
+                    {phone2}
+                  </a>
+                </div>
               </div>
               <div className="flex items-center space-x-2.5">
                 <Mail className="w-4 h-4 text-brass-400 shrink-0" />

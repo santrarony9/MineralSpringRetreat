@@ -16,9 +16,9 @@
     "section1Image": "/images/mineral-springs/mineral-springs-retreat-complex-facade.jpg",
     "section2Image": "/images/mineral-springs/dawaipani-drone-canopy-aerial.jpg",
     "section3Image": "/images/mineral-springs/dawaipani-darjeeling-night-lights.jpg",
-    "phone": "+91 98320 12345",
+    "phone": "+91 79081 92498",
     "email": "stay@mineralspringsretreat.com",
-    "whatsapp": "+919832012345",
+    "whatsapp": "+91 79081 92498",
     "address": "Mineral Springs, Yankoo, Dawaipani, Lebong and Mineral Spring Tea Garden, West Bengal – 734105, India",
     "hours": "Open 7 Days: 7am - 9pm",
     "checkInTime": "12:00 PM",
@@ -33,14 +33,16 @@
     "googleRating": 4.9,
     "whatsappNotificationConfig": {
       "enabled": true,
-      "hostPhone": "+919832012345",
+      "hostPhone": "+917908192498",
       "phoneNumberId": "placeholder_phone_number_id",
       "businessAccountId": "placeholder_business_account_id",
       "apiVersion": "v21.0",
       "updatedAt": "2026-11-12T14:36:34.729Z"
     },
     "heroVideo": "/videos/dawaipani-reel.mp4",
-    "heroPoster": "/images/mineral-springs/dawaipani-reel-poster.webp"
+    "heroPoster": "/images/mineral-springs/dawaipani-reel-poster.webp",
+    "phone2": "+91 98303 55105",
+    "whatsapp2": "+91 98303 55105"
   },
   "tariffDetails": {
     "doubleSharing": {
@@ -537,7 +539,7 @@
       "lastLoginAt": "2026-11-13T08:16:19.836Z",
       "name": "Website Owner",
       "status": "active",
-      "phone": "+91 98320 12345"
+      "phone": "+91 79081 92498"
     }
   ],
   "sessions": [],
@@ -818,14 +820,17 @@
       "brandTitle": "MINERAL SPRINGS",
       "brandSubtitle": "RETREAT · DAWAIPANI",
       "bio": "Mineral Springs Retreat is a rustic boutique eco-stay in Dawaipani village, overlooking Mount Kanchenjunga and the expansive Lebong tea gardens. Offering simple clean accommodation, home-cooked Gorkha meals, and unbroken mountain peace.",
-      "phone": "+91 98320 12345",
+      "phone": "+91 79081 92498",
       "email": "stay@mineralspringsretreat.com",
       "address": "Mineral Springs, Yankoo, Dawaipani, Lebong and Mineral Spring Tea Garden, West Bengal – 734105, India.",
       "googleReviewCount": 19,
       "googleRating": 4.9,
       "directionsUrl": "https://www.google.com/search?sa=X&q=mineral+springs+retreat+dawaipani+address&ludocid=12917762238512786598",
       "googleReviewsUrl": "https://www.google.com/travel/search?q=mineral+springs+retreat+dawaipani",
-      "copyrightText": "© 2026 Mineral Springs Retreat, Dawaipani. All rights reserved."
+      "copyrightText": "© 2026 Mineral Springs Retreat, Dawaipani. All rights reserved.",
+      "phone2": "+91 98303 55105",
+      "whatsapp": "+91 79081 92498",
+      "whatsapp2": "+91 98303 55105"
     }
   },
   "designTokens": {
@@ -1317,14 +1322,17 @@
       "brandTitle": "MINERAL SPRINGS",
       "brandSubtitle": "RETREAT · DAWAIPANI",
       "bio": "Mineral Springs Retreat is a rustic boutique eco-stay in Dawaipani village, overlooking Mount Kanchenjunga and the expansive Lebong tea gardens. Offering simple clean accommodation, home-cooked Gorkha meals, and unbroken mountain peace.",
-      "phone": "+91 98320 12345",
+      "phone": "+91 79081 92498",
       "email": "stay@mineralspringsretreat.com",
       "address": "Mineral Springs, Yankoo, Dawaipani, Lebong and Mineral Spring Tea Garden, West Bengal – 734105, India.",
       "googleReviewCount": 19,
       "googleRating": 4.9,
       "directionsUrl": "https://www.google.com/search?sa=X&q=mineral+springs+retreat+dawaipani+address&ludocid=12917762238512786598",
       "googleReviewsUrl": "https://www.google.com/travel/search?q=mineral+springs+retreat+dawaipani",
-      "copyrightText": "© 2026 Mineral Springs Retreat, Dawaipani. All rights reserved."
+      "copyrightText": "© 2026 Mineral Springs Retreat, Dawaipani. All rights reserved.",
+      "phone2": "+91 98303 55105",
+      "whatsapp": "+91 79081 92498",
+      "whatsapp2": "+91 98303 55105"
     }
   }
 }

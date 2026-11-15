@@ -703,9 +703,11 @@ router.post('/', (req, res) => {
     console.error('[WHATSAPP] Automatic notification exception:', err);
   });
 
-  // Generate WhatsApp inquiry link
-  const hostPhone = db.settings?.whatsapp || db.settings?.phone || '+919832012345';
+  // Generate WhatsApp inquiry links for both numbers
+  const hostPhone = db.settings?.whatsapp || db.settings?.phone || '+917908192498';
   const cleanPhone = hostPhone.replace(/[^0-9]/g, '');
+  const hostPhone2 = db.settings?.whatsapp2 || db.settings?.phone2 || '+919830355105';
+  const cleanPhone2 = hostPhone2.replace(/[^0-9]/g, '');
   const waText = encodeURIComponent(
     `Hello Mineral Springs Retreat!\n\n` +
     `I have submitted a booking inquiry on your website:\n` +
@@ -720,12 +722,16 @@ router.post('/', (req, res) => {
   );
 
   const whatsappUrl = `https://wa.me/${cleanPhone}?text=${waText}`;
+  const whatsappUrl2 = `https://wa.me/${cleanPhone2}?text=${waText}`;
 
   res.status(201).json({
     success: true,
     message: 'Booking inquiry received! Our host desk will contact you shortly.',
     inquiry: newInquiry,
-    whatsappUrl
+    whatsappUrl,
+    whatsappUrl2,
+    hostPhone1: '+91 79081 92498',
+    hostPhone2: '+91 98303 55105'
   });
 });
 

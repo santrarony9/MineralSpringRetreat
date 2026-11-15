@@ -2617,15 +2617,46 @@ export default function AdminPanel({ isStandalone = false, onClose }) {
                     <h3 className="font-roman text-2xl text-[#17251D] uppercase">Footer & Contact Information</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="text-[11px] uppercase tracking-wider font-semibold text-[#555D56] block mb-1">Telephone</label>
+                        <label className="text-[11px] uppercase tracking-wider font-semibold text-[#555D56] block mb-1">Telephone 1 (Primary)</label>
                         <input
                           type="text"
                           value={pageDraft.footer.phone || ''}
                           onChange={(e) => setPageDraft(p => ({ ...p, footer: { ...p.footer, phone: e.target.value } }))}
+                          placeholder="+91 79081 92498"
                           className="w-full px-4 py-2.5 bg-[#FAF7F2] border border-[#D5C9B8] text-xs rounded-xl"
                         />
                       </div>
                       <div>
+                        <label className="text-[11px] uppercase tracking-wider font-semibold text-[#555D56] block mb-1">Telephone 2 (Secondary)</label>
+                        <input
+                          type="text"
+                          value={pageDraft.footer.phone2 || ''}
+                          onChange={(e) => setPageDraft(p => ({ ...p, footer: { ...p.footer, phone2: e.target.value } }))}
+                          placeholder="+91 98303 55105"
+                          className="w-full px-4 py-2.5 bg-[#FAF7F2] border border-[#D5C9B8] text-xs rounded-xl"
+                        />
+                      </div>
+                      <div>
+                        <label className="text-[11px] uppercase tracking-wider font-semibold text-[#555D56] block mb-1">WhatsApp 1 (Primary)</label>
+                        <input
+                          type="text"
+                          value={pageDraft.footer.whatsapp || ''}
+                          onChange={(e) => setPageDraft(p => ({ ...p, footer: { ...p.footer, whatsapp: e.target.value } }))}
+                          placeholder="+91 79081 92498"
+                          className="w-full px-4 py-2.5 bg-[#FAF7F2] border border-[#D5C9B8] text-xs rounded-xl"
+                        />
+                      </div>
+                      <div>
+                        <label className="text-[11px] uppercase tracking-wider font-semibold text-[#555D56] block mb-1">WhatsApp 2 (Secondary)</label>
+                        <input
+                          type="text"
+                          value={pageDraft.footer.whatsapp2 || ''}
+                          onChange={(e) => setPageDraft(p => ({ ...p, footer: { ...p.footer, whatsapp2: e.target.value } }))}
+                          placeholder="+91 98303 55105"
+                          className="w-full px-4 py-2.5 bg-[#FAF7F2] border border-[#D5C9B8] text-xs rounded-xl"
+                        />
+                      </div>
+                      <div className="sm:col-span-2">
                         <label className="text-[11px] uppercase tracking-wider font-semibold text-[#555D56] block mb-1">Email</label>
                         <input
                           type="email"
@@ -4604,12 +4635,12 @@ export default function AdminPanel({ isStandalone = false, onClose }) {
                             onChange={(e) =>
                               setWaConfig((prev) => ({ ...prev, hostPhone: e.target.value }))
                             }
-                            placeholder="+919832012345"
+                            placeholder="+917908192498"
                             className="w-full px-3.5 py-2.5 bg-white border border-[#D5C9B8] text-xs font-mono rounded-xl focus:border-[#17251D] outline-none disabled:bg-neutral-100 disabled:text-neutral-500"
                             required
                           />
                           <p className="text-[10.5px] text-neutral-500">
-                            Must include international country code (e.g. <code className="bg-[#FAF7F2] px-1 py-0.5 rounded text-[#17251D]">+919832012345</code> for India). The backend automatically cleans formatting for the Meta Graph API.
+                            Must include international country code (e.g. <code className="bg-[#FAF7F2] px-1 py-0.5 rounded text-[#17251D]">+917908192498</code> for India). The backend automatically cleans formatting for the Meta Graph API.
                           </p>
                         </div>
                       </div>
@@ -4856,7 +4887,7 @@ export default function AdminPanel({ isStandalone = false, onClose }) {
                         <span>Recent Booking Notifications & Dispatch Log</span>
                       </h3>
                       <p className="text-xs text-[#555D56] mt-0.5">
-                        Audit trail of automated WhatsApp alerts sent to host (+{waConfig?.cleanHostPhone || '919832012345'})
+                        Audit trail of automated WhatsApp alerts sent to host (+{waConfig?.cleanHostPhone || '917908192498'})
                       </p>
                     </div>
                     <div className="text-xs text-neutral-500 font-medium">
@@ -4887,7 +4918,7 @@ export default function AdminPanel({ isStandalone = false, onClose }) {
                                 <div className="text-[11px] text-neutral-500">{inq.room} · ₹{Number(inq.estimatedTotal || 0).toLocaleString('en-IN')}</div>
                               </td>
                               <td className="p-3 font-mono text-[11px] text-neutral-600">
-                                {inq.whatsappNotification?.recipient ? `+${inq.whatsappNotification.recipient}` : `+${waConfig?.cleanHostPhone || '919832012345'}`}
+                                {inq.whatsappNotification?.recipient ? `+${inq.whatsappNotification.recipient}` : `+${waConfig?.cleanHostPhone || '917908192498'}`}
                               </td>
                               <td className="p-3">
                                 {status === 'sent' ? (
@@ -5289,7 +5320,7 @@ export default function AdminPanel({ isStandalone = false, onClose }) {
 
             <div className="p-5 bg-[#EFEAE2] space-y-4">
               <div className="text-[11px] text-neutral-600 bg-white/70 p-2.5 rounded-lg border border-[#D5C9B8]/40">
-                <strong>Recipient:</strong> +{waConfig?.cleanHostPhone || '919832012345'} (Host Phone)
+                <strong>Recipient:</strong> +{waConfig?.cleanHostPhone || '917908192498'} (Host Phone)
               </div>
 
               {/* Message Bubble */}
@@ -5438,7 +5469,7 @@ export default function AdminPanel({ isStandalone = false, onClose }) {
                     type="tel"
                     value={userForm.phone}
                     onChange={(e) => setUserForm(prev => ({ ...prev, phone: e.target.value }))}
-                    placeholder="+91 98320 00000"
+                    placeholder="+91 79081 92498"
                     className="w-full px-3.5 py-2.5 bg-[#FAF7F2] border border-[#D5C9B8] text-xs rounded-xl focus:border-[#17251D] outline-none"
                   />
                 </div>

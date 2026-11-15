@@ -36,7 +36,8 @@ export default function CozyTravelPage({ setActivePage }) {
   const officialName = settings?.officialName || 'Mineral Springs Retreat';
   const propertyCategory = settings?.propertyCategory || 'Homestay in Lebong and Mineral Spring Tea Garden, West Bengal.';
   const directionsUrl = settings?.googleDirectionsUrl || 'https://www.google.com/search?sa=X&q=mineral+springs+retreat+dawaipani+address&ludocid=12917762238512786598';
-  const phone = settings?.phone || '+91 98320 12345';
+  const phone1 = settings?.phone || '+91 79081 92498';
+  const phone2 = settings?.phone2 || '+91 98303 55105';
 
   const routes = (travelData?.distances && travelData.distances.length > 0)
     ? travelData.distances.slice(0, 3).map((d) => ({
@@ -305,13 +306,22 @@ export default function CozyTravelPage({ setActivePage }) {
           <p className="typo-small text-white/70 max-w-xl mx-auto mb-6">
             We work directly with reliable local 4WD drivers in Darjeeling, Siliguri, and Bagdogra. Call or WhatsApp our host concierge prior to your trip.
           </p>
-          <a
-            href={`tel:${phone.replace(/[^0-9+]/g, '')}`}
-            className="cozy-btn-sand typo-btn py-3 px-8 inline-flex items-center space-x-2"
-          >
-            <Phone className="w-4 h-4 text-[#151F18]" />
-            <span>Call Host ({phone})</span>
-          </a>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href={`tel:${phone1.replace(/[^0-9+]/g, '')}`}
+              className="cozy-btn-sand typo-btn py-3 px-6 inline-flex items-center space-x-2"
+            >
+              <Phone className="w-4 h-4 text-[#151F18]" />
+              <span>Call Host ({phone1})</span>
+            </a>
+            <a
+              href={`tel:${phone2.replace(/[^0-9+]/g, '')}`}
+              className="cozy-btn-sand typo-btn py-3 px-6 inline-flex items-center space-x-2"
+            >
+              <Phone className="w-4 h-4 text-[#151F18]" />
+              <span>Call Host ({phone2})</span>
+            </a>
+          </div>
         </div>
 
       </div>

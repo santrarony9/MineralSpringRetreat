@@ -101,7 +101,7 @@ flowchart TD
     subgraph External ["External Cloud Services"]
         GoogleAuth["Google Identity Services<br/>(OAuth 2.0 Verification)"]
         MetaCloud["Meta WhatsApp Cloud API<br/>(graph.facebook.com)"]
-        HostMobile["Host Mobile Device<br/>(+91 98320 12345)"]
+        HostMobile["Host Mobile Devices<br/>(+91 79081 92498 / +91 98303 55105)"]
     end
 
     Public --> StaticServe
@@ -223,7 +223,7 @@ Render provides zero-maintenance Node.js hosting with automated SSL, custom doma
    - `CLIENT_URL`: `https://mineral-springs-retreat.onrender.com` (or your custom domain)
    - `SESSION_SECRET`: *(Generate a random 32-character string)*
    - `WHATSAPP_NOTIFICATIONS_ENABLED`: `true`
-   - `WHATSAPP_HOST_PHONE`: `+919832012345`
+   - `WHATSAPP_HOST_PHONE`: `+917908192498`
    - `WHATSAPP_PHONE_NUMBER_ID`: `your-meta-phone-number-id`
    - `WHATSAPP_ACCESS_TOKEN`: `your-meta-access-token`
    - `WHATSAPP_BUSINESS_ACCOUNT_ID`: `your-meta-business-account-id`
@@ -355,7 +355,7 @@ If you prefer serving the static frontend on Vercel's global CDN:
 | `GOOGLE_CLIENT_SECRET` | Optional | Placeholder | Google Cloud OAuth 2.0 Web Client Secret |
 | `GOOGLE_CALLBACK_URL` | Optional | `/api/auth/google/callback` | OAuth redirect callback URL |
 | `WHATSAPP_NOTIFICATIONS_ENABLED` | Yes | `true` | Master switch for automated host WhatsApp notifications |
-| `WHATSAPP_HOST_PHONE` | Yes | `+919832012345` | Registered WhatsApp recipient phone with country code |
+| `WHATSAPP_HOST_PHONE` | Yes | `+917908192498` | Registered WhatsApp recipient phone with country code |
 | `WHATSAPP_PHONE_NUMBER_ID` | Optional | Placeholder | Meta Cloud API Phone Number ID |
 | `WHATSAPP_ACCESS_TOKEN` | Optional | Placeholder | Meta System User permanent Access Token |
 | `WHATSAPP_BUSINESS_ACCOUNT_ID` | Optional | Placeholder | Meta WhatsApp Business Account ID |
@@ -370,7 +370,7 @@ To enable automated WhatsApp notifications directly to the host's physical mobil
 2. Create a **Business App** and add the **WhatsApp** product.
 3. In **WhatsApp &rarr; API Setup**:
    - Note your **Phone Number ID** and **WhatsApp Business Account ID**.
-   - Add your host phone number (`+91 98320 12345`) to the verified recipients.
+   - Add your host phone numbers (`+91 79081 92498` / `+91 98303 55105`) to the verified recipients.
 4. In **Business Settings &rarr; System Users**:
    - Create a System User with Admin permissions.
    - Generate a permanent token with `whatsapp_business_messaging` and `whatsapp_business_management` permissions.

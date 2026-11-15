@@ -72,6 +72,9 @@ export default function WixFooter({ setActivePage }) {
               </a>
             </div>
             <p className="pt-2 text-xs opacity-90">
+              Tel: <a href={`tel:${(settings?.phone || '+91 79081 92498').replace(/[^0-9+]/g, '')}`} className="underline hover:opacity-75">{settings?.phone || '+91 79081 92498'}</a> / <a href={`tel:${(settings?.phone2 || '+91 98303 55105').replace(/[^0-9+]/g, '')}`} className="underline hover:opacity-75">{settings?.phone2 || '+91 98303 55105'}</a>
+            </p>
+            <p className="text-xs opacity-90">
               Mail: <a href={`mailto:${email}`} className="underline hover:opacity-75">{email}</a>
             </p>
           </div>

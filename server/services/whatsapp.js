@@ -138,7 +138,7 @@ export function getWhatsAppConfig() {
     process.env.WHATSAPP_HOST_PHONE ||
     db?.settings?.whatsapp ||
     db?.settings?.phone ||
-    '+919832012345';
+    '+917908192498';
 
   const phoneNumberId = dbConfig.phoneNumberId ||
     process.env.WHATSAPP_PHONE_NUMBER_ID ||

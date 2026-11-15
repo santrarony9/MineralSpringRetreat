@@ -166,7 +166,7 @@ export default function MyBookingsModal() {
                         type="tel"
                         value={phoneNumber}
                         onChange={(e) => setPhoneNumber(e.target.value)}
-                        placeholder="+91 98320 00000"
+                        placeholder="+91 79081 92498"
                         className="px-2 py-1 text-xs border border-[#D5C9B8] rounded-md w-36"
                       />
                       <button
@@ -253,7 +253,8 @@ export default function MyBookingsModal() {
             ) : (
               <div className="space-y-4">
                 {myBookings.map((b) => {
-                  const cleanPhone = (settings?.whatsapp || settings?.phone || '+919832012345').replace(/[^0-9]/g, '');
+                  const cleanPhone = (settings?.whatsapp || settings?.phone || '+917908192498').replace(/[^0-9]/g, '');
+                  const cleanPhone2 = (settings?.whatsapp2 || settings?.phone2 || '+919830355105').replace(/[^0-9]/g, '');
                   const waText = encodeURIComponent(
                     `Hello Mineral Springs Retreat!\n\nI am checking on my booking inquiry ${b.id} for ${b.room} (${b.checkIn} to ${b.checkOut}).`
                   );
@@ -421,15 +422,26 @@ export default function MyBookingsModal() {
                           Inquiry submitted: {new Date(b.createdAt).toLocaleDateString()}
                         </span>
 
-                        <a
-                          href={`https://wa.me/${cleanPhone}?text=${waText}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center space-x-1.5 px-3 py-1.5 bg-[#FAF7F2] hover:bg-emerald-50 text-emerald-800 border border-emerald-200 rounded-xl font-medium text-xs transition-colors"
-                        >
-                          <MessageSquare className="w-3.5 h-3.5 text-emerald-700" />
-                          <span>WhatsApp Host Regarding Inquiry</span>
-                        </a>
+                        <div className="flex flex-wrap items-center gap-2">
+                          <a
+                            href={`https://wa.me/${cleanPhone}?text=${waText}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center space-x-1 px-2.5 py-1.5 bg-[#FAF7F2] hover:bg-emerald-50 text-emerald-800 border border-emerald-200 rounded-xl font-medium text-[11px] transition-colors"
+                          >
+                            <MessageSquare className="w-3.5 h-3.5 text-emerald-700" />
+                            <span>WhatsApp (+91 79081 92498)</span>
+                          </a>
+                          <a
+                            href={`https://wa.me/${cleanPhone2}?text=${waText}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center space-x-1 px-2.5 py-1.5 bg-[#FAF7F2] hover:bg-emerald-50 text-emerald-800 border border-emerald-200 rounded-xl font-medium text-[11px] transition-colors"
+                          >
+                            <MessageSquare className="w-3.5 h-3.5 text-emerald-700" />
+                            <span>WhatsApp (+91 98303 55105)</span>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   );

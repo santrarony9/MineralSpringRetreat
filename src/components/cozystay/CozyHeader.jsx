@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useApp } from '../../context/AppContext';
-import { Menu, X, Shield, User, LogOut, Calendar } from 'lucide-react';
+import { Menu, X, Shield, User, LogOut, Calendar, Phone, MessageSquare } from 'lucide-react';
 
 export default function CozyHeader({ activePage, setActivePage }) {
   const {
@@ -42,7 +42,12 @@ export default function CozyHeader({ activePage, setActivePage }) {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const phone = settings?.phone || '+91 98320 12345';
+  const phone1 = settings?.phone || '+91 79081 92498';
+  const phone2 = settings?.phone2 || '+91 98303 55105';
+  const whatsapp1 = settings?.whatsapp || '+91 79081 92498';
+  const whatsapp2 = settings?.whatsapp2 || '+91 98303 55105';
+  const cleanWa1 = whatsapp1.replace(/[^0-9]/g, '');
+  const cleanWa2 = whatsapp2.replace(/[^0-9]/g, '');
   const headerData = pages?.header;
   const brandTitle = headerData?.brandTitle || 'MINERAL SPRINGS';
   const brandSubtitle = headerData?.brandSubtitle || 'RETREAT';
@@ -393,9 +398,52 @@ export default function CozyHeader({ activePage, setActivePage }) {
               Reserve Your Stay
             </button>
 
-            <div className="text-[11px] text-[#FAF7F2]/60 font-sans tracking-wider pt-2">
-              <p>DAWAIPANI · DARJEELING</p>
-              <p className="mt-1 text-[#B89A70]">{phone}</p>
+            <div className="text-[11px] text-[#FAF7F2]/70 font-sans tracking-wider pt-2 space-y-2">
+              <p className="text-[10px] tracking-[0.25em] text-[#FAF7F2]/50 uppercase">DAWAIPANI · DARJEELING</p>
+              
+              <div className="bg-[#1F2C23] border border-[#B89A70]/25 rounded-xl p-3 text-left space-y-2.5">
+                <div className="text-[10px] uppercase tracking-wider text-[#B89A70] font-semibold">Direct Host Contact:</div>
+                
+                <div className="flex items-center justify-between gap-2 border-b border-[#B89A70]/15 pb-2">
+                  <a
+                    href={`tel:${phone1.replace(/[^0-9+]/g, '')}`}
+                    className="flex items-center gap-2 text-xs text-[#FAF7F2] hover:text-[#B89A70] transition-colors font-medium tracking-wide"
+                  >
+                    <Phone className="w-3.5 h-3.5 text-[#B89A70] shrink-0" />
+                    <span>{phone1}</span>
+                  </a>
+                  <a
+                    href={`https://wa.me/${cleanWa1}?text=${encodeURIComponent('Hello Mineral Springs Retreat, I would like to inquire about booking a stay.')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Chat on WhatsApp (+91 79081 92498)"
+                    className="inline-flex items-center gap-1 px-2 py-1 bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-500/40 text-emerald-300 rounded text-[10px] font-semibold tracking-wider transition-colors shrink-0"
+                  >
+                    <MessageSquare className="w-3 h-3 text-emerald-400" />
+                    <span>WhatsApp</span>
+                  </a>
+                </div>
+
+                <div className="flex items-center justify-between gap-2">
+                  <a
+                    href={`tel:${phone2.replace(/[^0-9+]/g, '')}`}
+                    className="flex items-center gap-2 text-xs text-[#FAF7F2] hover:text-[#B89A70] transition-colors font-medium tracking-wide"
+                  >
+                    <Phone className="w-3.5 h-3.5 text-[#B89A70] shrink-0" />
+                    <span>{phone2}</span>
+                  </a>
+                  <a
+                    href={`https://wa.me/${cleanWa2}?text=${encodeURIComponent('Hello Mineral Springs Retreat, I would like to inquire about booking a stay.')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Chat on WhatsApp (+91 98303 55105)"
+                    className="inline-flex items-center gap-1 px-2 py-1 bg-emerald-950/80 hover:bg-emerald-900 border border-emerald-500/40 text-emerald-300 rounded text-[10px] font-semibold tracking-wider transition-colors shrink-0"
+                  >
+                    <MessageSquare className="w-3 h-3 text-emerald-400" />
+                    <span>WhatsApp</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -15,7 +15,7 @@ services:
       - key: WHATSAPP_NOTIFICATIONS_ENABLED
         value: "true"
       - key: WHATSAPP_HOST_PHONE
-        value: "+919832012345"
+        value: "+917908192498"
       - key: WHATSAPP_API_VERSION
         value: "v21.0"
       - key: GOOGLE_CLIENT_ID

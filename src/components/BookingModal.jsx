@@ -162,18 +162,35 @@ export default function BookingModal() {
             </div>
 
             {/* Direct WhatsApp Action */}
-            {successData.whatsappUrl && (
-              <div className="space-y-3">
-                <a
-                  href={successData.whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="cozy-btn-sand text-xs tracking-wider font-semibold py-3.5 px-8 shadow-md inline-flex items-center space-x-2"
-                >
-                  <MessageSquare className="w-4 h-4 text-[#151F18]" />
-                  <span>Continue on WhatsApp</span>
-                  <CozySparkle className="w-3.5 h-3.5 text-[#151F18]" />
-                </a>
+            {(successData.whatsappUrl || successData.whatsappUrl2) && (
+              <div className="space-y-2.5">
+                <p className="text-xs text-cozy-muted">Chat directly with our retreat hosts to confirm your booking:</p>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                  {successData.whatsappUrl && (
+                    <a
+                      href={successData.whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="cozy-btn-sand text-xs tracking-wider font-semibold py-3 px-5 shadow-md inline-flex items-center space-x-2"
+                    >
+                      <MessageSquare className="w-4 h-4 text-[#151F18]" />
+                      <span>WhatsApp (+91 79081 92498)</span>
+                      <CozySparkle className="w-3.5 h-3.5 text-[#151F18]" />
+                    </a>
+                  )}
+                  {successData.whatsappUrl2 && (
+                    <a
+                      href={successData.whatsappUrl2}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="cozy-btn-sand text-xs tracking-wider font-semibold py-3 px-5 shadow-md inline-flex items-center space-x-2"
+                    >
+                      <MessageSquare className="w-4 h-4 text-[#151F18]" />
+                      <span>WhatsApp (+91 98303 55105)</span>
+                      <CozySparkle className="w-3.5 h-3.5 text-[#151F18]" />
+                    </a>
+                  )}
+                </div>
               </div>
             )}
 
@@ -403,7 +420,7 @@ export default function BookingModal() {
                     id="phone"
                     type="tel"
                     required
-                    placeholder="+91 98320 00000"
+                    placeholder="+91 79081 92498"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     className="w-full px-3.5 py-2.5 bg-white border border-cozy-border text-sm text-cozy-charcoal focus:outline-none focus:border-cozy-forest rounded-xl"

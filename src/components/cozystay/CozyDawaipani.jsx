@@ -396,12 +396,19 @@ export default function CozyDawaipani({ setActivePage, standalone = false }) {
                 </p>
               </div>
 
-              <div className="pt-2">
+              <div className="pt-2 flex flex-wrap items-center gap-4">
                 <a
-                  href={`tel:${(settings?.phone || '+91 98320 12345').replace(/[^0-9+]/g, '')}`}
+                  href={`tel:${(settings?.phone || '+91 79081 92498').replace(/[^0-9+]/g, '')}`}
                   className="inline-flex items-center space-x-2 text-xs font-sans font-semibold uppercase tracking-wider text-[#B89D77] hover:text-white transition-colors"
                 >
-                  <span>Contact Retreat Host</span>
+                  <span>Call {settings?.phone || '+91 79081 92498'}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+                <a
+                  href={`tel:${(settings?.phone2 || '+91 98303 55105').replace(/[^0-9+]/g, '')}`}
+                  className="inline-flex items-center space-x-2 text-xs font-sans font-semibold uppercase tracking-wider text-[#B89D77] hover:text-white transition-colors"
+                >
+                  <span>Call {settings?.phone2 || '+91 98303 55105'}</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>

@@ -1427,7 +1427,7 @@ export default function BookingCalendar({ onNavigateToInquiries }) {
                     required
                     value={formData.phone}
                     onChange={e => setFormData({ ...formData, phone: e.target.value })}
-                    placeholder="+91 98320 12345"
+                    placeholder="+91 79081 92498"
                     className="w-full bg-[#FAF7F2] border border-[#EAE4DB] rounded-lg px-3 py-2 text-xs text-[#17251D] focus:ring-1 focus:ring-[#B89A70]"
                   />
                 </div>

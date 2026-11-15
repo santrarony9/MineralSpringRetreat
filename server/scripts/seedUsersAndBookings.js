@@ -16,7 +16,7 @@ if (adminIdx !== -1) {
   db.users[adminIdx].name = 'Website Owner';
   db.users[adminIdx].role = 'superadmin';
   db.users[adminIdx].status = 'active';
-  db.users[adminIdx].phone = '+91 98320 12345';
+  db.users[adminIdx].phone = '+91 79081 92498';
   db.users[adminIdx].email = 'stay@mineralspringsretreat.com';
 } else {
   db.users.unshift({
@@ -24,7 +24,7 @@ if (adminIdx !== -1) {
     username: 'admin',
     name: 'Website Owner',
     email: 'stay@mineralspringsretreat.com',
-    phone: '+91 98320 12345',
+    phone: '+91 79081 92498',
     passwordHash: hashPassword('Admin@Mineral2026!'),
     role: 'superadmin',
     status: 'active',
@@ -77,7 +77,7 @@ if (!db.inquiries || db.inquiries.length < 3) {
       id: 'MSR-49175',
       guestName: 'Sarah Jenkins',
       email: 'sarah.jenkins@gmail.com',
-      phone: '+91 98320 99999',
+      phone: '+91 79081 92498',
       room: 'Double Sharing Eco Room',
       checkIn: '2026-11-13',
       checkOut: '2026-11-15',

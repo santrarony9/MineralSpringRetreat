@@ -185,21 +185,29 @@ export default function Navbar() {
               <span>BOOK YOUR STAY</span>
             </button>
 
-            <div className="flex items-center justify-between text-xs text-sand-400 pt-2">
-              <a href={`tel:${settings?.phone}`} className="flex items-center space-x-1.5 hover:text-white">
-                <Phone className="w-3.5 h-3.5" />
-                <span>{settings?.phone || 'Call Us'}</span>
-              </a>
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  setAdminOpen(true);
-                }}
-                className="flex items-center space-x-1.5 hover:text-brass-400"
-              >
-                <Shield className="w-3.5 h-3.5" />
-                <span>Admin Login</span>
-              </button>
+            <div className="flex flex-col gap-1.5 text-xs text-sand-400 pt-2 border-t border-[#B89A70]/15">
+              <div className="flex items-center justify-between">
+                <a href={`tel:${(settings?.phone || '+91 79081 92498').replace(/[^0-9+]/g, '')}`} className="flex items-center space-x-1.5 hover:text-white">
+                  <Phone className="w-3.5 h-3.5 text-brass-400" />
+                  <span>{settings?.phone || '+91 79081 92498'}</span>
+                </a>
+                <button
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    setAdminOpen(true);
+                  }}
+                  className="flex items-center space-x-1.5 hover:text-brass-400"
+                >
+                  <Shield className="w-3.5 h-3.5" />
+                  <span>Admin</span>
+                </button>
+              </div>
+              <div>
+                <a href={`tel:${(settings?.phone2 || '+91 98303 55105').replace(/[^0-9+]/g, '')}`} className="flex items-center space-x-1.5 hover:text-white">
+                  <Phone className="w-3.5 h-3.5 text-brass-400" />
+                  <span>{settings?.phone2 || '+91 98303 55105'}</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
