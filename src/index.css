@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --font-heading: "Cormorant Garamond", "Playfair Display", Georgia, serif;
-  --font-display: "Playfair Display", "Cormorant Garamond", Georgia, serif;
-  --font-body: "DM Sans", "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-nav: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-button: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: "Manrope", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Manrope", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-nav: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-button: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   --gold-primary: #B89D77;
   --gold-light: #CBB08B;
   --gold-dark: #9E825D;
@@ -32,9 +32,9 @@
   body {
     background-color: #FAF7F2;
     color: #1F2220;
-    font-family: "DM Sans", "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: var(--font-body);
     font-size: 1.0625rem;
-    line-height: 1.85;
+    line-height: 1.8;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
@@ -48,8 +48,8 @@
   }
 
   h1, h2, h3, h4, .font-serif, .font-heading, .font-display {
-    font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
-    letter-spacing: -0.015em;
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
     font-feature-settings: "kern" 1, "liga" 1, "lnum" 1, "tnum" 1;
     font-variant-numeric: lining-nums tabular-nums;
   }
@@ -73,31 +73,34 @@
 /* UNIFIED TYPOGRAPHY HIERARCHY SYSTEM                                       */
 /* ========================================================================= */
 
-/* 1. Main Hero Heading: 64–76px (Desktop), 38–44px (Mobile), Line-height: 1.05–1.15 */
+/* 1. Main Hero Heading: 64–76px (Desktop), 30–42px (Mobile), Line-height: 1.08–1.14 */
 .typo-hero {
   font-family: var(--font-heading);
-  font-size: clamp(2.375rem, 5.2vw + 1rem, 4.75rem);
-  line-height: 1.08;
-  letter-spacing: 0.035em;
+  font-size: clamp(1.85rem, 4.8vw + 0.8rem, 4.75rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  font-weight: 700;
   text-wrap: balance;
   text-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
 }
 
-/* 1b. Subpage Hero Title: 44–64px (Desktop), 32–40px (Mobile), Line-height: 1.08–1.15 */
+/* 1b. Subpage Hero Title: 44–64px (Desktop), 28–38px (Mobile), Line-height: 1.08–1.15 */
 .typo-page-title {
   font-family: var(--font-heading);
-  font-size: clamp(2.125rem, 3.8vw + 0.9rem, 4rem);
+  font-size: clamp(1.75rem, 3.6vw + 0.8rem, 4rem);
   line-height: 1.1;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
+  font-weight: 700;
   text-wrap: balance;
 }
 
-/* 2. Main Section Heading: 44–54px (Desktop), 30–36px (Mobile), Line-height: 1.15–1.25 */
+/* 2. Main Section Heading: 44–54px (Desktop), 26–34px (Mobile), Line-height: 1.15–1.25 */
 .typo-section-heading {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 3vw + 0.85rem, 3.375rem);
+  font-size: clamp(1.65rem, 2.8vw + 0.8rem, 3.375rem);
   line-height: 1.16;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
+  font-weight: 600;
   text-wrap: balance;
 }
 
@@ -106,7 +109,8 @@
   font-family: var(--font-heading);
   font-size: clamp(1.4rem, 1.6vw + 0.8rem, 2.125rem);
   line-height: 1.24;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
+  font-weight: 600;
   text-wrap: balance;
 }
 
@@ -115,7 +119,8 @@
   font-family: var(--font-heading);
   font-size: clamp(1.25rem, 0.8vw + 0.95rem, 1.625rem);
   line-height: 1.26;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.01em;
+  font-weight: 600;
   text-wrap: balance;
 }
 
@@ -123,9 +128,9 @@
 .typo-body {
   font-family: var(--font-body);
   font-size: clamp(1rem, 0.35vw + 0.9rem, 1.125rem);
-  line-height: 1.85;
-  font-weight: 350;
-  letter-spacing: 0.01em;
+  line-height: 1.75;
+  font-weight: 400;
+  letter-spacing: -0.005em;
   color: #4A524D;
   text-wrap: pretty;
 }
@@ -134,27 +139,27 @@
 .typo-small {
   font-family: var(--font-body);
   font-size: clamp(0.875rem, 0.2vw + 0.8rem, 0.9375rem);
-  line-height: 1.72;
+  line-height: 1.65;
   font-weight: 400;
-  letter-spacing: 0.01em;
+  letter-spacing: 0;
   text-wrap: pretty;
 }
 
-/* 7. Navigation: 13–15px, DM Sans, subtle tracking */
+/* 7. Navigation: 13–15px, Inter, modern geometric tracking */
 .typo-nav {
   font-family: var(--font-nav);
   font-size: clamp(0.8125rem, 0.15vw + 0.75rem, 0.9375rem);
   font-weight: 500;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-/* 8. Buttons: 13–15px, DM Sans, 600 weight, subtle tracking */
+/* 8. Buttons: 13–15px, Inter, 600 weight, modern geometric tracking */
 .typo-btn {
   font-family: var(--font-button);
   font-size: clamp(0.8125rem, 0.15vw + 0.75rem, 0.9375rem);
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -202,9 +207,15 @@
   font-family: var(--font-nav);
   font-size: 0.6875rem;
   font-weight: 600;
-  letter-spacing: 0.26em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: #B89D77;
+}
+
+.typo-eyebrow.text-white,
+.typo-eyebrow.\!text-white,
+.text-white.typo-eyebrow {
+  color: #FFFFFF !important;
 }
 
 /* Card Vertical Text Alignment & Baseline Utilities */
@@ -310,36 +321,36 @@
 
 /* CozyStay Editorial Typography Utilities */
 .font-cozy-roman {
-  font-family: "Cinzel", "Cormorant Garamond", Georgia, serif;
+  font-family: var(--font-heading);
 }
 
 .font-cozy-serif {
-  font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  font-family: var(--font-heading);
 }
 
 .font-cozy-display {
-  font-family: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  font-family: var(--font-heading);
 }
 
 .font-cozy-sans {
-  font-family: "DM Sans", "Lato", sans-serif;
+  font-family: var(--font-body);
 }
 
 /* CozyStay Subtitle and Heading Styles */
 .cozy-subtitle {
-  font-family: "DM Sans", sans-serif;
+  font-family: var(--font-nav);
   font-size: 0.6875rem;
   text-transform: uppercase;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.16em;
   font-weight: 600;
   color: #B89D77;
 }
 
 .cozy-title-large {
-  font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  font-family: var(--font-heading);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-weight: 400;
+  letter-spacing: -0.01em;
+  font-weight: 700;
   line-height: 1.1;
 }
 
@@ -495,10 +506,10 @@
 
 /* Eyebrow tag */
 .cozy-eyebrow {
-  font-family: "DM Sans", sans-serif;
+  font-family: var(--font-nav);
   font-size: 0.6875rem;
   text-transform: uppercase;
-  letter-spacing: 0.26em;
+  letter-spacing: 0.16em;
   font-weight: 600;
   color: #B89D77;
 }
@@ -514,10 +525,10 @@
   background: linear-gradient(135deg, #CBB08B 0%, #B89D77 50%, #A6875E 100%);
   border: 1px solid rgba(212, 175, 55, 0.35);
   color: #FFFFFF;
-  font-family: "DM Sans", sans-serif;
+  font-family: var(--font-button);
   font-size: clamp(0.8125rem, 0.15vw + 0.75rem, 0.9375rem);
   font-weight: 600;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 13px 30px;
   box-shadow: 0 4px 14px -2px rgba(184, 157, 119, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.22);
@@ -542,10 +553,10 @@
   backdrop-filter: blur(4px);
   border: 1px solid rgba(184, 157, 119, 0.85);
   color: #FFFFFF;
-  font-family: "DM Sans", sans-serif;
+  font-family: var(--font-button);
   font-size: clamp(0.8125rem, 0.15vw + 0.75rem, 0.9375rem);
   font-weight: 500;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 10px 24px;
   box-shadow: inset 0 0 12px rgba(184, 157, 119, 0.08);
@@ -568,10 +579,10 @@
   background: linear-gradient(135deg, #D4BA95 0%, #C5A880 50%, #B4946A 100%);
   border: 1px solid rgba(255, 255, 255, 0.35);
   color: #151F18;
-  font-family: "DM Sans", sans-serif;
+  font-family: var(--font-button);
   font-size: clamp(0.8125rem, 0.15vw + 0.75rem, 0.9375rem);
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 13px 28px;
   border-radius: 9999px;
@@ -595,10 +606,10 @@
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.35);
   color: #FFFFFF;
-  font-family: "DM Sans", sans-serif;
+  font-family: var(--font-button);
   font-size: clamp(0.8125rem, 0.15vw + 0.75rem, 0.9375rem);
   font-weight: 500;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 12px 26px;
   border-radius: 9999px;

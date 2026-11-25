@@ -568,7 +568,7 @@
           {
             "id": "stat-3",
             "value": "70",
-            "unit": "km",
+            "unit": "km approx.",
             "label": "FROM NJP & BAGDOGRA"
           }
         ],
@@ -834,8 +834,8 @@
     }
   },
   "designTokens": {
-    "headingFont": "'Cormorant Garamond', Georgia, serif",
-    "bodyFont": "'DM Sans', sans-serif",
+    "headingFont": "'Manrope', sans-serif",
+    "bodyFont": "'Inter', sans-serif",
     "h1SizeDesktop": "64px",
     "h1SizeMobile": "38px",
     "h2SizeDesktop": "44px",
@@ -1072,7 +1072,7 @@
           {
             "id": "stat-3",
             "value": "70",
-            "unit": "km",
+            "unit": "km approx.",
             "label": "FROM NJP & BAGDOGRA"
           }
         ]

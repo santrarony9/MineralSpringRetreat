@@ -37,8 +37,8 @@ router.put('/', requireAdminMiddleware, (req, res) => {
   const updates = req.body || {};
 
   const cleanTokens = {
-    headingFont: sanitizeCssValue(updates.headingFont, current.headingFont || "'Cormorant Garamond', Georgia, serif"),
-    bodyFont: sanitizeCssValue(updates.bodyFont, current.bodyFont || "'DM Sans', sans-serif"),
+    headingFont: sanitizeCssValue(updates.headingFont, current.headingFont || "'Manrope', sans-serif"),
+    bodyFont: sanitizeCssValue(updates.bodyFont, current.bodyFont || "'Inter', sans-serif"),
     h1SizeDesktop: sanitizeCssValue(updates.h1SizeDesktop, current.h1SizeDesktop || "64px"),
     h1SizeMobile: sanitizeCssValue(updates.h1SizeMobile, current.h1SizeMobile || "38px"),
     h2SizeDesktop: sanitizeCssValue(updates.h2SizeDesktop, current.h2SizeDesktop || "44px"),

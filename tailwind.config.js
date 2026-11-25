@@ -40,33 +40,44 @@ export default {
       },
       fontFamily: {
         roman: [
-          'Cinzel',
-          '"Cormorant Garamond"',
-          '"Playfair Display"',
-          'Georgia',
-          'serif'
+          '"Manrope"',
+          '"Inter"',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          'sans-serif'
         ],
         serif: [
-          '"Cormorant Garamond"',
-          '"Playfair Display"',
-          'Georgia',
-          'serif'
+          '"Manrope"',
+          '"Inter"',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          'sans-serif'
         ],
         heading: [
-          '"Cormorant Garamond"',
-          '"Playfair Display"',
-          'Georgia',
-          'serif'
+          '"Manrope"',
+          '"Inter"',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          'sans-serif'
         ],
         display: [
-          '"Playfair Display"',
-          '"Cormorant Garamond"',
-          'Georgia',
-          'serif'
+          '"Manrope"',
+          '"Inter"',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          'sans-serif'
         ],
         sans: [
-          '"DM Sans"',
-          'Lato',
+          '"Inter"',
+          '"Manrope"',
           '-apple-system',
           'BlinkMacSystemFont',
           '"Segoe UI"',
@@ -74,20 +85,21 @@ export default {
           'sans-serif'
         ],
         body: [
-          '"DM Sans"',
-          'Lato',
+          '"Inter"',
           '-apple-system',
           'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
           'sans-serif'
         ],
         nav: [
-          '"DM Sans"',
+          '"Inter"',
           '-apple-system',
           'BlinkMacSystemFont',
           'sans-serif'
         ],
         button: [
-          '"DM Sans"',
+          '"Inter"',
           '-apple-system',
           'BlinkMacSystemFont',
           'sans-serif'

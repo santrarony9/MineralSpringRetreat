@@ -121,8 +121,8 @@ export default function CozyRooms({ setActivePage }) {
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/30" />
 
             {/* Top-Left Price Tag (Refined Champagne Gold Badge) */}
-            <div className="absolute top-4 sm:top-6 left-4 sm:left-6 z-20 bg-gradient-to-r from-[#CBB08B] via-[#B89D77] to-[#A6875E] text-white typo-eyebrow px-4 py-2 rounded-full shadow-lg border border-white/25 font-semibold tracking-[0.14em] num-badge whitespace-nowrap">
-              {currentRoom.tag}
+            <div className="absolute top-4 sm:top-6 left-4 sm:left-6 z-20 max-w-[calc(100%-2rem)] sm:max-w-none inline-flex items-center justify-center bg-gradient-to-r from-[#CBB08B] via-[#B89D77] to-[#A6875E] !text-white text-[10px] sm:text-[11px] px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full shadow-lg border border-white/25 font-semibold tracking-normal sm:tracking-[0.12em] num-badge uppercase">
+              <span className="!text-white text-center leading-none">{currentRoom.tag}</span>
             </div>
 
             {/* Center Room Details & Specs Bar */}
@@ -135,7 +135,7 @@ export default function CozyRooms({ setActivePage }) {
               </h3>
 
               {/* Specs Icons Row (Exact CozyStay Format) */}
-              <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-6 lg:gap-8 bg-black/40 backdrop-blur-sm px-4 sm:px-6 py-2.5 sm:py-3 rounded-2xl sm:rounded-full border border-white/20 typo-small tracking-wider text-white/90 max-w-full">
+              <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-6 lg:gap-8 bg-black/40 backdrop-blur-sm px-4 sm:px-6 py-2.5 sm:py-3 rounded-2xl sm:rounded-full border border-white/20 typo-small tracking-wider text-white/90 max-w-[calc(100%-5rem)] sm:max-w-none">
                 {currentRoom.specs.map((sp, idx) => {
                   const Icon = sp.icon;
                   return (
@@ -167,18 +167,18 @@ export default function CozyRooms({ setActivePage }) {
             {/* Circular Slider Arrows */}
             <button
               onClick={handlePrev}
-              className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white shadow-xl flex items-center justify-center text-[#1A1A1A] hover:bg-black hover:text-white transition-all duration-200 z-30 focus:outline-none"
+              className="absolute left-2.5 sm:left-6 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-white/95 shadow-xl flex items-center justify-center text-[#1A1A1A] hover:bg-black hover:text-white transition-all duration-200 z-30 focus:outline-none"
               aria-label="Previous Room"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
 
             <button
               onClick={handleNext}
-              className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white shadow-xl flex items-center justify-center text-[#1A1A1A] hover:bg-black hover:text-white transition-all duration-200 z-30 focus:outline-none"
+              className="absolute right-2.5 sm:right-6 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-white/95 shadow-xl flex items-center justify-center text-[#1A1A1A] hover:bg-black hover:text-white transition-all duration-200 z-30 focus:outline-none"
               aria-label="Next Room"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
           </div>
 

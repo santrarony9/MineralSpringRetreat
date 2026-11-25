@@ -5017,10 +5017,11 @@ export default function AdminPanel({ isStandalone = false, onClose }) {
                           onChange={(e) => setDesignForm({ ...designForm, headingFont: e.target.value })}
                           className="w-full px-3 py-2 bg-[#FAF7F2] border border-[#D5C9B8] text-xs rounded-xl"
                         >
-                          <option value="'Cormorant Garamond', Georgia, serif">Cormorant Garamond (Default Luxury Serif)</option>
+                          <option value="'Manrope', sans-serif">Manrope (Modern Geometric Sans)</option>
+                          <option value="'Space Grotesk', sans-serif">Space Grotesk (Neo-Grotesque)</option>
+                          <option value="'Inter', sans-serif">Inter</option>
+                          <option value="'Cormorant Garamond', Georgia, serif">Cormorant Garamond (Serif)</option>
                           <option value="'Playfair Display', serif">Playfair Display</option>
-                          <option value="'Cinzel', serif">Cinzel</option>
-                          <option value="'DM Serif Display', serif">DM Serif Display</option>
                         </select>
                       </div>
 
@@ -5033,9 +5034,10 @@ export default function AdminPanel({ isStandalone = false, onClose }) {
                           onChange={(e) => setDesignForm({ ...designForm, bodyFont: e.target.value })}
                           className="w-full px-3 py-2 bg-[#FAF7F2] border border-[#D5C9B8] text-xs rounded-xl"
                         >
-                          <option value="'DM Sans', sans-serif">DM Sans (Default Clean Sans)</option>
+                          <option value="'Inter', sans-serif">Inter (Modern Neo-Grotesque Sans)</option>
+                          <option value="'Manrope', sans-serif">Manrope</option>
+                          <option value="'DM Sans', sans-serif">DM Sans</option>
                           <option value="'Lato', sans-serif">Lato</option>
-                          <option value="'Inter', sans-serif">Inter</option>
                           <option value="'Montserrat', sans-serif">Montserrat</option>
                         </select>
                       </div>
@@ -5114,8 +5116,8 @@ export default function AdminPanel({ isStandalone = false, onClose }) {
                       type="button"
                       onClick={() => {
                         setDesignForm({
-                          headingFont: "'Cormorant Garamond', Georgia, serif",
-                          bodyFont: "'DM Sans', sans-serif",
+                          headingFont: "'Manrope', sans-serif",
+                          bodyFont: "'Inter', sans-serif",
                           colorHeaderBg: "#17251D",
                           colorFooterBg: "#111613",
                           colorAccentGold: "#B89A70",

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useApp } from '../../context/AppContext';
 import { Send, MapPin, Phone, Mail, ArrowUp, Star, ExternalLink } from 'lucide-react';
 
@@ -6,6 +6,19 @@ export default function CozyFooter({ setActivePage }) {
   const { settings, openBooking, setPolicyModal, pages } = useApp();
   const [newsletterEmail, setNewsletterEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 400) {
+        setShowBackToTop(true);
+      } else {
+        setShowBackToTop(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const footerData = pages?.footer;
   const brandTitle = footerData?.brandTitle || 'MINERAL SPRINGS';
@@ -184,7 +197,7 @@ export default function CozyFooter({ setActivePage }) {
         </div>
 
         {/* Bottom Bar: Policies on Left, Copyright on Right (Exact CozyStay Reference) */}
-        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between typo-small text-xs text-white/50 tracking-wider gap-4 reveal-init reveal-delay-3">
+        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between typo-small text-xs text-white/50 tracking-wider gap-4 pb-12 sm:pb-0 reveal-init reveal-delay-3">
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2 typo-nav text-xs">
             <button
               onClick={() => setActivePage('dawaipani')}
@@ -212,17 +225,19 @@ export default function CozyFooter({ setActivePage }) {
             </button>
           </div>
 
-          <div className="text-center sm:text-right typo-small text-xs">
+          <div className="text-center sm:text-right typo-small text-xs pr-0 sm:pr-14">
             © Copyright Mineral Springs Retreat. All Rights Reserved.
           </div>
         </div>
 
       </div>
 
-      {/* Floating Scroll to Top Arrow (Exact CozyStay Floating Button - Luxury Satin Gold Finish) */}
+      {/* Floating Scroll to Top Arrow - Fades in only after scrolling down */}
       <button
         onClick={scrollToTop}
-        className="fixed bottom-6 right-6 z-40 w-11 h-11 border border-[#B89D77]/40 bg-[#151F18]/90 backdrop-blur-md hover:bg-gradient-to-r hover:from-[#CBB08B] hover:to-[#B89D77] text-white flex items-center justify-center transition-all duration-300 shadow-xl focus:outline-none hover:-translate-y-1 rounded-full"
+        className={`fixed bottom-6 right-6 z-40 w-11 h-11 border border-[#B89D77]/40 bg-[#151F18]/90 backdrop-blur-md hover:bg-gradient-to-r hover:from-[#CBB08B] hover:to-[#B89D77] text-white flex items-center justify-center transition-all duration-300 shadow-xl focus:outline-none hover:-translate-y-1 rounded-full ${
+          showBackToTop ? 'opacity-100 pointer-events-auto translate-y-0' : 'opacity-0 pointer-events-none translate-y-4'
+        }`}
         aria-label="Back to Top"
       >
         <ArrowUp className="w-4 h-4" />

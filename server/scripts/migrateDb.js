@@ -53,7 +53,7 @@ export function runMigration() {
         stats: [
           { id: "stat-1", value: "6,500", unit: "ft", label: "RETREAT ALTITUDE" },
           { id: "stat-2", value: "4", unit: "Meals", label: "DAILY INCLUDED" },
-          { id: "stat-3", value: "70", unit: "km", label: "FROM NJP & BAGDOGRA" }
+          { id: "stat-3", value: "70", unit: "km approx.", label: "FROM NJP & BAGDOGRA" }
         ]
       },
       intro: {

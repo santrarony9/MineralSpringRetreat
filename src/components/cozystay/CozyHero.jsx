@@ -25,7 +25,7 @@ export default function CozyHero({ setActivePage }) {
   const heroStats = heroData?.stats || [
     { value: '6,500', unit: 'ft', label: 'RETREAT ALTITUDE' },
     { value: '4', unit: 'Meals', label: 'DAILY INCLUDED' },
-    { value: '70', unit: 'km', label: 'FROM NJP & BAGDOGRA' }
+    { value: '70', unit: 'km approx.', label: 'FROM NJP & BAGDOGRA' }
   ];
 
   // Listen for reduced motion preference
@@ -66,7 +66,7 @@ export default function CozyHero({ setActivePage }) {
       }
     };
 
-    if (window.innerWidth >= 1024 && !prefersReducedMotion) {
+    if (!prefersReducedMotion) {
       playVideo();
     }
   }, [prefersReducedMotion, desktopHeroVideo]);
@@ -113,14 +113,14 @@ export default function CozyHero({ setActivePage }) {
   return (
     <section
       ref={heroRef}
-      className="relative w-full h-screen min-h-[700px] max-h-[1080px] flex flex-col justify-between overflow-hidden select-none"
+      className="relative w-full h-[100dvh] min-h-[580px] sm:min-h-[680px] max-h-[1080px] flex flex-col justify-between overflow-hidden select-none"
     >
       {/* Background Media with Exact Cinematic Mountain Treatment & Subtle Parallax Drift */}
       <div
         className="absolute inset-0 z-0 will-change-transform"
         style={{ transform: `translate3d(0, ${scrollY * 0.28}px, 0)` }}
       >
-        {/* Desktop / Laptop Cinematic Drone Video Background (Viewport >= 1024px only) */}
+        {/* Unified Cinematic Drone Video Background on All Viewports */}
         {!videoError && !prefersReducedMotion ? (
           <video
             ref={videoRef}
@@ -130,7 +130,7 @@ export default function CozyHero({ setActivePage }) {
             playsInline
             poster={desktopPoster}
             onError={() => setVideoError(true)}
-            className="hidden lg:block w-full h-full object-cover object-[center_35%]"
+            className="w-full h-full object-cover object-[center_35%]"
             preload="auto"
           >
             <source src={desktopHeroVideo} type="video/mp4" />
@@ -139,53 +139,46 @@ export default function CozyHero({ setActivePage }) {
           <img
             src={desktopPoster}
             alt="Mineral Springs Retreat - Drone Himalayan Mountain Panorama"
-            className="hidden lg:block w-full h-full object-cover object-[center_35%]"
+            className="w-full h-full object-cover object-[center_35%]"
           />
         )}
 
-        {/* Mobile & Tablet Static Photograph (< 1024px) - Completely Unchanged */}
-        <img
-          src={mobileHeroImage}
-          alt="Mineral Springs Retreat - Mountain vistas and tea garden slopes in Dawaipani"
-          className="block lg:hidden w-full h-full object-cover object-center scale-105 animate-hero-drift"
-        />
-
         {/* Subtle Dark Overlay for Natural Luxury Retreat Aesthetics & Text Legibility */}
         <div className="absolute inset-0 bg-black/25 pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/40 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40 pointer-events-none" />
       </div>
 
-      {/* Generous Clearance Spacer for Fixed Header */}
-      <div className="pt-32 sm:pt-36 lg:pt-40 xl:pt-44" />
+      {/* Responsive Clearance Spacer for Fixed Header */}
+      <div className="pt-20 sm:pt-28 lg:pt-36" />
 
-      {/* Center Cinematic Typography (Exact CozyStay Composition) */}
+      {/* Center Cinematic Typography */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center text-white my-auto">
         
         {/* Dedicated Gold Retreat Tagline Badge */}
-        <div className="hero-item mb-5 sm:mb-6">
-          <span className="inline-flex items-center justify-center text-[#DFCCA8] font-sans font-medium text-[10px] sm:text-[11px] lg:text-xs tracking-[0.24em] sm:tracking-[0.28em] uppercase px-5 py-2 rounded-full bg-black/45 backdrop-blur-md border border-[#B89D77]/45 shadow-[0_4px_24px_rgba(0,0,0,0.4)] text-center max-w-full">
+        <div className="hero-item mb-3.5 sm:mb-5 lg:mb-6 px-2">
+          <span className="inline-flex items-center justify-center text-[#DFCCA8] font-sans font-medium text-[9px] sm:text-[11px] lg:text-xs tracking-[0.16em] sm:tracking-[0.24em] lg:tracking-[0.28em] uppercase px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full bg-black/45 backdrop-blur-md border border-[#B89D77]/45 shadow-[0_4px_24px_rgba(0,0,0,0.4)] text-center max-w-[92%] sm:max-w-none leading-relaxed">
             {heroBadge}
           </span>
         </div>
 
-        {/* Main Hero Headline: 64–76px (Desktop), 38–44px (Mobile), Line-height: 1.05–1.15 */}
-        <h1 className="hero-item typo-hero font-normal text-white uppercase drop-shadow-md whitespace-pre-line">
+        {/* Main Hero Headline: Responsive, balanced 4-line presentation on mobile */}
+        <h1 className="hero-item typo-hero font-normal text-white uppercase drop-shadow-md text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.14] sm:leading-[1.1] max-w-[280px] sm:max-w-2xl md:max-w-4xl mx-auto sm:whitespace-pre-line text-balance">
           {heroTitle}
         </h1>
 
       </div>
 
-      {/* Bottom Stats Row (Exact Signature CozyStay Reference: 3 Numbers + Uppercase Labels) */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 pb-10 sm:pb-14">
-        <div className="hero-stats-grid grid grid-cols-3 gap-4 sm:gap-8 text-center text-white border-t border-white/20 pt-6 sm:pt-8">
+      {/* Bottom Stats Row (3 Columns with Clean Dividers + Down Arrow) */}
+      <div className="relative z-10 w-full max-w-5xl mx-auto px-3 sm:px-6 pb-6 sm:pb-10 lg:pb-14">
+        <div className="hero-stats-grid grid grid-cols-3 gap-2 sm:gap-6 lg:gap-8 text-center text-white border-t border-white/20 pt-3.5 sm:pt-6 lg:pt-8">
           
           {heroStats.map((stat, idx) => (
-            <div key={idx} className={`space-y-1 ${idx === 1 ? 'border-x border-white/15 px-2' : ''}`}>
-              <div className="num-stat-hero font-serif text-3xl sm:text-4xl md:text-5xl font-light tracking-normal text-white drop-shadow-sm tabular-nums flex items-baseline justify-center space-x-1.5 whitespace-nowrap">
+            <div key={idx} className={`space-y-0.5 sm:space-y-1 ${idx === 1 ? 'border-x border-white/20 px-1 sm:px-4' : 'px-1'}`}>
+              <div className="num-stat-hero text-lg min-[360px]:text-xl sm:text-3xl md:text-4xl lg:text-5xl font-light tracking-normal text-white drop-shadow-sm tabular-nums flex items-baseline justify-center space-x-1 whitespace-nowrap">
                 <span>{stat.value}</span>
-                <span className="num-unit-label text-xl sm:text-2xl md:text-3xl font-serif text-white/85 font-light">{stat.unit}</span>
+                <span className="num-unit-label text-[10px] min-[360px]:text-xs sm:text-xl md:text-2xl lg:text-3xl font-light text-white/85">{stat.unit}</span>
               </div>
-              <span className="typo-eyebrow text-[#CBB08B] block font-medium mt-1 tracking-[0.16em] sm:tracking-[0.2em]">
+              <span className="typo-eyebrow text-[#CBB08B] block font-medium mt-0.5 text-[8.5px] sm:text-[10px] md:text-xs tracking-[0.1em] sm:tracking-[0.16em] leading-tight">
                 {stat.label}
               </span>
             </div>
@@ -196,10 +189,10 @@ export default function CozyHero({ setActivePage }) {
         {/* Scroll Indicator */}
         <button
           onClick={scrollToIntro}
-          className="mx-auto mt-6 flex flex-col items-center text-white/50 hover:text-white transition-colors focus:outline-none"
+          className="mx-auto mt-3 sm:mt-5 flex flex-col items-center text-white/60 hover:text-white transition-colors focus:outline-none"
           aria-label="Scroll to Introduction"
         >
-          <ArrowDown className="w-4 h-4 animate-bounce" />
+          <ArrowDown className="w-3.5 h-3.5 sm:w-4 sm:h-4 animate-bounce" />
         </button>
       </div>
 

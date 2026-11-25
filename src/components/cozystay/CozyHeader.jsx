@@ -229,21 +229,21 @@ export default function CozyHeader({ activePage, setActivePage }) {
         </div>
 
         {/* Mobile & Tablet Navigation Row: Logo Left, Reserve & Hamburger Menu Right */}
-        <div className="lg:hidden flex items-center justify-between px-4 sm:px-6 py-2.5 sm:py-3 w-full bg-[#17251D]">
+        <div className="lg:hidden flex items-center justify-between px-3.5 sm:px-6 py-2.5 sm:py-3 w-full bg-[#17251D]">
           
           {/* Left: Scaled Brand Logo */}
           <button
             onClick={() => handleNavClick('home')}
             className="flex flex-col items-start text-left group focus:outline-none shrink-0"
           >
-            <span className="font-roman text-base sm:text-lg font-normal tracking-[0.14em] sm:tracking-[0.16em] text-[#FAF7F2] uppercase group-hover:text-[#B89A70] transition-colors whitespace-nowrap leading-tight">
-              MINERAL SPRINGS
+            <span className="font-roman text-[13px] sm:text-base md:text-lg font-normal tracking-[0.11em] sm:tracking-[0.16em] text-[#FAF7F2] uppercase group-hover:text-[#B89A70] transition-colors whitespace-nowrap leading-tight">
+              {brandTitle}
             </span>
-            <span className="font-roman text-[9px] sm:text-[10px] tracking-[0.28em] text-[#B89A70] uppercase font-light mt-0.5 whitespace-nowrap leading-none">
-              RETREAT
+            <span className="font-roman text-[8.5px] sm:text-[9.5px] tracking-[0.26em] text-[#B89A70] uppercase font-light mt-0.5 whitespace-nowrap leading-none">
+              {brandSubtitle}
             </span>
             {/* 5 Subtle Gold Stars */}
-            <div className="flex items-center space-x-1 mt-1 text-[#B89A70] text-[7px] tracking-[0.2em] opacity-90 leading-none">
+            <div className="flex items-center space-x-1 mt-1 text-[#B89A70] text-[6.5px] sm:text-[7px] tracking-[0.2em] opacity-90 leading-none">
               <span>★</span>
               <span>★</span>
               <span>★</span>
@@ -253,10 +253,10 @@ export default function CozyHeader({ activePage, setActivePage }) {
           </button>
 
           {/* Right: Reserve Button + Hamburger Menu Toggle */}
-          <div className="flex items-center space-x-2.5 sm:space-x-3 shrink-0">
+          <div className="flex items-center space-x-2 sm:space-x-3 shrink-0">
             <button
               onClick={() => openBooking()}
-              className="btn-header-reserve !py-1 !px-2.5 !text-[10px] sm:!text-[11px] whitespace-nowrap"
+              className="btn-header-reserve !py-1.5 !px-3 !text-[10px] sm:!text-[11px] uppercase tracking-[0.14em] whitespace-nowrap"
             >
               Reserve
             </button>
